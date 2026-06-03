@@ -170,12 +170,16 @@ main { padding: 28px; max-width: 1280px; margin: 0 auto; }
 .status--pass { background: rgba(74, 208, 142, 0.15); color: var(--pass); }
 .status--fail { background: rgba(248, 113, 113, 0.15); color: var(--fail); }
 
-/* Findings — larguras de coluna: ID e Título com mais espaço; Marca/Sev/Status travadas */
-.findings-table th:nth-child(1), .findings-table td:nth-child(1) { width: 120px; }
-.findings-table th:nth-child(2), .findings-table td:nth-child(2) { width: 110px; }
-.findings-table th:nth-child(3), .findings-table td:nth-child(3) { width: 90px; }
-.findings-table th:nth-child(4), .findings-table td:nth-child(4) { width: auto; }
-.findings-table th:nth-child(5), .findings-table td:nth-child(5) { width: 130px; }
+/* Findings — larguras de coluna: ID/Marca/Sev/Status travadas em px; Título com
+   width auto pra absorver o restante do espaço (em table-layout:fixed, colunas
+   sem width explícito recebem o sobejo distribuído proporcionalmente). */
+.findings-table { table-layout: fixed; }
+.findings-table th:nth-child(1), .findings-table td:nth-child(1) { width: 110px; white-space: nowrap; }
+.findings-table th:nth-child(2), .findings-table td:nth-child(2) { width: 100px; white-space: nowrap; }
+.findings-table th:nth-child(3), .findings-table td:nth-child(3) { width: 90px;  white-space: nowrap; }
+/* Título: SEM width — herda o que sobra. overflow-wrap garante quebra correta. */
+.findings-table th:nth-child(4), .findings-table td:nth-child(4) { overflow-wrap: anywhere; }
+.findings-table th:nth-child(5), .findings-table td:nth-child(5) { width: 180px; white-space: nowrap; }
 
 .filters { display: flex; gap: 20px; margin-bottom: 20px; align-items: flex-end; flex-wrap: wrap; }
 .filters label { display: flex; flex-direction: column; gap: 4px; font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; }
