@@ -1,0 +1,1888 @@
+{
+  "brand": "nv",
+  "display_name": "by NV",
+  "schema_version": 1,
+  "generated_at": "2026-06-03T22:29:44.527750+00:00",
+  "app": {
+    "bundle_id": "br.com.bynv",
+    "version": "2.0.0",
+    "build": "1",
+    "build_path": "brands/nv/test-builds/NVBuild.app"
+  },
+  "last_run": {
+    "stamp": "2026-05-30-1443",
+    "status": "PASS",
+    "pass": 16,
+    "fail": 0,
+    "total": 16,
+    "duration_s": 894
+  },
+  "runs": [
+    {
+      "stamp": "2026-05-30-1443",
+      "status": "PASS",
+      "pass": 16,
+      "fail": 0,
+      "total": 16,
+      "duration_s": 894,
+      "report_md": "brands/nv/reports/run-2026-05-30-1443.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-05-30-1443/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 11
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 16
+        },
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "PASS",
+          "duration_s": 86
+        },
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "PASS",
+          "duration_s": 69
+        },
+        {
+          "name": "10-compra-via-busca",
+          "status": "PASS",
+          "duration_s": 76
+        },
+        {
+          "name": "10-compra-via-categoria",
+          "status": "PASS",
+          "duration_s": 78
+        },
+        {
+          "name": "20-busca-textual",
+          "status": "PASS",
+          "duration_s": 39
+        },
+        {
+          "name": "20-categoria-navegacao",
+          "status": "PASS",
+          "duration_s": 43
+        },
+        {
+          "name": "20-cupom-aplicar",
+          "status": "PASS",
+          "duration_s": 90
+        },
+        {
+          "name": "20-home-dobras",
+          "status": "PASS",
+          "duration_s": 39
+        },
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "PASS",
+          "duration_s": 58
+        },
+        {
+          "name": "20-sacola-editar",
+          "status": "PASS",
+          "duration_s": 78
+        },
+        {
+          "name": "20-wishlist-favoritar",
+          "status": "PASS",
+          "duration_s": 55
+        },
+        {
+          "name": "30-conta-perfil",
+          "status": "PASS",
+          "duration_s": 39
+        },
+        {
+          "name": "30-logout",
+          "status": "PASS",
+          "duration_s": 54
+        },
+        {
+          "name": "30-pedidos-historico",
+          "status": "PASS",
+          "duration_s": 63
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-30-1441",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 62,
+      "report_md": "brands/nv/reports/run-2026-05-30-1441.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-05-30-1441/",
+      "flows": [
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "PASS",
+          "duration_s": 62
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-30-1411",
+      "status": "FAIL",
+      "pass": 15,
+      "fail": 1,
+      "total": 16,
+      "duration_s": 868,
+      "report_md": "brands/nv/reports/run-2026-05-30-1411.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-05-30-1411/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 13
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 20
+        },
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "PASS",
+          "duration_s": 90
+        },
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "FAIL",
+          "duration_s": 36
+        },
+        {
+          "name": "10-compra-via-busca",
+          "status": "PASS",
+          "duration_s": 75
+        },
+        {
+          "name": "10-compra-via-categoria",
+          "status": "PASS",
+          "duration_s": 81
+        },
+        {
+          "name": "20-busca-textual",
+          "status": "PASS",
+          "duration_s": 41
+        },
+        {
+          "name": "20-categoria-navegacao",
+          "status": "PASS",
+          "duration_s": 45
+        },
+        {
+          "name": "20-cupom-aplicar",
+          "status": "PASS",
+          "duration_s": 97
+        },
+        {
+          "name": "20-home-dobras",
+          "status": "PASS",
+          "duration_s": 42
+        },
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "PASS",
+          "duration_s": 58
+        },
+        {
+          "name": "20-sacola-editar",
+          "status": "PASS",
+          "duration_s": 78
+        },
+        {
+          "name": "20-wishlist-favoritar",
+          "status": "PASS",
+          "duration_s": 56
+        },
+        {
+          "name": "30-conta-perfil",
+          "status": "PASS",
+          "duration_s": 38
+        },
+        {
+          "name": "30-logout",
+          "status": "PASS",
+          "duration_s": 41
+        },
+        {
+          "name": "30-pedidos-historico",
+          "status": "PASS",
+          "duration_s": 57
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-30-1410",
+      "status": "PASS",
+      "pass": 2,
+      "fail": 0,
+      "total": 2,
+      "duration_s": 54,
+      "report_md": "brands/nv/reports/run-2026-05-30-1410.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-05-30-1410/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 32
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 22
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-29-1633",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 70,
+      "report_md": "brands/nv/reports/run-2026-05-29-1633.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-05-29-1633/",
+      "flows": [
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "PASS",
+          "duration_s": 70
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-29-1630",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 86,
+      "report_md": "brands/nv/reports/run-2026-05-29-1630.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-05-29-1630/",
+      "flows": [
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "FAIL",
+          "duration_s": 86
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-29-1608",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 79,
+      "report_md": "brands/nv/reports/run-2026-05-29-1608.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-05-29-1608/",
+      "flows": [
+        {
+          "name": "20-wishlist-favoritar",
+          "status": "PASS",
+          "duration_s": 79
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-29-1607",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 91,
+      "report_md": "brands/nv/reports/run-2026-05-29-1607.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-05-29-1607/",
+      "flows": [
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "FAIL",
+          "duration_s": 91
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-29-1606",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 67,
+      "report_md": "brands/nv/reports/run-2026-05-29-1606.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-05-29-1606/",
+      "flows": [
+        {
+          "name": "20-categoria-navegacao",
+          "status": "PASS",
+          "duration_s": 67
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-29-1603",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 143,
+      "report_md": "brands/nv/reports/run-2026-05-29-1603.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-05-29-1603/",
+      "flows": [
+        {
+          "name": "10-compra-via-categoria",
+          "status": "PASS",
+          "duration_s": 143
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-29-1307",
+      "status": "FAIL",
+      "pass": 10,
+      "fail": 6,
+      "total": 16,
+      "duration_s": 977,
+      "report_md": "brands/nv/reports/run-2026-05-29-1307.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-05-29-1307/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 53
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 35
+        },
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "PASS",
+          "duration_s": 126
+        },
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "FAIL",
+          "duration_s": 73
+        },
+        {
+          "name": "10-compra-via-busca",
+          "status": "PASS",
+          "duration_s": 115
+        },
+        {
+          "name": "10-compra-via-categoria",
+          "status": "FAIL",
+          "duration_s": 3
+        },
+        {
+          "name": "20-busca-textual",
+          "status": "PASS",
+          "duration_s": 60
+        },
+        {
+          "name": "20-categoria-navegacao",
+          "status": "FAIL",
+          "duration_s": 3
+        },
+        {
+          "name": "20-cupom-aplicar",
+          "status": "PASS",
+          "duration_s": 137
+        },
+        {
+          "name": "20-home-dobras",
+          "status": "PASS",
+          "duration_s": 64
+        },
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "FAIL",
+          "duration_s": 4
+        },
+        {
+          "name": "20-sacola-editar",
+          "status": "FAIL",
+          "duration_s": 100
+        },
+        {
+          "name": "20-wishlist-favoritar",
+          "status": "FAIL",
+          "duration_s": 3
+        },
+        {
+          "name": "30-conta-perfil",
+          "status": "PASS",
+          "duration_s": 52
+        },
+        {
+          "name": "30-logout",
+          "status": "PASS",
+          "duration_s": 61
+        },
+        {
+          "name": "30-pedidos-historico",
+          "status": "PASS",
+          "duration_s": 88
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-29-1145",
+      "status": "FAIL",
+      "pass": 7,
+      "fail": 9,
+      "total": 16,
+      "duration_s": 1622,
+      "report_md": "brands/nv/reports/run-2026-05-29-1145.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-05-29-1145/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 76
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 57
+        },
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "PASS",
+          "duration_s": 155
+        },
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "FAIL",
+          "duration_s": 62
+        },
+        {
+          "name": "10-compra-via-busca",
+          "status": "PASS",
+          "duration_s": 141
+        },
+        {
+          "name": "10-compra-via-categoria",
+          "status": "FAIL",
+          "duration_s": 7
+        },
+        {
+          "name": "20-busca-textual",
+          "status": "PASS",
+          "duration_s": 95
+        },
+        {
+          "name": "20-categoria-navegacao",
+          "status": "FAIL",
+          "duration_s": 3
+        },
+        {
+          "name": "20-cupom-aplicar",
+          "status": "PASS",
+          "duration_s": 113
+        },
+        {
+          "name": "20-home-dobras",
+          "status": "FAIL",
+          "duration_s": 581
+        },
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "FAIL",
+          "duration_s": 21
+        },
+        {
+          "name": "20-sacola-editar",
+          "status": "FAIL",
+          "duration_s": 61
+        },
+        {
+          "name": "20-wishlist-favoritar",
+          "status": "FAIL",
+          "duration_s": 4
+        },
+        {
+          "name": "30-conta-perfil",
+          "status": "PASS",
+          "duration_s": 77
+        },
+        {
+          "name": "30-logout",
+          "status": "FAIL",
+          "duration_s": 128
+        },
+        {
+          "name": "30-pedidos-historico",
+          "status": "FAIL",
+          "duration_s": 41
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-29-1137",
+      "status": "FAIL",
+      "pass": 2,
+      "fail": 7,
+      "total": 9,
+      "duration_s": 135,
+      "report_md": "brands/nv/reports/run-2026-05-29-1137.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-05-29-1137/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 47
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 51
+        },
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "FAIL",
+          "duration_s": 7
+        },
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "FAIL",
+          "duration_s": 5
+        },
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 6
+        },
+        {
+          "name": "10-compra-via-categoria",
+          "status": "FAIL",
+          "duration_s": 5
+        },
+        {
+          "name": "20-busca-textual",
+          "status": "FAIL",
+          "duration_s": 5
+        },
+        {
+          "name": "20-categoria-navegacao",
+          "status": "FAIL",
+          "duration_s": 5
+        },
+        {
+          "name": "20-cupom-aplicar",
+          "status": "FAIL",
+          "duration_s": 4
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-29-1127",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 116,
+      "report_md": "brands/nv/reports/run-2026-05-29-1127.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-05-29-1127/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "PASS",
+          "duration_s": 116
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-29-1120",
+      "status": "PASS",
+      "pass": 2,
+      "fail": 0,
+      "total": 2,
+      "duration_s": 287,
+      "report_md": "brands/nv/reports/run-2026-05-29-1120.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-05-29-1120/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 130
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 157
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-29-1103",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 16,
+      "total": 16,
+      "duration_s": 296,
+      "report_md": "brands/nv/reports/run-2026-05-29-1103.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-05-29-1103/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "FAIL",
+          "duration_s": 162
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "FAIL",
+          "duration_s": 47
+        },
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "FAIL",
+          "duration_s": 5
+        },
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "FAIL",
+          "duration_s": 5
+        },
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 8
+        },
+        {
+          "name": "10-compra-via-categoria",
+          "status": "FAIL",
+          "duration_s": 6
+        },
+        {
+          "name": "20-busca-textual",
+          "status": "FAIL",
+          "duration_s": 11
+        },
+        {
+          "name": "20-categoria-navegacao",
+          "status": "FAIL",
+          "duration_s": 17
+        },
+        {
+          "name": "20-cupom-aplicar",
+          "status": "FAIL",
+          "duration_s": 7
+        },
+        {
+          "name": "20-home-dobras",
+          "status": "FAIL",
+          "duration_s": 5
+        },
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "FAIL",
+          "duration_s": 4
+        },
+        {
+          "name": "20-sacola-editar",
+          "status": "FAIL",
+          "duration_s": 4
+        },
+        {
+          "name": "20-wishlist-favoritar",
+          "status": "FAIL",
+          "duration_s": 4
+        },
+        {
+          "name": "30-conta-perfil",
+          "status": "FAIL",
+          "duration_s": 4
+        },
+        {
+          "name": "30-logout",
+          "status": "FAIL",
+          "duration_s": 4
+        },
+        {
+          "name": "30-pedidos-historico",
+          "status": "FAIL",
+          "duration_s": 3
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-29-1052",
+      "status": "PASS",
+      "pass": 2,
+      "fail": 0,
+      "total": 2,
+      "duration_s": 101,
+      "report_md": "brands/nv/reports/run-2026-05-29-1052.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-05-29-1052/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 51
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 50
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-29-1007",
+      "status": "PASS",
+      "pass": 2,
+      "fail": 0,
+      "total": 2,
+      "duration_s": 331,
+      "report_md": "brands/nv/reports/run-2026-05-29-1007.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-05-29-1007/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 105
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 226
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-29-0958",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 65,
+      "report_md": "brands/nv/reports/run-2026-05-29-0958.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-05-29-0958/",
+      "flows": [
+        {
+          "name": "20-busca-textual",
+          "status": "PASS",
+          "duration_s": 65
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-29-0951",
+      "status": "PASS",
+      "pass": 2,
+      "fail": 0,
+      "total": 2,
+      "duration_s": 95,
+      "report_md": "brands/nv/reports/run-2026-05-29-0951.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-05-29-0951/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 39
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 56
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-28-2056",
+      "status": "PASS",
+      "pass": 2,
+      "fail": 0,
+      "total": 2,
+      "duration_s": 70,
+      "report_md": "brands/nv/reports/run-2026-05-28-2056.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-05-28-2056/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 39
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 31
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-28-1944",
+      "status": "PASS",
+      "pass": 2,
+      "fail": 0,
+      "total": 2,
+      "duration_s": 60,
+      "report_md": "brands/nv/reports/run-2026-05-28-1944.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-05-28-1944/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 28
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 32
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-28-1943",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 0,
+      "total": 0,
+      "duration_s": 0,
+      "report_md": "brands/nv/reports/run-2026-05-28-1943.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-05-28-1943/",
+      "flows": []
+    },
+    {
+      "stamp": "2026-05-28-1344",
+      "status": "FAIL",
+      "pass": 9,
+      "fail": 2,
+      "total": 11,
+      "duration_s": 5735,
+      "report_md": "brands/nv/reports/run-2026-05-28-1344.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-05-28-1344/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 27
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 34
+        },
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "PASS",
+          "duration_s": 119
+        },
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "FAIL",
+          "duration_s": 51
+        },
+        {
+          "name": "10-compra-via-busca",
+          "status": "PASS",
+          "duration_s": 95
+        },
+        {
+          "name": "10-compra-via-categoria",
+          "status": "PASS",
+          "duration_s": 99
+        },
+        {
+          "name": "20-busca-textual",
+          "status": "PASS",
+          "duration_s": 51
+        },
+        {
+          "name": "20-categoria-navegacao",
+          "status": "PASS",
+          "duration_s": 56
+        },
+        {
+          "name": "20-cupom-aplicar",
+          "status": "PASS",
+          "duration_s": 111
+        },
+        {
+          "name": "20-home-dobras",
+          "status": "PASS",
+          "duration_s": 54
+        },
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "FAIL",
+          "duration_s": 5038
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-28-1311",
+      "status": "FAIL",
+      "pass": 8,
+      "fail": 8,
+      "total": 16,
+      "duration_s": 1167,
+      "report_md": "brands/nv/reports/run-2026-05-28-1311.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-05-28-1311/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 27
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 34
+        },
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "FAIL",
+          "duration_s": 132
+        },
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "FAIL",
+          "duration_s": 64
+        },
+        {
+          "name": "10-compra-via-busca",
+          "status": "PASS",
+          "duration_s": 92
+        },
+        {
+          "name": "10-compra-via-categoria",
+          "status": "FAIL",
+          "duration_s": 66
+        },
+        {
+          "name": "20-busca-textual",
+          "status": "PASS",
+          "duration_s": 56
+        },
+        {
+          "name": "20-categoria-navegacao",
+          "status": "FAIL",
+          "duration_s": 73
+        },
+        {
+          "name": "20-cupom-aplicar",
+          "status": "PASS",
+          "duration_s": 108
+        },
+        {
+          "name": "20-home-dobras",
+          "status": "PASS",
+          "duration_s": 79
+        },
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "FAIL",
+          "duration_s": 75
+        },
+        {
+          "name": "20-sacola-editar",
+          "status": "PASS",
+          "duration_s": 102
+        },
+        {
+          "name": "20-wishlist-favoritar",
+          "status": "PASS",
+          "duration_s": 91
+        },
+        {
+          "name": "30-conta-perfil",
+          "status": "FAIL",
+          "duration_s": 58
+        },
+        {
+          "name": "30-logout",
+          "status": "FAIL",
+          "duration_s": 55
+        },
+        {
+          "name": "30-pedidos-historico",
+          "status": "FAIL",
+          "duration_s": 55
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-27-1002",
+      "status": "FAIL",
+      "pass": 4,
+      "fail": 12,
+      "total": 16,
+      "duration_s": 850,
+      "report_md": "brands/nv/reports/run-2026-05-27-1002.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-05-27-1002/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 33
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 26
+        },
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "FAIL",
+          "duration_s": 58
+        },
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "FAIL",
+          "duration_s": 59
+        },
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 55
+        },
+        {
+          "name": "10-compra-via-categoria",
+          "status": "FAIL",
+          "duration_s": 58
+        },
+        {
+          "name": "20-busca-textual",
+          "status": "FAIL",
+          "duration_s": 58
+        },
+        {
+          "name": "20-categoria-navegacao",
+          "status": "FAIL",
+          "duration_s": 52
+        },
+        {
+          "name": "20-cupom-aplicar",
+          "status": "FAIL",
+          "duration_s": 54
+        },
+        {
+          "name": "20-home-dobras",
+          "status": "PASS",
+          "duration_s": 44
+        },
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "FAIL",
+          "duration_s": 55
+        },
+        {
+          "name": "20-sacola-editar",
+          "status": "FAIL",
+          "duration_s": 56
+        },
+        {
+          "name": "20-wishlist-favoritar",
+          "status": "FAIL",
+          "duration_s": 55
+        },
+        {
+          "name": "30-conta-perfil",
+          "status": "FAIL",
+          "duration_s": 51
+        },
+        {
+          "name": "30-logout",
+          "status": "FAIL",
+          "duration_s": 53
+        },
+        {
+          "name": "30-pedidos-historico",
+          "status": "PASS",
+          "duration_s": 83
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-26-1258",
+      "status": "FAIL",
+      "pass": 15,
+      "fail": 1,
+      "total": 16,
+      "duration_s": 1202,
+      "report_md": "brands/nv/reports/run-2026-05-26-1258.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-05-26-1258/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 27
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 35
+        },
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "PASS",
+          "duration_s": 123
+        },
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "PASS",
+          "duration_s": 89
+        },
+        {
+          "name": "10-compra-via-busca",
+          "status": "PASS",
+          "duration_s": 110
+        },
+        {
+          "name": "10-compra-via-categoria",
+          "status": "PASS",
+          "duration_s": 95
+        },
+        {
+          "name": "20-busca-textual",
+          "status": "PASS",
+          "duration_s": 64
+        },
+        {
+          "name": "20-categoria-navegacao",
+          "status": "PASS",
+          "duration_s": 57
+        },
+        {
+          "name": "20-cupom-aplicar",
+          "status": "PASS",
+          "duration_s": 116
+        },
+        {
+          "name": "20-home-dobras",
+          "status": "PASS",
+          "duration_s": 53
+        },
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "PASS",
+          "duration_s": 76
+        },
+        {
+          "name": "20-sacola-editar",
+          "status": "PASS",
+          "duration_s": 106
+        },
+        {
+          "name": "20-wishlist-favoritar",
+          "status": "PASS",
+          "duration_s": 78
+        },
+        {
+          "name": "30-conta-perfil",
+          "status": "PASS",
+          "duration_s": 53
+        },
+        {
+          "name": "30-logout",
+          "status": "PASS",
+          "duration_s": 55
+        },
+        {
+          "name": "30-pedidos-historico",
+          "status": "FAIL",
+          "duration_s": 65
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-26-1152",
+      "status": "FAIL",
+      "pass": 15,
+      "fail": 1,
+      "total": 16,
+      "duration_s": 1150,
+      "report_md": "brands/nv/reports/run-2026-05-26-1152.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-05-26-1152/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 26
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 34
+        },
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "PASS",
+          "duration_s": 105
+        },
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "PASS",
+          "duration_s": 97
+        },
+        {
+          "name": "10-compra-via-busca",
+          "status": "PASS",
+          "duration_s": 99
+        },
+        {
+          "name": "10-compra-via-categoria",
+          "status": "PASS",
+          "duration_s": 91
+        },
+        {
+          "name": "20-busca-textual",
+          "status": "PASS",
+          "duration_s": 64
+        },
+        {
+          "name": "20-categoria-navegacao",
+          "status": "PASS",
+          "duration_s": 51
+        },
+        {
+          "name": "20-cupom-aplicar",
+          "status": "PASS",
+          "duration_s": 128
+        },
+        {
+          "name": "20-home-dobras",
+          "status": "PASS",
+          "duration_s": 56
+        },
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "PASS",
+          "duration_s": 68
+        },
+        {
+          "name": "20-sacola-editar",
+          "status": "PASS",
+          "duration_s": 94
+        },
+        {
+          "name": "20-wishlist-favoritar",
+          "status": "PASS",
+          "duration_s": 74
+        },
+        {
+          "name": "30-conta-perfil",
+          "status": "PASS",
+          "duration_s": 48
+        },
+        {
+          "name": "30-logout",
+          "status": "PASS",
+          "duration_s": 53
+        },
+        {
+          "name": "30-pedidos-historico",
+          "status": "FAIL",
+          "duration_s": 62
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-26-1108",
+      "status": "FAIL",
+      "pass": 14,
+      "fail": 2,
+      "total": 16,
+      "duration_s": 1632,
+      "report_md": "brands/nv/reports/run-2026-05-26-1108.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-05-26-1108/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 70
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 89
+        },
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "PASS",
+          "duration_s": 176
+        },
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "FAIL",
+          "duration_s": 97
+        },
+        {
+          "name": "10-compra-via-busca",
+          "status": "PASS",
+          "duration_s": 127
+        },
+        {
+          "name": "10-compra-via-categoria",
+          "status": "PASS",
+          "duration_s": 116
+        },
+        {
+          "name": "20-busca-textual",
+          "status": "PASS",
+          "duration_s": 99
+        },
+        {
+          "name": "20-categoria-navegacao",
+          "status": "PASS",
+          "duration_s": 95
+        },
+        {
+          "name": "20-cupom-aplicar",
+          "status": "PASS",
+          "duration_s": 169
+        },
+        {
+          "name": "20-home-dobras",
+          "status": "PASS",
+          "duration_s": 80
+        },
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "PASS",
+          "duration_s": 82
+        },
+        {
+          "name": "20-sacola-editar",
+          "status": "PASS",
+          "duration_s": 124
+        },
+        {
+          "name": "20-wishlist-favoritar",
+          "status": "PASS",
+          "duration_s": 105
+        },
+        {
+          "name": "30-conta-perfil",
+          "status": "PASS",
+          "duration_s": 67
+        },
+        {
+          "name": "30-logout",
+          "status": "PASS",
+          "duration_s": 64
+        },
+        {
+          "name": "30-pedidos-historico",
+          "status": "FAIL",
+          "duration_s": 72
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-26-0927",
+      "status": "FAIL",
+      "pass": 10,
+      "fail": 6,
+      "total": 16,
+      "duration_s": 1531,
+      "report_md": "brands/nv/reports/run-2026-05-26-0927.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-05-26-0927/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 38
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 47
+        },
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "FAIL",
+          "duration_s": 186
+        },
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "PASS",
+          "duration_s": 169
+        },
+        {
+          "name": "10-compra-via-busca",
+          "status": "PASS",
+          "duration_s": 91
+        },
+        {
+          "name": "10-compra-via-categoria",
+          "status": "PASS",
+          "duration_s": 81
+        },
+        {
+          "name": "20-busca-textual",
+          "status": "PASS",
+          "duration_s": 64
+        },
+        {
+          "name": "20-categoria-navegacao",
+          "status": "PASS",
+          "duration_s": 74
+        },
+        {
+          "name": "20-cupom-aplicar",
+          "status": "FAIL",
+          "duration_s": 136
+        },
+        {
+          "name": "20-home-dobras",
+          "status": "PASS",
+          "duration_s": 51
+        },
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "PASS",
+          "duration_s": 62
+        },
+        {
+          "name": "20-sacola-editar",
+          "status": "FAIL",
+          "duration_s": 147
+        },
+        {
+          "name": "20-wishlist-favoritar",
+          "status": "PASS",
+          "duration_s": 79
+        },
+        {
+          "name": "30-conta-perfil",
+          "status": "FAIL",
+          "duration_s": 101
+        },
+        {
+          "name": "30-logout",
+          "status": "FAIL",
+          "duration_s": 122
+        },
+        {
+          "name": "30-pedidos-historico",
+          "status": "FAIL",
+          "duration_s": 83
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-25-2230",
+      "status": "FAIL",
+      "pass": 8,
+      "fail": 4,
+      "total": 12,
+      "duration_s": 39201,
+      "report_md": "brands/nv/reports/run-2026-05-25-2230.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-05-25-2230/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 27
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 33
+        },
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "FAIL",
+          "duration_s": 125
+        },
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "PASS",
+          "duration_s": 87
+        },
+        {
+          "name": "10-compra-via-busca",
+          "status": "PASS",
+          "duration_s": 87
+        },
+        {
+          "name": "10-compra-via-categoria",
+          "status": "PASS",
+          "duration_s": 76
+        },
+        {
+          "name": "20-busca-textual",
+          "status": "PASS",
+          "duration_s": 53
+        },
+        {
+          "name": "20-categoria-navegacao",
+          "status": "PASS",
+          "duration_s": 40
+        },
+        {
+          "name": "20-cupom-aplicar",
+          "status": "FAIL",
+          "duration_s": 89
+        },
+        {
+          "name": "20-home-dobras",
+          "status": "PASS",
+          "duration_s": 48
+        },
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "FAIL",
+          "duration_s": 1025
+        },
+        {
+          "name": "20-sacola-editar",
+          "status": "FAIL",
+          "duration_s": 37511
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-19-1700",
+      "status": "FAIL",
+      "pass": 1,
+      "fail": 4,
+      "total": 5,
+      "duration_s": 199,
+      "report_md": "brands/nv/reports/run-2026-05-19-1700.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-05-19-1700/",
+      "flows": [
+        {
+          "name": "20-busca-textual",
+          "status": "FAIL",
+          "duration_s": 42
+        },
+        {
+          "name": "20-categoria-navegacao",
+          "status": "FAIL",
+          "duration_s": 40
+        },
+        {
+          "name": "20-home-dobras",
+          "status": "PASS",
+          "duration_s": 33
+        },
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "FAIL",
+          "duration_s": 43
+        },
+        {
+          "name": "20-wishlist-favoritar",
+          "status": "FAIL",
+          "duration_s": 41
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-19-1632",
+      "status": "PASS",
+      "pass": 2,
+      "fail": 0,
+      "total": 2,
+      "duration_s": 57,
+      "report_md": "brands/nv/reports/run-2026-05-19-1632.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-05-19-1632/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 31
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 26
+        }
+      ]
+    }
+  ],
+  "flows_summary": [
+    {
+      "name": "00-pipeline-smoke",
+      "last_status": "PASS",
+      "last_duration_s": 11,
+      "last_run_stamp": "2026-05-30-1443"
+    },
+    {
+      "name": "00-smoke-launch",
+      "last_status": "PASS",
+      "last_duration_s": 16,
+      "last_run_stamp": "2026-05-30-1443"
+    },
+    {
+      "name": "10-checkout-ate-pagamento",
+      "last_status": "PASS",
+      "last_duration_s": 86,
+      "last_run_stamp": "2026-05-30-1443"
+    },
+    {
+      "name": "10-compra-cold-anonimo",
+      "last_status": "PASS",
+      "last_duration_s": 69,
+      "last_run_stamp": "2026-05-30-1443"
+    },
+    {
+      "name": "10-compra-via-busca",
+      "last_status": "PASS",
+      "last_duration_s": 76,
+      "last_run_stamp": "2026-05-30-1443"
+    },
+    {
+      "name": "10-compra-via-categoria",
+      "last_status": "PASS",
+      "last_duration_s": 78,
+      "last_run_stamp": "2026-05-30-1443"
+    },
+    {
+      "name": "20-busca-textual",
+      "last_status": "PASS",
+      "last_duration_s": 39,
+      "last_run_stamp": "2026-05-30-1443"
+    },
+    {
+      "name": "20-categoria-navegacao",
+      "last_status": "PASS",
+      "last_duration_s": 43,
+      "last_run_stamp": "2026-05-30-1443"
+    },
+    {
+      "name": "20-cupom-aplicar",
+      "last_status": "PASS",
+      "last_duration_s": 90,
+      "last_run_stamp": "2026-05-30-1443"
+    },
+    {
+      "name": "20-home-dobras",
+      "last_status": "PASS",
+      "last_duration_s": 39,
+      "last_run_stamp": "2026-05-30-1443"
+    },
+    {
+      "name": "20-plp-filtros-ordenacao",
+      "last_status": "PASS",
+      "last_duration_s": 58,
+      "last_run_stamp": "2026-05-30-1443"
+    },
+    {
+      "name": "20-sacola-editar",
+      "last_status": "PASS",
+      "last_duration_s": 78,
+      "last_run_stamp": "2026-05-30-1443"
+    },
+    {
+      "name": "20-wishlist-favoritar",
+      "last_status": "PASS",
+      "last_duration_s": 55,
+      "last_run_stamp": "2026-05-30-1443"
+    },
+    {
+      "name": "30-conta-perfil",
+      "last_status": "PASS",
+      "last_duration_s": 39,
+      "last_run_stamp": "2026-05-30-1443"
+    },
+    {
+      "name": "30-logout",
+      "last_status": "PASS",
+      "last_duration_s": 54,
+      "last_run_stamp": "2026-05-30-1443"
+    },
+    {
+      "name": "30-pedidos-historico",
+      "last_status": "PASS",
+      "last_duration_s": 63,
+      "last_run_stamp": "2026-05-30-1443"
+    }
+  ],
+  "findings": [
+    {
+      "id": "F-001",
+      "title": "Erro ao adicionar produto à sacola em cold start sem login",
+      "severity": null,
+      "status": "✅ **NÃO REPRODUZ em v2.0.0** (testado 2026-05-19).",
+      "severity_level": "desconhecido",
+      "severity_label": "—",
+      "status_category": "closed",
+      "status_clean": "NÃO REPRODUZ em v2.0.0 (testado 2026-05-19)."
+    },
+    {
+      "id": "F-002",
+      "title": "Fluxo de Checkout reduzido em uma tela",
+      "severity": null,
+      "status": "✅ **Fechado — intencional**",
+      "severity_level": "desconhecido",
+      "severity_label": "—",
+      "status_category": "closed",
+      "status_clean": "Fechado — intencional"
+    },
+    {
+      "id": "F-003",
+      "title": "Add-to-cart anônimo passou a funcionar (relacionado a F-001)",
+      "severity": null,
+      "status": "observado, requer mais detalhamento.",
+      "severity_level": "desconhecido",
+      "severity_label": "—",
+      "status_category": "observation",
+      "status_clean": "observado, requer mais detalhamento."
+    },
+    {
+      "id": "F-004",
+      "title": "Personalização \"For You\" não aparece na Home logada (v2.0.0)",
+      "severity": "🟠 Média (degradação de experiência logada).",
+      "status": "✅ **Verificado — corrigido em 2026-05-28**",
+      "severity_level": "media",
+      "severity_label": "Média",
+      "status_category": "closed",
+      "status_clean": "Verificado — corrigido em 2026-05-28"
+    },
+    {
+      "id": "F-005",
+      "title": "Botão de compartilhar removido da PLP (v2.0.0)",
+      "severity": "🟢 Baixa.",
+      "status": "✅ **Verificado — corrigido em 2026-05-28**",
+      "severity_level": "baixa",
+      "severity_label": "Baixa",
+      "status_category": "closed",
+      "status_clean": "Verificado — corrigido em 2026-05-28"
+    },
+    {
+      "id": "F-006",
+      "title": "Funcionalidades da PDP alteradas (v2.0.0)",
+      "severity": "🟠 Média (uma é funcionalidade de conversão).",
+      "status": "🟡 **Em ADR**",
+      "severity_level": "media",
+      "severity_label": "Média",
+      "status_category": "in_progress",
+      "status_clean": "Em ADR"
+    },
+    {
+      "id": "F-007",
+      "title": "\"Get the Look\" reposicionado na PDP (v2.0.0)",
+      "severity": "🟢 Baixa.",
+      "status": "✅ **Verificado — corrigido em 2026-05-28**",
+      "severity_level": "baixa",
+      "severity_label": "Baixa",
+      "status_category": "closed",
+      "status_clean": "Verificado — corrigido em 2026-05-28"
+    },
+    {
+      "id": "F-008",
+      "title": "Pagamento com saldo possivelmente removido (v2.0.0)",
+      "severity": "🔴 Alta (meio de pagamento ausente = perda de conversão para clientes com crédito).",
+      "status": "✅ **Fechado — comportamento esperado**",
+      "severity_level": "alta",
+      "severity_label": "Alta",
+      "status_category": "closed",
+      "status_clean": "Fechado — comportamento esperado"
+    },
+    {
+      "id": "F-009",
+      "title": "Aviso de devolução em loja removido da Conta (v2.0.0)",
+      "severity": "🟠 Média (informação relevante ao consumidor).",
+      "status": "🟡 **Em correção — falta ativar via CMS**",
+      "severity_level": "media",
+      "severity_label": "Média",
+      "status_category": "in_progress",
+      "status_clean": "Em correção — falta ativar via CMS"
+    },
+    {
+      "id": "F-010",
+      "title": "Texto legal de política de privacidade ausente no Login (v2.0.0)",
+      "severity": "🔴 Alta (compliance LGPD).",
+      "status": "🟡 **Em correção — ticket aberto**",
+      "severity_level": "alta",
+      "severity_label": "Alta",
+      "status_category": "in_progress",
+      "status_clean": "Em correção — ticket aberto"
+    },
+    {
+      "id": "F-012",
+      "title": "Wishlist persiste para usuário anônimo (positivo)",
+      "severity": "🟢 Comportamento positivo (não-bug), só vale documentar.",
+      "status": null,
+      "severity_level": "positivo",
+      "severity_label": "Positivo",
+      "status_category": "open",
+      "status_clean": "Aberto"
+    },
+    {
+      "id": "F-011",
+      "title": "Typo no título do bottom sheet de ordenação",
+      "severity": "🟢 Baixa (cosmético, mas visível ao usuário).",
+      "status": "✅ **Verificado — corrigido em 2026-05-28**",
+      "severity_level": "baixa",
+      "severity_label": "Baixa",
+      "status_category": "closed",
+      "status_clean": "Verificado — corrigido em 2026-05-28"
+    },
+    {
+      "id": "F-013",
+      "title": "Validação frouxa de email no checkout guest",
+      "severity": null,
+      "status": "❌ **Won't fix**",
+      "severity_level": "desconhecido",
+      "severity_label": "—",
+      "status_category": "wontfix",
+      "status_clean": "Won't fix"
+    },
+    {
+      "id": "F-014",
+      "title": "Botões usam o texto do estado desabilitado como label",
+      "severity": null,
+      "status": "❌ **Won't fix**",
+      "severity_level": "desconhecido",
+      "severity_label": "—",
+      "status_category": "wontfix",
+      "status_clean": "Won't fix"
+    },
+    {
+      "id": "F-015",
+      "title": "Tap por coordenada no primeiro produto da PLP é instável em cold state",
+      "severity": null,
+      "status": "✅ **Verificado — corrigido em 2026-05-30**",
+      "severity_level": "desconhecido",
+      "severity_label": "—",
+      "status_category": "closed",
+      "status_clean": "Verificado — corrigido em 2026-05-30"
+    },
+    {
+      "id": "F-016",
+      "title": "\"Salvar para depois\" anônimo leva a tela de erro genérica",
+      "severity": null,
+      "status": "✅ **Verificado — corrigido em 2026-05-28**",
+      "severity_level": "desconhecido",
+      "severity_label": "—",
+      "status_category": "closed",
+      "status_clean": "Verificado — corrigido em 2026-05-28"
+    },
+    {
+      "id": "F-017",
+      "title": "Sacola/Wishlist limpas após logout",
+      "severity": null,
+      "status": "observação de comportamento, não-bug óbvio — mas vale validar com produto se é intencional. Em apps de e-commerce, é comum:",
+      "severity_level": "desconhecido",
+      "severity_label": "—",
+      "status_category": "closed",
+      "status_clean": "observação de comportamento, não-bug óbvio — mas vale validar com produto se é intencional. Em apps de e-commerce, é comum:"
+    },
+    {
+      "id": "F-018",
+      "title": "Modal de biometria pós-login",
+      "severity": null,
+      "status": "não é bug; é fluxo de produto. Mencionado aqui porque **toda automação que loga precisa dispensar esse modal**. Já incorporado no subflow `auth/login.yaml`.",
+      "severity_level": "desconhecido",
+      "severity_label": "—",
+      "status_category": "open",
+      "status_clean": "não é bug; é fluxo de produto. Mencionado aqui porque toda automação que loga precisa dispensar esse modal. Já incorporado no subflow `auth/login.yaml`."
+    }
+  ],
+  "open_findings": 5
+}

@@ -1,0 +1,3329 @@
+{
+  "brand": "reserva",
+  "display_name": "Reserva",
+  "schema_version": 1,
+  "generated_at": "2026-06-03T22:29:44.768805+00:00",
+  "app": {
+    "bundle_id": "com.globalsys.reserva",
+    "version": "2000000.0.0",
+    "build": "1",
+    "build_path": "brands/reserva/test-builds/Reserva29-05.app"
+  },
+  "last_run": {
+    "stamp": "2026-06-03-1843",
+    "status": "PASS",
+    "pass": 16,
+    "fail": 0,
+    "total": 16,
+    "duration_s": 2383
+  },
+  "runs": [
+    {
+      "stamp": "2026-06-03-1843",
+      "status": "PASS",
+      "pass": 16,
+      "fail": 0,
+      "total": 16,
+      "duration_s": 2383,
+      "report_md": "brands/reserva/reports/run-2026-06-03-1843.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-03-1843/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 11
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 34
+        },
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "PASS",
+          "duration_s": 149
+        },
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "PASS",
+          "duration_s": 178
+        },
+        {
+          "name": "10-compra-via-busca",
+          "status": "PASS",
+          "duration_s": 315
+        },
+        {
+          "name": "10-compra-via-categoria",
+          "status": "PASS",
+          "duration_s": 337
+        },
+        {
+          "name": "20-busca-textual",
+          "status": "PASS",
+          "duration_s": 170
+        },
+        {
+          "name": "20-categoria-navegacao",
+          "status": "PASS",
+          "duration_s": 126
+        },
+        {
+          "name": "20-cupom-aplicar",
+          "status": "PASS",
+          "duration_s": 223
+        },
+        {
+          "name": "20-home-dobras",
+          "status": "PASS",
+          "duration_s": 119
+        },
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "PASS",
+          "duration_s": 117
+        },
+        {
+          "name": "20-sacola-editar",
+          "status": "PASS",
+          "duration_s": 171
+        },
+        {
+          "name": "20-wishlist-favoritar",
+          "status": "PASS",
+          "duration_s": 141
+        },
+        {
+          "name": "30-conta-perfil",
+          "status": "PASS",
+          "duration_s": 81
+        },
+        {
+          "name": "30-logout",
+          "status": "PASS",
+          "duration_s": 88
+        },
+        {
+          "name": "30-pedidos-historico",
+          "status": "PASS",
+          "duration_s": 123
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-03-1838",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 156,
+      "report_md": "brands/reserva/reports/run-2026-06-03-1838.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-03-1838/",
+      "flows": [
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "PASS",
+          "duration_s": 156
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-03-1812",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 218,
+      "report_md": "brands/reserva/reports/run-2026-06-03-1812.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-03-1812/",
+      "flows": [
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "FAIL",
+          "duration_s": 218
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-03-1805",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 160,
+      "report_md": "brands/reserva/reports/run-2026-06-03-1805.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-03-1805/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "PASS",
+          "duration_s": 160
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-03-1752",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 696,
+      "report_md": "brands/reserva/reports/run-2026-06-03-1752.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-03-1752/",
+      "flows": [
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "PASS",
+          "duration_s": 696
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-03-1747",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 129,
+      "report_md": "brands/reserva/reports/run-2026-06-03-1747.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-03-1747/",
+      "flows": [
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "FAIL",
+          "duration_s": 129
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-03-1739",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 103,
+      "report_md": "brands/reserva/reports/run-2026-06-03-1739.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-03-1739/",
+      "flows": [
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "PASS",
+          "duration_s": 103
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-03-1711",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 168,
+      "report_md": "brands/reserva/reports/run-2026-06-03-1711.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-03-1711/",
+      "flows": [
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "FAIL",
+          "duration_s": 168
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-03-1707",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 146,
+      "report_md": "brands/reserva/reports/run-2026-06-03-1707.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-03-1707/",
+      "flows": [
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "FAIL",
+          "duration_s": 146
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-03-1655",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 125,
+      "report_md": "brands/reserva/reports/run-2026-06-03-1655.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-03-1655/",
+      "flows": [
+        {
+          "name": "20-wishlist-favoritar",
+          "status": "PASS",
+          "duration_s": 125
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-03-1653",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 107,
+      "report_md": "brands/reserva/reports/run-2026-06-03-1653.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-03-1653/",
+      "flows": [
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "FAIL",
+          "duration_s": 107
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-03-1651",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 89,
+      "report_md": "brands/reserva/reports/run-2026-06-03-1651.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-03-1651/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 89
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-03-1649",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 158,
+      "report_md": "brands/reserva/reports/run-2026-06-03-1649.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-03-1649/",
+      "flows": [
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "FAIL",
+          "duration_s": 158
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-03-1645",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 207,
+      "report_md": "brands/reserva/reports/run-2026-06-03-1645.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-03-1645/",
+      "flows": [
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "FAIL",
+          "duration_s": 207
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-03-1633",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 135,
+      "report_md": "brands/reserva/reports/run-2026-06-03-1633.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-03-1633/",
+      "flows": [
+        {
+          "name": "20-wishlist-favoritar",
+          "status": "FAIL",
+          "duration_s": 135
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-03-1631",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 124,
+      "report_md": "brands/reserva/reports/run-2026-06-03-1631.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-03-1631/",
+      "flows": [
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "FAIL",
+          "duration_s": 124
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-03-1619",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 734,
+      "report_md": "brands/reserva/reports/run-2026-06-03-1619.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-03-1619/",
+      "flows": [
+        {
+          "name": "10-compra-via-categoria",
+          "status": "PASS",
+          "duration_s": 734
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-03-1615",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 206,
+      "report_md": "brands/reserva/reports/run-2026-06-03-1615.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-03-1615/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 206
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-03-1610",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 277,
+      "report_md": "brands/reserva/reports/run-2026-06-03-1610.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-03-1610/",
+      "flows": [
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "FAIL",
+          "duration_s": 277
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-03-1608",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 127,
+      "report_md": "brands/reserva/reports/run-2026-06-03-1608.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-03-1608/",
+      "flows": [
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "FAIL",
+          "duration_s": 127
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-03-1553",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 0,
+      "total": 0,
+      "duration_s": 0,
+      "report_md": "brands/reserva/reports/run-2026-06-03-1553.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-03-1553/",
+      "flows": []
+    },
+    {
+      "stamp": "2026-06-03-1551",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 100,
+      "report_md": "brands/reserva/reports/run-2026-06-03-1551.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-03-1551/",
+      "flows": [
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "FAIL",
+          "duration_s": 100
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-03-1509",
+      "status": "FAIL",
+      "pass": 10,
+      "fail": 6,
+      "total": 16,
+      "duration_s": 1889,
+      "report_md": "brands/reserva/reports/run-2026-06-03-1509.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-03-1509/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 40
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 67
+        },
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "FAIL",
+          "duration_s": 151
+        },
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "FAIL",
+          "duration_s": 179
+        },
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 86
+        },
+        {
+          "name": "10-compra-via-categoria",
+          "status": "FAIL",
+          "duration_s": 147
+        },
+        {
+          "name": "20-busca-textual",
+          "status": "PASS",
+          "duration_s": 190
+        },
+        {
+          "name": "20-categoria-navegacao",
+          "status": "PASS",
+          "duration_s": 84
+        },
+        {
+          "name": "20-cupom-aplicar",
+          "status": "PASS",
+          "duration_s": 200
+        },
+        {
+          "name": "20-home-dobras",
+          "status": "PASS",
+          "duration_s": 79
+        },
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "FAIL",
+          "duration_s": 87
+        },
+        {
+          "name": "20-sacola-editar",
+          "status": "PASS",
+          "duration_s": 151
+        },
+        {
+          "name": "20-wishlist-favoritar",
+          "status": "FAIL",
+          "duration_s": 146
+        },
+        {
+          "name": "30-conta-perfil",
+          "status": "PASS",
+          "duration_s": 94
+        },
+        {
+          "name": "30-logout",
+          "status": "PASS",
+          "duration_s": 86
+        },
+        {
+          "name": "30-pedidos-historico",
+          "status": "PASS",
+          "duration_s": 102
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-03-1507",
+      "status": "PASS",
+      "pass": 2,
+      "fail": 0,
+      "total": 2,
+      "duration_s": 80,
+      "report_md": "brands/reserva/reports/run-2026-06-03-1507.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-03-1507/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 25
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 55
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-03-1503",
+      "status": "FAIL",
+      "pass": 1,
+      "fail": 1,
+      "total": 2,
+      "duration_s": 214,
+      "report_md": "brands/reserva/reports/run-2026-06-03-1503.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-03-1503/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "FAIL",
+          "duration_s": 125
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 89
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-03-1001",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 167,
+      "report_md": "brands/reserva/reports/run-2026-06-03-1001.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-03-1001/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "PASS",
+          "duration_s": 167
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-03-0929",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 92,
+      "report_md": "brands/reserva/reports/run-2026-06-03-0929.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-03-0929/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 92
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-1944",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 162,
+      "report_md": "brands/reserva/reports/run-2026-06-02-1944.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-1944/",
+      "flows": [
+        {
+          "name": "20-sacola-editar",
+          "status": "PASS",
+          "duration_s": 162
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-1941",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 68,
+      "report_md": "brands/reserva/reports/run-2026-06-02-1941.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-1941/",
+      "flows": [
+        {
+          "name": "20-sacola-editar",
+          "status": "FAIL",
+          "duration_s": 68
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-1855",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 154,
+      "report_md": "brands/reserva/reports/run-2026-06-02-1855.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-1855/",
+      "flows": [
+        {
+          "name": "30-conta-perfil",
+          "status": "PASS",
+          "duration_s": 154
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-1628",
+      "status": "FAIL",
+      "pass": 8,
+      "fail": 8,
+      "total": 16,
+      "duration_s": 2152,
+      "report_md": "brands/reserva/reports/run-2026-06-02-1628.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-1628/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 141
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "FAIL",
+          "duration_s": 247
+        },
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "FAIL",
+          "duration_s": 109
+        },
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "FAIL",
+          "duration_s": 94
+        },
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 123
+        },
+        {
+          "name": "10-compra-via-categoria",
+          "status": "PASS",
+          "duration_s": 157
+        },
+        {
+          "name": "20-busca-textual",
+          "status": "PASS",
+          "duration_s": 98
+        },
+        {
+          "name": "20-categoria-navegacao",
+          "status": "PASS",
+          "duration_s": 85
+        },
+        {
+          "name": "20-cupom-aplicar",
+          "status": "PASS",
+          "duration_s": 223
+        },
+        {
+          "name": "20-home-dobras",
+          "status": "PASS",
+          "duration_s": 130
+        },
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "PASS",
+          "duration_s": 114
+        },
+        {
+          "name": "20-sacola-editar",
+          "status": "FAIL",
+          "duration_s": 84
+        },
+        {
+          "name": "20-wishlist-favoritar",
+          "status": "PASS",
+          "duration_s": 142
+        },
+        {
+          "name": "30-conta-perfil",
+          "status": "FAIL",
+          "duration_s": 117
+        },
+        {
+          "name": "30-logout",
+          "status": "FAIL",
+          "duration_s": 154
+        },
+        {
+          "name": "30-pedidos-historico",
+          "status": "FAIL",
+          "duration_s": 134
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-1624",
+      "status": "FAIL",
+      "pass": 1,
+      "fail": 1,
+      "total": 2,
+      "duration_s": 191,
+      "report_md": "brands/reserva/reports/run-2026-06-02-1624.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-1624/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 66
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "FAIL",
+          "duration_s": 125
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-1617",
+      "status": "FAIL",
+      "pass": 1,
+      "fail": 1,
+      "total": 2,
+      "duration_s": 259,
+      "report_md": "brands/reserva/reports/run-2026-06-02-1617.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-1617/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 129
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "FAIL",
+          "duration_s": 130
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-1456",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 192,
+      "report_md": "brands/reserva/reports/run-2026-06-02-1456.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-1456/",
+      "flows": [
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "PASS",
+          "duration_s": 192
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-1454",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 116,
+      "report_md": "brands/reserva/reports/run-2026-06-02-1454.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-1454/",
+      "flows": [
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "PASS",
+          "duration_s": 116
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-1452",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 85,
+      "report_md": "brands/reserva/reports/run-2026-06-02-1452.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-1452/",
+      "flows": [
+        {
+          "name": "30-logout",
+          "status": "PASS",
+          "duration_s": 85
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-1451",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 2,
+      "report_md": "brands/reserva/reports/run-2026-06-02-1451.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-1451/",
+      "flows": [
+        {
+          "name": "30-logout",
+          "status": "FAIL",
+          "duration_s": 2
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-1450",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 3,
+      "report_md": "brands/reserva/reports/run-2026-06-02-1450.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-1450/",
+      "flows": [
+        {
+          "name": "30-logout",
+          "status": "FAIL",
+          "duration_s": 3
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-1344",
+      "status": "FAIL",
+      "pass": 13,
+      "fail": 3,
+      "total": 16,
+      "duration_s": 1780,
+      "report_md": "brands/reserva/reports/run-2026-06-02-1344.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-1344/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 24
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 46
+        },
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "FAIL",
+          "duration_s": 99
+        },
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "FAIL",
+          "duration_s": 84
+        },
+        {
+          "name": "10-compra-via-busca",
+          "status": "PASS",
+          "duration_s": 146
+        },
+        {
+          "name": "10-compra-via-categoria",
+          "status": "PASS",
+          "duration_s": 144
+        },
+        {
+          "name": "20-busca-textual",
+          "status": "PASS",
+          "duration_s": 62
+        },
+        {
+          "name": "20-categoria-navegacao",
+          "status": "PASS",
+          "duration_s": 64
+        },
+        {
+          "name": "20-cupom-aplicar",
+          "status": "PASS",
+          "duration_s": 147
+        },
+        {
+          "name": "20-home-dobras",
+          "status": "PASS",
+          "duration_s": 84
+        },
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "PASS",
+          "duration_s": 83
+        },
+        {
+          "name": "20-sacola-editar",
+          "status": "PASS",
+          "duration_s": 158
+        },
+        {
+          "name": "20-wishlist-favoritar",
+          "status": "PASS",
+          "duration_s": 215
+        },
+        {
+          "name": "30-conta-perfil",
+          "status": "PASS",
+          "duration_s": 133
+        },
+        {
+          "name": "30-logout",
+          "status": "FAIL",
+          "duration_s": 140
+        },
+        {
+          "name": "30-pedidos-historico",
+          "status": "PASS",
+          "duration_s": 151
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-1341",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 79,
+      "report_md": "brands/reserva/reports/run-2026-06-02-1341.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-1341/",
+      "flows": [
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "PASS",
+          "duration_s": 79
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-1338",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 92,
+      "report_md": "brands/reserva/reports/run-2026-06-02-1338.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-1338/",
+      "flows": [
+        {
+          "name": "_debug-filtros",
+          "status": "PASS",
+          "duration_s": 92
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-1305",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 155,
+      "report_md": "brands/reserva/reports/run-2026-06-02-1305.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-1305/",
+      "flows": [
+        {
+          "name": "20-cupom-aplicar",
+          "status": "PASS",
+          "duration_s": 155
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-1300",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 175,
+      "report_md": "brands/reserva/reports/run-2026-06-02-1300.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-1300/",
+      "flows": [
+        {
+          "name": "20-cupom-aplicar",
+          "status": "FAIL",
+          "duration_s": 175
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-1252",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 150,
+      "report_md": "brands/reserva/reports/run-2026-06-02-1252.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-1252/",
+      "flows": [
+        {
+          "name": "_debug-cupom",
+          "status": "PASS",
+          "duration_s": 150
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-1247",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 162,
+      "report_md": "brands/reserva/reports/run-2026-06-02-1247.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-1247/",
+      "flows": [
+        {
+          "name": "_debug-cupom",
+          "status": "PASS",
+          "duration_s": 162
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-1240",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 178,
+      "report_md": "brands/reserva/reports/run-2026-06-02-1240.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-1240/",
+      "flows": [
+        {
+          "name": "20-cupom-aplicar",
+          "status": "FAIL",
+          "duration_s": 178
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-1236",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 154,
+      "report_md": "brands/reserva/reports/run-2026-06-02-1236.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-1236/",
+      "flows": [
+        {
+          "name": "20-cupom-aplicar",
+          "status": "FAIL",
+          "duration_s": 154
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-1205",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 67,
+      "report_md": "brands/reserva/reports/run-2026-06-02-1205.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-1205/",
+      "flows": [
+        {
+          "name": "20-cupom-aplicar",
+          "status": "FAIL",
+          "duration_s": 67
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-1157",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 264,
+      "report_md": "brands/reserva/reports/run-2026-06-02-1157.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-1157/",
+      "flows": [
+        {
+          "name": "20-cupom-aplicar",
+          "status": "FAIL",
+          "duration_s": 264
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-1140",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 169,
+      "report_md": "brands/reserva/reports/run-2026-06-02-1140.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-1140/",
+      "flows": [
+        {
+          "name": "20-cupom-aplicar",
+          "status": "FAIL",
+          "duration_s": 169
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-1131",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 163,
+      "report_md": "brands/reserva/reports/run-2026-06-02-1131.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-1131/",
+      "flows": [
+        {
+          "name": "20-cupom-aplicar",
+          "status": "FAIL",
+          "duration_s": 163
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-1122",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 172,
+      "report_md": "brands/reserva/reports/run-2026-06-02-1122.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-1122/",
+      "flows": [
+        {
+          "name": "20-cupom-aplicar",
+          "status": "FAIL",
+          "duration_s": 172
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-1116",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 154,
+      "report_md": "brands/reserva/reports/run-2026-06-02-1116.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-1116/",
+      "flows": [
+        {
+          "name": "20-cupom-aplicar",
+          "status": "FAIL",
+          "duration_s": 154
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-1106",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 146,
+      "report_md": "brands/reserva/reports/run-2026-06-02-1106.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-1106/",
+      "flows": [
+        {
+          "name": "20-sacola-editar",
+          "status": "PASS",
+          "duration_s": 146
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-1056",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 112,
+      "report_md": "brands/reserva/reports/run-2026-06-02-1056.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-1056/",
+      "flows": [
+        {
+          "name": "20-sacola-editar",
+          "status": "FAIL",
+          "duration_s": 112
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-1050",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 32,
+      "report_md": "brands/reserva/reports/run-2026-06-02-1050.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-1050/",
+      "flows": [
+        {
+          "name": "20-sacola-editar",
+          "status": "FAIL",
+          "duration_s": 32
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-1034",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 71,
+      "report_md": "brands/reserva/reports/run-2026-06-02-1034.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-1034/",
+      "flows": [
+        {
+          "name": "20-sacola-editar",
+          "status": "FAIL",
+          "duration_s": 71
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-1032",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 81,
+      "report_md": "brands/reserva/reports/run-2026-06-02-1032.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-1032/",
+      "flows": [
+        {
+          "name": "20-sacola-editar",
+          "status": "FAIL",
+          "duration_s": 81
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-1025",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 127,
+      "report_md": "brands/reserva/reports/run-2026-06-02-1025.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-1025/",
+      "flows": [
+        {
+          "name": "10-compra-via-categoria",
+          "status": "PASS",
+          "duration_s": 127
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-1023",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 136,
+      "report_md": "brands/reserva/reports/run-2026-06-02-1023.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-1023/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "PASS",
+          "duration_s": 136
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-0957",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 177,
+      "report_md": "brands/reserva/reports/run-2026-06-02-0957.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-0957/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 177
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-0951",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 94,
+      "report_md": "brands/reserva/reports/run-2026-06-02-0951.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-0951/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 94
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-0939",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 89,
+      "report_md": "brands/reserva/reports/run-2026-06-02-0939.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-0939/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 89
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-0928",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 96,
+      "report_md": "brands/reserva/reports/run-2026-06-02-0928.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-0928/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 96
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-0918",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 95,
+      "report_md": "brands/reserva/reports/run-2026-06-02-0918.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-0918/",
+      "flows": [
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "PASS",
+          "duration_s": 95
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-0914",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 92,
+      "report_md": "brands/reserva/reports/run-2026-06-02-0914.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-0914/",
+      "flows": [
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "PASS",
+          "duration_s": 92
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-0910",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 109,
+      "report_md": "brands/reserva/reports/run-2026-06-02-0910.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-0910/",
+      "flows": [
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "FAIL",
+          "duration_s": 109
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-0858",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 95,
+      "report_md": "brands/reserva/reports/run-2026-06-02-0858.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-0858/",
+      "flows": [
+        {
+          "name": "20-wishlist-favoritar",
+          "status": "PASS",
+          "duration_s": 95
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-02-0857",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 52,
+      "report_md": "brands/reserva/reports/run-2026-06-02-0857.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-02-0857/",
+      "flows": [
+        {
+          "name": "30-conta-perfil",
+          "status": "PASS",
+          "duration_s": 52
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-01-1735",
+      "status": "FAIL",
+      "pass": 8,
+      "fail": 8,
+      "total": 16,
+      "duration_s": 1071,
+      "report_md": "brands/reserva/reports/run-2026-06-01-1735.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-01-1735/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 14
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 30
+        },
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "FAIL",
+          "duration_s": 108
+        },
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "PASS",
+          "duration_s": 68
+        },
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 83
+        },
+        {
+          "name": "10-compra-via-categoria",
+          "status": "FAIL",
+          "duration_s": 93
+        },
+        {
+          "name": "20-busca-textual",
+          "status": "PASS",
+          "duration_s": 47
+        },
+        {
+          "name": "20-categoria-navegacao",
+          "status": "PASS",
+          "duration_s": 54
+        },
+        {
+          "name": "20-cupom-aplicar",
+          "status": "FAIL",
+          "duration_s": 99
+        },
+        {
+          "name": "20-home-dobras",
+          "status": "PASS",
+          "duration_s": 48
+        },
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "FAIL",
+          "duration_s": 66
+        },
+        {
+          "name": "20-sacola-editar",
+          "status": "FAIL",
+          "duration_s": 102
+        },
+        {
+          "name": "20-wishlist-favoritar",
+          "status": "FAIL",
+          "duration_s": 93
+        },
+        {
+          "name": "30-conta-perfil",
+          "status": "FAIL",
+          "duration_s": 52
+        },
+        {
+          "name": "30-logout",
+          "status": "PASS",
+          "duration_s": 47
+        },
+        {
+          "name": "30-pedidos-historico",
+          "status": "PASS",
+          "duration_s": 67
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-01-1657",
+      "status": "FAIL",
+      "pass": 7,
+      "fail": 9,
+      "total": 16,
+      "duration_s": 1768,
+      "report_md": "brands/reserva/reports/run-2026-06-01-1657.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-01-1657/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 15
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 38
+        },
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "FAIL",
+          "duration_s": 172
+        },
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "FAIL",
+          "duration_s": 66
+        },
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 147
+        },
+        {
+          "name": "10-compra-via-categoria",
+          "status": "FAIL",
+          "duration_s": 147
+        },
+        {
+          "name": "20-busca-textual",
+          "status": "PASS",
+          "duration_s": 92
+        },
+        {
+          "name": "20-categoria-navegacao",
+          "status": "PASS",
+          "duration_s": 109
+        },
+        {
+          "name": "20-cupom-aplicar",
+          "status": "FAIL",
+          "duration_s": 183
+        },
+        {
+          "name": "20-home-dobras",
+          "status": "PASS",
+          "duration_s": 79
+        },
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "FAIL",
+          "duration_s": 114
+        },
+        {
+          "name": "20-sacola-editar",
+          "status": "FAIL",
+          "duration_s": 216
+        },
+        {
+          "name": "20-wishlist-favoritar",
+          "status": "FAIL",
+          "duration_s": 170
+        },
+        {
+          "name": "30-conta-perfil",
+          "status": "FAIL",
+          "duration_s": 69
+        },
+        {
+          "name": "30-logout",
+          "status": "PASS",
+          "duration_s": 58
+        },
+        {
+          "name": "30-pedidos-historico",
+          "status": "PASS",
+          "duration_s": 93
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-01-1622",
+      "status": "FAIL",
+      "pass": 5,
+      "fail": 11,
+      "total": 16,
+      "duration_s": 1278,
+      "report_md": "brands/reserva/reports/run-2026-06-01-1622.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-01-1622/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 15
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 33
+        },
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "FAIL",
+          "duration_s": 106
+        },
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "FAIL",
+          "duration_s": 60
+        },
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 118
+        },
+        {
+          "name": "10-compra-via-categoria",
+          "status": "FAIL",
+          "duration_s": 126
+        },
+        {
+          "name": "20-busca-textual",
+          "status": "PASS",
+          "duration_s": 83
+        },
+        {
+          "name": "20-categoria-navegacao",
+          "status": "FAIL",
+          "duration_s": 81
+        },
+        {
+          "name": "20-cupom-aplicar",
+          "status": "FAIL",
+          "duration_s": 73
+        },
+        {
+          "name": "20-home-dobras",
+          "status": "PASS",
+          "duration_s": 75
+        },
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "FAIL",
+          "duration_s": 86
+        },
+        {
+          "name": "20-sacola-editar",
+          "status": "FAIL",
+          "duration_s": 106
+        },
+        {
+          "name": "20-wishlist-favoritar",
+          "status": "FAIL",
+          "duration_s": 128
+        },
+        {
+          "name": "30-conta-perfil",
+          "status": "FAIL",
+          "duration_s": 64
+        },
+        {
+          "name": "30-logout",
+          "status": "FAIL",
+          "duration_s": 62
+        },
+        {
+          "name": "30-pedidos-historico",
+          "status": "PASS",
+          "duration_s": 62
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-01-1619",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 90,
+      "report_md": "brands/reserva/reports/run-2026-06-01-1619.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-01-1619/",
+      "flows": [
+        {
+          "name": "20-categoria-navegacao",
+          "status": "FAIL",
+          "duration_s": 90
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-01-1537",
+      "status": "FAIL",
+      "pass": 6,
+      "fail": 10,
+      "total": 16,
+      "duration_s": 1338,
+      "report_md": "brands/reserva/reports/run-2026-06-01-1537.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-01-1537/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 39
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 48
+        },
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "FAIL",
+          "duration_s": 84
+        },
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "FAIL",
+          "duration_s": 116
+        },
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 123
+        },
+        {
+          "name": "10-compra-via-categoria",
+          "status": "FAIL",
+          "duration_s": 67
+        },
+        {
+          "name": "20-busca-textual",
+          "status": "PASS",
+          "duration_s": 84
+        },
+        {
+          "name": "20-categoria-navegacao",
+          "status": "FAIL",
+          "duration_s": 65
+        },
+        {
+          "name": "20-cupom-aplicar",
+          "status": "FAIL",
+          "duration_s": 107
+        },
+        {
+          "name": "20-home-dobras",
+          "status": "PASS",
+          "duration_s": 71
+        },
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "FAIL",
+          "duration_s": 103
+        },
+        {
+          "name": "20-sacola-editar",
+          "status": "FAIL",
+          "duration_s": 78
+        },
+        {
+          "name": "20-wishlist-favoritar",
+          "status": "FAIL",
+          "duration_s": 142
+        },
+        {
+          "name": "30-conta-perfil",
+          "status": "FAIL",
+          "duration_s": 64
+        },
+        {
+          "name": "30-logout",
+          "status": "PASS",
+          "duration_s": 61
+        },
+        {
+          "name": "30-pedidos-historico",
+          "status": "PASS",
+          "duration_s": 86
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-01-1534",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 100,
+      "report_md": "brands/reserva/reports/run-2026-06-01-1534.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-01-1534/",
+      "flows": [
+        {
+          "name": "20-busca-textual",
+          "status": "PASS",
+          "duration_s": 100
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-01-1532",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 82,
+      "report_md": "brands/reserva/reports/run-2026-06-01-1532.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-01-1532/",
+      "flows": [
+        {
+          "name": "20-busca-textual",
+          "status": "FAIL",
+          "duration_s": 82
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-01-1502",
+      "status": "FAIL",
+      "pass": 6,
+      "fail": 10,
+      "total": 16,
+      "duration_s": 1372,
+      "report_md": "brands/reserva/reports/run-2026-06-01-1502.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-01-1502/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 19
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 42
+        },
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "FAIL",
+          "duration_s": 70
+        },
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "FAIL",
+          "duration_s": 77
+        },
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 163
+        },
+        {
+          "name": "10-compra-via-categoria",
+          "status": "FAIL",
+          "duration_s": 125
+        },
+        {
+          "name": "20-busca-textual",
+          "status": "FAIL",
+          "duration_s": 67
+        },
+        {
+          "name": "20-categoria-navegacao",
+          "status": "PASS",
+          "duration_s": 71
+        },
+        {
+          "name": "20-cupom-aplicar",
+          "status": "FAIL",
+          "duration_s": 95
+        },
+        {
+          "name": "20-home-dobras",
+          "status": "PASS",
+          "duration_s": 64
+        },
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "FAIL",
+          "duration_s": 80
+        },
+        {
+          "name": "20-sacola-editar",
+          "status": "FAIL",
+          "duration_s": 96
+        },
+        {
+          "name": "20-wishlist-favoritar",
+          "status": "FAIL",
+          "duration_s": 98
+        },
+        {
+          "name": "30-conta-perfil",
+          "status": "FAIL",
+          "duration_s": 133
+        },
+        {
+          "name": "30-logout",
+          "status": "PASS",
+          "duration_s": 91
+        },
+        {
+          "name": "30-pedidos-historico",
+          "status": "PASS",
+          "duration_s": 81
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-01-1441",
+      "status": "FAIL",
+      "pass": 6,
+      "fail": 10,
+      "total": 16,
+      "duration_s": 1153,
+      "report_md": "brands/reserva/reports/run-2026-06-01-1441.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-01-1441/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 23
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 41
+        },
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "FAIL",
+          "duration_s": 89
+        },
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "FAIL",
+          "duration_s": 59
+        },
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 82
+        },
+        {
+          "name": "10-compra-via-categoria",
+          "status": "FAIL",
+          "duration_s": 92
+        },
+        {
+          "name": "20-busca-textual",
+          "status": "PASS",
+          "duration_s": 58
+        },
+        {
+          "name": "20-categoria-navegacao",
+          "status": "FAIL",
+          "duration_s": 58
+        },
+        {
+          "name": "20-cupom-aplicar",
+          "status": "FAIL",
+          "duration_s": 116
+        },
+        {
+          "name": "20-home-dobras",
+          "status": "PASS",
+          "duration_s": 53
+        },
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "FAIL",
+          "duration_s": 59
+        },
+        {
+          "name": "20-sacola-editar",
+          "status": "FAIL",
+          "duration_s": 87
+        },
+        {
+          "name": "20-wishlist-favoritar",
+          "status": "FAIL",
+          "duration_s": 118
+        },
+        {
+          "name": "30-conta-perfil",
+          "status": "FAIL",
+          "duration_s": 61
+        },
+        {
+          "name": "30-logout",
+          "status": "PASS",
+          "duration_s": 64
+        },
+        {
+          "name": "30-pedidos-historico",
+          "status": "PASS",
+          "duration_s": 93
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-01-1438",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 117,
+      "report_md": "brands/reserva/reports/run-2026-06-01-1438.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-01-1438/",
+      "flows": [
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "FAIL",
+          "duration_s": 117
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-01-0953",
+      "status": "FAIL",
+      "pass": 6,
+      "fail": 10,
+      "total": 16,
+      "duration_s": 1020,
+      "report_md": "brands/reserva/reports/run-2026-06-01-0953.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-01-0953/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 11
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 25
+        },
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "FAIL",
+          "duration_s": 73
+        },
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "FAIL",
+          "duration_s": 70
+        },
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 55
+        },
+        {
+          "name": "10-compra-via-categoria",
+          "status": "PASS",
+          "duration_s": 122
+        },
+        {
+          "name": "20-busca-textual",
+          "status": "PASS",
+          "duration_s": 53
+        },
+        {
+          "name": "20-categoria-navegacao",
+          "status": "FAIL",
+          "duration_s": 52
+        },
+        {
+          "name": "20-cupom-aplicar",
+          "status": "FAIL",
+          "duration_s": 77
+        },
+        {
+          "name": "20-home-dobras",
+          "status": "PASS",
+          "duration_s": 46
+        },
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "FAIL",
+          "duration_s": 53
+        },
+        {
+          "name": "20-sacola-editar",
+          "status": "FAIL",
+          "duration_s": 67
+        },
+        {
+          "name": "20-wishlist-favoritar",
+          "status": "FAIL",
+          "duration_s": 56
+        },
+        {
+          "name": "30-conta-perfil",
+          "status": "FAIL",
+          "duration_s": 142
+        },
+        {
+          "name": "30-logout",
+          "status": "FAIL",
+          "duration_s": 60
+        },
+        {
+          "name": "30-pedidos-historico",
+          "status": "PASS",
+          "duration_s": 58
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-01-0937",
+      "status": "FAIL",
+      "pass": 5,
+      "fail": 11,
+      "total": 16,
+      "duration_s": 876,
+      "report_md": "brands/reserva/reports/run-2026-06-01-0937.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-01-0937/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 11
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 24
+        },
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "FAIL",
+          "duration_s": 72
+        },
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "FAIL",
+          "duration_s": 64
+        },
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 54
+        },
+        {
+          "name": "10-compra-via-categoria",
+          "status": "FAIL",
+          "duration_s": 77
+        },
+        {
+          "name": "20-busca-textual",
+          "status": "PASS",
+          "duration_s": 47
+        },
+        {
+          "name": "20-categoria-navegacao",
+          "status": "FAIL",
+          "duration_s": 53
+        },
+        {
+          "name": "20-cupom-aplicar",
+          "status": "FAIL",
+          "duration_s": 74
+        },
+        {
+          "name": "20-home-dobras",
+          "status": "PASS",
+          "duration_s": 38
+        },
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "FAIL",
+          "duration_s": 51
+        },
+        {
+          "name": "20-sacola-editar",
+          "status": "FAIL",
+          "duration_s": 45
+        },
+        {
+          "name": "20-wishlist-favoritar",
+          "status": "FAIL",
+          "duration_s": 76
+        },
+        {
+          "name": "30-conta-perfil",
+          "status": "FAIL",
+          "duration_s": 59
+        },
+        {
+          "name": "30-logout",
+          "status": "PASS",
+          "duration_s": 61
+        },
+        {
+          "name": "30-pedidos-historico",
+          "status": "FAIL",
+          "duration_s": 70
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-01-0936",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 49,
+      "report_md": "brands/reserva/reports/run-2026-06-01-0936.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-01-0936/",
+      "flows": [
+        {
+          "name": "20-home-dobras",
+          "status": "PASS",
+          "duration_s": 49
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-31-2045",
+      "status": "FAIL",
+      "pass": 2,
+      "fail": 14,
+      "total": 16,
+      "duration_s": 719,
+      "report_md": "brands/reserva/reports/run-2026-05-31-2045.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-05-31-2045/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 15
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 30
+        },
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "FAIL",
+          "duration_s": 36
+        },
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "FAIL",
+          "duration_s": 65
+        },
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 47
+        },
+        {
+          "name": "10-compra-via-categoria",
+          "status": "FAIL",
+          "duration_s": 48
+        },
+        {
+          "name": "20-busca-textual",
+          "status": "FAIL",
+          "duration_s": 49
+        },
+        {
+          "name": "20-categoria-navegacao",
+          "status": "FAIL",
+          "duration_s": 48
+        },
+        {
+          "name": "20-cupom-aplicar",
+          "status": "FAIL",
+          "duration_s": 47
+        },
+        {
+          "name": "20-home-dobras",
+          "status": "FAIL",
+          "duration_s": 47
+        },
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "FAIL",
+          "duration_s": 47
+        },
+        {
+          "name": "20-sacola-editar",
+          "status": "FAIL",
+          "duration_s": 47
+        },
+        {
+          "name": "20-wishlist-favoritar",
+          "status": "FAIL",
+          "duration_s": 48
+        },
+        {
+          "name": "30-conta-perfil",
+          "status": "FAIL",
+          "duration_s": 48
+        },
+        {
+          "name": "30-logout",
+          "status": "FAIL",
+          "duration_s": 48
+        },
+        {
+          "name": "30-pedidos-historico",
+          "status": "FAIL",
+          "duration_s": 49
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-31-1627",
+      "status": "FAIL",
+      "pass": 2,
+      "fail": 14,
+      "total": 16,
+      "duration_s": 572,
+      "report_md": "brands/reserva/reports/run-2026-05-31-1627.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-05-31-1627/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 11
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 25
+        },
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "FAIL",
+          "duration_s": 37
+        },
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "FAIL",
+          "duration_s": 64
+        },
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 36
+        },
+        {
+          "name": "10-compra-via-categoria",
+          "status": "FAIL",
+          "duration_s": 36
+        },
+        {
+          "name": "20-busca-textual",
+          "status": "FAIL",
+          "duration_s": 36
+        },
+        {
+          "name": "20-categoria-navegacao",
+          "status": "FAIL",
+          "duration_s": 35
+        },
+        {
+          "name": "20-cupom-aplicar",
+          "status": "FAIL",
+          "duration_s": 35
+        },
+        {
+          "name": "20-home-dobras",
+          "status": "FAIL",
+          "duration_s": 37
+        },
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "FAIL",
+          "duration_s": 37
+        },
+        {
+          "name": "20-sacola-editar",
+          "status": "FAIL",
+          "duration_s": 37
+        },
+        {
+          "name": "20-wishlist-favoritar",
+          "status": "FAIL",
+          "duration_s": 37
+        },
+        {
+          "name": "30-conta-perfil",
+          "status": "FAIL",
+          "duration_s": 36
+        },
+        {
+          "name": "30-logout",
+          "status": "FAIL",
+          "duration_s": 37
+        },
+        {
+          "name": "30-pedidos-historico",
+          "status": "FAIL",
+          "duration_s": 36
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-30-2024",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 34,
+      "report_md": "brands/reserva/reports/run-2026-05-30-2024.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-05-30-2024/",
+      "flows": [
+        {
+          "name": "10-compra-via-categoria",
+          "status": "FAIL",
+          "duration_s": 34
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-30-2021",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 50,
+      "report_md": "brands/reserva/reports/run-2026-05-30-2021.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-05-30-2021/",
+      "flows": [
+        {
+          "name": "10-compra-via-categoria",
+          "status": "FAIL",
+          "duration_s": 50
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-30-1849",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 46,
+      "report_md": "brands/reserva/reports/run-2026-05-30-1849.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-05-30-1849/",
+      "flows": [
+        {
+          "name": "10-compra-via-categoria",
+          "status": "FAIL",
+          "duration_s": 46
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-30-1847",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 45,
+      "report_md": "brands/reserva/reports/run-2026-05-30-1847.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-05-30-1847/",
+      "flows": [
+        {
+          "name": "10-compra-via-categoria",
+          "status": "FAIL",
+          "duration_s": 45
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-30-1845",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 42,
+      "report_md": "brands/reserva/reports/run-2026-05-30-1845.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-05-30-1845/",
+      "flows": [
+        {
+          "name": "10-compra-via-categoria",
+          "status": "FAIL",
+          "duration_s": 42
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-30-1843",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 47,
+      "report_md": "brands/reserva/reports/run-2026-05-30-1843.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-05-30-1843/",
+      "flows": [
+        {
+          "name": "10-compra-via-categoria",
+          "status": "FAIL",
+          "duration_s": 47
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-30-1834",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 133,
+      "report_md": "brands/reserva/reports/run-2026-05-30-1834.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-05-30-1834/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "PASS",
+          "duration_s": 133
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-30-1832",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 84,
+      "report_md": "brands/reserva/reports/run-2026-05-30-1832.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-05-30-1832/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 84
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-30-1830",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 45,
+      "report_md": "brands/reserva/reports/run-2026-05-30-1830.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-05-30-1830/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 45
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-30-1822",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 54,
+      "report_md": "brands/reserva/reports/run-2026-05-30-1822.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-05-30-1822/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 54
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-30-1816",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 57,
+      "report_md": "brands/reserva/reports/run-2026-05-30-1816.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-05-30-1816/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 57
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-30-1813",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 68,
+      "report_md": "brands/reserva/reports/run-2026-05-30-1813.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-05-30-1813/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 68
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-30-1808",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 31,
+      "report_md": "brands/reserva/reports/run-2026-05-30-1808.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-05-30-1808/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 31
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-30-1802",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 59,
+      "report_md": "brands/reserva/reports/run-2026-05-30-1802.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-05-30-1802/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 59
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-30-1756",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 65,
+      "report_md": "brands/reserva/reports/run-2026-05-30-1756.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-05-30-1756/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 65
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-30-1721",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 116,
+      "report_md": "brands/reserva/reports/run-2026-05-30-1721.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-05-30-1721/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 116
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-30-1719",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 81,
+      "report_md": "brands/reserva/reports/run-2026-05-30-1719.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-05-30-1719/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 81
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-30-1714",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 51,
+      "report_md": "brands/reserva/reports/run-2026-05-30-1714.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-05-30-1714/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 51
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-30-1643",
+      "status": "FAIL",
+      "pass": 6,
+      "fail": 10,
+      "total": 16,
+      "duration_s": 863,
+      "report_md": "brands/reserva/reports/run-2026-05-30-1643.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-05-30-1643/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 25
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 31
+        },
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "FAIL",
+          "duration_s": 71
+        },
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "FAIL",
+          "duration_s": 65
+        },
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 72
+        },
+        {
+          "name": "10-compra-via-categoria",
+          "status": "FAIL",
+          "duration_s": 44
+        },
+        {
+          "name": "20-busca-textual",
+          "status": "PASS",
+          "duration_s": 44
+        },
+        {
+          "name": "20-categoria-navegacao",
+          "status": "FAIL",
+          "duration_s": 43
+        },
+        {
+          "name": "20-cupom-aplicar",
+          "status": "FAIL",
+          "duration_s": 66
+        },
+        {
+          "name": "20-home-dobras",
+          "status": "PASS",
+          "duration_s": 40
+        },
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "FAIL",
+          "duration_s": 43
+        },
+        {
+          "name": "20-sacola-editar",
+          "status": "FAIL",
+          "duration_s": 65
+        },
+        {
+          "name": "20-wishlist-favoritar",
+          "status": "FAIL",
+          "duration_s": 73
+        },
+        {
+          "name": "30-conta-perfil",
+          "status": "FAIL",
+          "duration_s": 52
+        },
+        {
+          "name": "30-logout",
+          "status": "PASS",
+          "duration_s": 48
+        },
+        {
+          "name": "30-pedidos-historico",
+          "status": "PASS",
+          "duration_s": 81
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-30-0949",
+      "status": "FAIL",
+      "pass": 2,
+      "fail": 6,
+      "total": 8,
+      "duration_s": 1622,
+      "report_md": "brands/reserva/reports/run-2026-05-30-0949.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-05-30-0949/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 37
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 49
+        },
+        {
+          "name": "10-checkout-ate-pagamento",
+          "status": "FAIL",
+          "duration_s": 82
+        },
+        {
+          "name": "10-compra-cold-anonimo",
+          "status": "FAIL",
+          "duration_s": 81
+        },
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 1040
+        },
+        {
+          "name": "10-compra-via-categoria",
+          "status": "FAIL",
+          "duration_s": 238
+        },
+        {
+          "name": "20-busca-textual",
+          "status": "FAIL",
+          "duration_s": 37
+        },
+        {
+          "name": "20-categoria-navegacao",
+          "status": "FAIL",
+          "duration_s": 58
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-30-0944",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 89,
+      "report_md": "brands/reserva/reports/run-2026-05-30-0944.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-05-30-0944/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "PASS",
+          "duration_s": 89
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-30-0933",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 103,
+      "report_md": "brands/reserva/reports/run-2026-05-30-0933.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-05-30-0933/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 103
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-30-0925",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 87,
+      "report_md": "brands/reserva/reports/run-2026-05-30-0925.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-05-30-0925/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 87
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-30-0921",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 101,
+      "report_md": "brands/reserva/reports/run-2026-05-30-0921.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-05-30-0921/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 101
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-30-0919",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 102,
+      "report_md": "brands/reserva/reports/run-2026-05-30-0919.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-05-30-0919/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 102
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-30-0911",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 98,
+      "report_md": "brands/reserva/reports/run-2026-05-30-0911.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-05-30-0911/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 98
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-30-0909",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 83,
+      "report_md": "brands/reserva/reports/run-2026-05-30-0909.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-05-30-0909/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 83
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-30-0906",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 103,
+      "report_md": "brands/reserva/reports/run-2026-05-30-0906.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-05-30-0906/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 103
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-30-0904",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 71,
+      "report_md": "brands/reserva/reports/run-2026-05-30-0904.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-05-30-0904/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 71
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-29-1947",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 104,
+      "report_md": "brands/reserva/reports/run-2026-05-29-1947.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-05-29-1947/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 104
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-29-1739",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 76,
+      "report_md": "brands/reserva/reports/run-2026-05-29-1739.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-05-29-1739/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 76
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-29-1737",
+      "status": "PASS",
+      "pass": 2,
+      "fail": 0,
+      "total": 2,
+      "duration_s": 92,
+      "report_md": "brands/reserva/reports/run-2026-05-29-1737.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-05-29-1737/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 33
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 59
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-29-1734",
+      "status": "FAIL",
+      "pass": 1,
+      "fail": 1,
+      "total": 2,
+      "duration_s": 102,
+      "report_md": "brands/reserva/reports/run-2026-05-29-1734.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-05-29-1734/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 31
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "FAIL",
+          "duration_s": 71
+        }
+      ]
+    },
+    {
+      "stamp": "2026-05-29-1726",
+      "status": "FAIL",
+      "pass": 1,
+      "fail": 1,
+      "total": 2,
+      "duration_s": 92,
+      "report_md": "brands/reserva/reports/run-2026-05-29-1726.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-05-29-1726/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 32
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "FAIL",
+          "duration_s": 60
+        }
+      ]
+    }
+  ],
+  "flows_summary": [
+    {
+      "name": "00-pipeline-smoke",
+      "last_status": "PASS",
+      "last_duration_s": 11,
+      "last_run_stamp": "2026-06-03-1843"
+    },
+    {
+      "name": "00-smoke-launch",
+      "last_status": "PASS",
+      "last_duration_s": 34,
+      "last_run_stamp": "2026-06-03-1843"
+    },
+    {
+      "name": "10-checkout-ate-pagamento",
+      "last_status": "PASS",
+      "last_duration_s": 149,
+      "last_run_stamp": "2026-06-03-1843"
+    },
+    {
+      "name": "10-compra-cold-anonimo",
+      "last_status": "PASS",
+      "last_duration_s": 178,
+      "last_run_stamp": "2026-06-03-1843"
+    },
+    {
+      "name": "10-compra-via-busca",
+      "last_status": "PASS",
+      "last_duration_s": 315,
+      "last_run_stamp": "2026-06-03-1843"
+    },
+    {
+      "name": "10-compra-via-categoria",
+      "last_status": "PASS",
+      "last_duration_s": 337,
+      "last_run_stamp": "2026-06-03-1843"
+    },
+    {
+      "name": "20-busca-textual",
+      "last_status": "PASS",
+      "last_duration_s": 170,
+      "last_run_stamp": "2026-06-03-1843"
+    },
+    {
+      "name": "20-categoria-navegacao",
+      "last_status": "PASS",
+      "last_duration_s": 126,
+      "last_run_stamp": "2026-06-03-1843"
+    },
+    {
+      "name": "20-cupom-aplicar",
+      "last_status": "PASS",
+      "last_duration_s": 223,
+      "last_run_stamp": "2026-06-03-1843"
+    },
+    {
+      "name": "20-home-dobras",
+      "last_status": "PASS",
+      "last_duration_s": 119,
+      "last_run_stamp": "2026-06-03-1843"
+    },
+    {
+      "name": "20-plp-filtros-ordenacao",
+      "last_status": "PASS",
+      "last_duration_s": 117,
+      "last_run_stamp": "2026-06-03-1843"
+    },
+    {
+      "name": "20-sacola-editar",
+      "last_status": "PASS",
+      "last_duration_s": 171,
+      "last_run_stamp": "2026-06-03-1843"
+    },
+    {
+      "name": "20-wishlist-favoritar",
+      "last_status": "PASS",
+      "last_duration_s": 141,
+      "last_run_stamp": "2026-06-03-1843"
+    },
+    {
+      "name": "30-conta-perfil",
+      "last_status": "PASS",
+      "last_duration_s": 81,
+      "last_run_stamp": "2026-06-03-1843"
+    },
+    {
+      "name": "30-logout",
+      "last_status": "PASS",
+      "last_duration_s": 88,
+      "last_run_stamp": "2026-06-03-1843"
+    },
+    {
+      "name": "30-pedidos-historico",
+      "last_status": "PASS",
+      "last_duration_s": 123,
+      "last_run_stamp": "2026-06-03-1843"
+    },
+    {
+      "name": "_debug-filtros",
+      "last_status": "PASS",
+      "last_duration_s": 92,
+      "last_run_stamp": "2026-06-02-1338"
+    },
+    {
+      "name": "_debug-cupom",
+      "last_status": "PASS",
+      "last_duration_s": 150,
+      "last_run_stamp": "2026-06-02-1252"
+    }
+  ],
+  "findings": [],
+  "open_findings": 0
+}

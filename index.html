@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>QA Soma — Painel</title>
+<link rel="stylesheet" href="styles.css?v=20260603-1" />
+<script defer src="app.js?v=4"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
+</head>
+<body x-data="dashboard" x-init="init()">
+
+<header class="topbar">
+  <h1>QA Soma</h1>
+  <nav class="tabs">
+    <a :class="{ active: tab === 'brands' }" @click.prevent="tab = 'brands'" href="#/brands">Marcas</a>
+    <a :class="{ active: tab === 'findings' }" @click.prevent="tab = 'findings'" href="#/findings">Bugs</a>
+    <a :class="{ active: tab === 'live' }" @click.prevent="tab = 'live'" href="#/live">
+      Ao vivo
+      <span class="live-dot" x-show="state?.live?.active"></span>
+    </a>
+  </nav>
+  <div class="meta">
+    <span x-show="state?.generated_at" class="ts">
+      Atualizado: <span x-text="formatTs(state?.generated_at)"></span>
+    </span>
+    <button @click="refresh()" :disabled="loading">↻</button>
+  </div>
+</header>
+
+<main>
+  <!-- ABA MARCAS -->
+  <section x-show="tab === 'brands'">
+    <div x-show="!state" class="empty">Carregando dados…</div>
+    <div x-show="state && state.brands.length === 0" class="empty">
+      Nenhuma marca encontrada. Rode <code>shared/scripts/build-dashboard-data.sh</code> primeiro.
+    </div>
+
+    <div class="brand-grid">
+      <template x-for="b in state?.brands || []" :key="b.id">
+        <article class="brand-card" @click="openBrand(b)">
+          <div class="brand-card__header">
+            <h2 x-text="b.display_name"></h2>
+            <span class="bundle" x-text="b.bundle_id"></span>
+          </div>
+          <div class="brand-card__app">
+            v<span x-text="b.app_version"></span>
+            (build <span x-text="b.app_build"></span>)
+          </div>
+          <div class="brand-card__run" :class="b.last_run ? 'run--' + b.last_run.status.toLowerCase() : 'run--empty'">
+            <template x-if="b.last_run">
+              <div>
+                <strong x-text="b.last_run.status"></strong>
+                <span x-text="`${b.last_run.pass}/${b.last_run.total}`"></span>
+                <span class="muted" x-text="`(${b.last_run.stamp})`"></span>
+              </div>
+            </template>
+            <template x-if="!b.last_run">
+              <div class="muted">sem rodadas ainda</div>
+            </template>
+          </div>
+          <div class="brand-card__findings">
+            <span class="badge badge--bugs" x-text="b.open_findings"></span>
+            bug<span x-show="b.open_findings !== 1">s</span> em aberto
+          </div>
+        </article>
+      </template>
+    </div>
+
+    <!-- Detalhe da marca selecionada -->
+    <section class="brand-detail" x-show="selectedBrand" x-transition>
+      <header class="detail-header">
+        <button class="back" @click="selectedBrand = null">← voltar</button>
+        <h2 x-text="selectedBrandData?.display_name"></h2>
+      </header>
+
+      <h3>Flows (último status por flow)</h3>
+      <table class="flows-table">
+        <thead>
+          <tr><th>Flow</th><th>Status</th><th>Duração</th><th>Última rodada</th></tr>
+        </thead>
+        <tbody>
+          <template x-for="f in selectedBrandData?.flows_summary || []" :key="f.name">
+            <tr>
+              <td x-text="f.name"></td>
+              <td><span class="status" :class="'status--' + f.last_status.toLowerCase()" x-text="f.last_status"></span></td>
+              <td x-text="f.last_duration_s + 's'"></td>
+              <td class="muted" x-text="f.last_run_stamp"></td>
+            </tr>
+          </template>
+        </tbody>
+      </table>
+
+      <h3>Histórico de rodadas</h3>
+      <table class="runs-table">
+        <thead><tr><th>Stamp</th><th>Status</th><th>Pass/Total</th><th>Duração</th></tr></thead>
+        <tbody>
+          <template x-for="r in selectedBrandData?.runs || []" :key="r.stamp">
+            <tr>
+              <td x-text="r.stamp"></td>
+              <td><span class="status" :class="'status--' + r.status.toLowerCase()" x-text="r.status"></span></td>
+              <td x-text="`${r.pass}/${r.total}`"></td>
+              <td x-text="r.duration_s + 's'"></td>
+            </tr>
+          </template>
+        </tbody>
+      </table>
+    </section>
+  </section>
+
+  <!-- ABA BUGS -->
+  <section x-show="tab === 'findings'">
+    <div class="filters">
+      <label>Marca
+        <select x-model="findingFilter.brand">
+          <option value="">Todas</option>
+          <template x-for="b in state?.brands || []" :key="b.id">
+            <option :value="b.id" x-text="b.display_name"></option>
+          </template>
+        </select>
+      </label>
+      <label>Severidade
+        <select x-model="findingFilter.severity">
+          <option value="">Todas</option>
+          <option value="alta">Alta</option>
+          <option value="media">Média</option>
+          <option value="baixa">Baixa</option>
+          <option value="positivo">Positivo</option>
+        </select>
+      </label>
+      <label>Status
+        <select x-model="findingFilter.status">
+          <option value="">Todos</option>
+          <option value="open">Aberto</option>
+          <option value="in_progress">Em andamento</option>
+          <option value="pending">Pendente</option>
+          <option value="closed">Fechado</option>
+          <option value="wontfix">Wont fix</option>
+          <option value="observation">Observação</option>
+        </select>
+      </label>
+      <span class="filters-summary muted">
+        <span x-text="filteredFindings().length"></span> de <span x-text="(allFindingsCache || []).length"></span>
+      </span>
+    </div>
+
+    <table class="findings-table">
+      <thead><tr>
+        <th>ID</th><th>Marca</th><th>Sev.</th><th>Título</th><th>Status</th>
+      </tr></thead>
+      <tbody>
+        <template x-for="f in filteredFindings()" :key="f.brand + '/' + f.id">
+          <tr>
+            <td class="mono" x-text="f.id"></td>
+            <td x-text="f.brandDisplay"></td>
+            <td>
+              <span class="sev-badge" :class="'sev--' + (f.severity_level || 'desconhecido')"
+                    x-text="f.severity_label || '—'"></span>
+            </td>
+            <td x-text="f.title"></td>
+            <td>
+              <span class="status-pill" :class="'st--' + (f.status_category || 'open')"
+                    x-text="f.status_clean || 'Aberto'"></span>
+            </td>
+          </tr>
+        </template>
+      </tbody>
+    </table>
+    <p x-show="filteredFindings().length === 0" class="empty">
+      Nenhum bug com esses filtros.
+    </p>
+  </section>
+
+  <!-- ABA AO VIVO -->
+  <section x-show="tab === 'live'">
+    <div x-show="!liveRun" class="empty">
+      Nenhuma suíte rodando. Inicie com <code>brands/&lt;brand&gt;/scripts/run-suite.sh all</code>.
+    </div>
+    <div x-show="liveRun" class="live-panel">
+      <header>
+        <h2>Rodada em andamento — <span x-text="liveRun?.brand"></span></h2>
+        <span class="ts">
+          Início: <span x-text="liveRun?.started_at"></span> ·
+          Heartbeat: <span x-text="liveRun?.heartbeat"></span>
+        </span>
+      </header>
+      <div class="live-progress">
+        <span x-text="`${liveRun?.completed?.length || 0}/${liveRun?.total_flows || 0}`"></span> flows
+        ·
+        Atual: <strong x-text="liveRun?.current?.name || '—'"></strong>
+      </div>
+      <ul class="live-flows">
+        <template x-for="f in liveRun?.completed || []" :key="f.name">
+          <li :class="'live-flow live-flow--' + f.status.toLowerCase()">
+            <span x-text="f.status"></span>
+            <span x-text="f.name"></span>
+            <span class="muted" x-text="f.duration_s + 's'"></span>
+          </li>
+        </template>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <span>Schema v<span x-text="state?.schema_version || '?'"></span></span>
+  <span x-show="error" class="error" x-text="error"></span>
+</footer>
+
+</body>
+</html>
