@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-03T22:29:44.799041+00:00",
+  "generated_at": "2026-06-05T17:50:47.859763+00:00",
   "brands": [
     {
       "id": "nv",
@@ -18,6 +18,16 @@
       },
       "open_findings": 5,
       "state_file": "nv-state.json"
+    },
+    {
+      "id": "off",
+      "display_name": "Off Premium",
+      "bundle_id": "TODO_DESCOBRIR_VIA_PLISTBUDDY",
+      "app_version": "?",
+      "app_build": "?",
+      "last_run": null,
+      "open_findings": 0,
+      "state_file": "off-state.json"
     },
     {
       "id": "reserva",

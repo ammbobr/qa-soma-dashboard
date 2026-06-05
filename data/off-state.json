@@ -1,0 +1,17 @@
+{
+  "brand": "off",
+  "display_name": "Off Premium",
+  "schema_version": 1,
+  "generated_at": "2026-06-05T17:50:47.318055+00:00",
+  "app": {
+    "bundle_id": "TODO_DESCOBRIR_VIA_PLISTBUDDY",
+    "version": "?",
+    "build": "?",
+    "build_path": "/Users/thiagoborges/+Soma/Claude/QA Produtos Digitais Soma/brands/off/test-builds/Off.app"
+  },
+  "last_run": null,
+  "runs": [],
+  "flows_summary": [],
+  "findings": [],
+  "open_findings": 0
+}
