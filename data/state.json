@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-05T17:50:47.859763+00:00",
+  "generated_at": "2026-06-07T12:30:22.274729+00:00",
   "brands": [
     {
       "id": "nv",
@@ -22,9 +22,9 @@
     {
       "id": "off",
       "display_name": "Off Premium",
-      "bundle_id": "TODO_DESCOBRIR_VIA_PLISTBUDDY",
-      "app_version": "?",
-      "app_build": "?",
+      "bundle_id": "com.mobfiq.offpremium",
+      "app_version": "10.0.0",
+      "app_build": "1",
       "last_run": null,
       "open_findings": 0,
       "state_file": "off-state.json"

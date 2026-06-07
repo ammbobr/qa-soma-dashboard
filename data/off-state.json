@@ -2,12 +2,12 @@
   "brand": "off",
   "display_name": "Off Premium",
   "schema_version": 1,
-  "generated_at": "2026-06-05T17:50:47.318055+00:00",
+  "generated_at": "2026-06-07T12:30:22.240736+00:00",
   "app": {
-    "bundle_id": "TODO_DESCOBRIR_VIA_PLISTBUDDY",
-    "version": "?",
-    "build": "?",
-    "build_path": "/Users/thiagoborges/+Soma/Claude/QA Produtos Digitais Soma/brands/off/test-builds/Off.app"
+    "bundle_id": "com.mobfiq.offpremium",
+    "version": "10.0.0",
+    "build": "1",
+    "build_path": "brands/off/test-builds/OFF05-06.app"
   },
   "last_run": null,
   "runs": [],
