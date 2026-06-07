@@ -2,16 +2,155 @@
   "brand": "off",
   "display_name": "Off Premium",
   "schema_version": 1,
-  "generated_at": "2026-06-07T12:30:22.240736+00:00",
+  "generated_at": "2026-06-07T16:53:43.992106+00:00",
   "app": {
     "bundle_id": "com.mobfiq.offpremium",
     "version": "10.0.0",
     "build": "1",
     "build_path": "brands/off/test-builds/OFF05-06.app"
   },
-  "last_run": null,
-  "runs": [],
-  "flows_summary": [],
+  "last_run": {
+    "stamp": "2026-06-07-1340",
+    "status": "PASS",
+    "pass": 1,
+    "fail": 0,
+    "total": 1,
+    "duration_s": 115
+  },
+  "runs": [
+    {
+      "stamp": "2026-06-07-1340",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 115,
+      "report_md": "brands/off/reports/run-2026-06-07-1340.md",
+      "artifacts_dir": "brands/off/reports/run-2026-06-07-1340/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "PASS",
+          "duration_s": 115
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-07-1326",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 190,
+      "report_md": "brands/off/reports/run-2026-06-07-1326.md",
+      "artifacts_dir": "brands/off/reports/run-2026-06-07-1326/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 190
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-07-1114",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 40,
+      "report_md": "brands/off/reports/run-2026-06-07-1114.md",
+      "artifacts_dir": "brands/off/reports/run-2026-06-07-1114/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 40
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-07-1058",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 94,
+      "report_md": "brands/off/reports/run-2026-06-07-1058.md",
+      "artifacts_dir": "brands/off/reports/run-2026-06-07-1058/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 94
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-07-1052",
+      "status": "PASS",
+      "pass": 2,
+      "fail": 0,
+      "total": 2,
+      "duration_s": 314,
+      "report_md": "brands/off/reports/run-2026-06-07-1052.md",
+      "artifacts_dir": "brands/off/reports/run-2026-06-07-1052/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 247
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 67
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-07-1043",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 2,
+      "total": 2,
+      "duration_s": 345,
+      "report_md": "brands/off/reports/run-2026-06-07-1043.md",
+      "artifacts_dir": "brands/off/reports/run-2026-06-07-1043/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "FAIL",
+          "duration_s": 38
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "FAIL",
+          "duration_s": 307
+        }
+      ]
+    }
+  ],
+  "flows_summary": [
+    {
+      "name": "10-compra-via-busca",
+      "last_status": "PASS",
+      "last_duration_s": 115,
+      "last_run_stamp": "2026-06-07-1340"
+    },
+    {
+      "name": "00-pipeline-smoke",
+      "last_status": "PASS",
+      "last_duration_s": 247,
+      "last_run_stamp": "2026-06-07-1052"
+    },
+    {
+      "name": "00-smoke-launch",
+      "last_status": "PASS",
+      "last_duration_s": 67,
+      "last_run_stamp": "2026-06-07-1052"
+    }
+  ],
   "findings": [],
   "open_findings": 0
 }
