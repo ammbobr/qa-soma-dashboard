@@ -2,7 +2,7 @@
   "brand": "off",
   "display_name": "Off Premium",
   "schema_version": 1,
-  "generated_at": "2026-06-09T23:23:28.132646+00:00",
+  "generated_at": "2026-06-09T23:24:16.284357+00:00",
   "app": {
     "bundle_id": "com.mobfiq.offpremium",
     "version": "10.0.0",
@@ -714,13 +714,15 @@
       "id": "F-OFF-03",
       "title": "Cupom inválido: sheet auto-fecha em 2-3s (não é silencioso)",
       "severity": "Baixa",
-      "status": "Aberto",
+      "status": "Fechado — não é bug",
       "body": "Inicialmente pareceu bug de UX (cupom rejeitado sem feedback). **Triagem manual provou que NÃO** — mensagem \"Cupom inválido\" aparece dentro do sheet, em vermelho, abaixo do campo, com borda vermelha no input (idêntico ao NV/Reserva). O sheet apenas auto-fecha em 2-3s, então a automação capturava a tela depois.\n\n### Evidência\n- Print manual: `scratch/repros/cupom-invalido-manual-2026-06-09.png` (mensagem visível).\n- Print automation: `scratch/repros/cupom-invalido-state-2026-06-09.png` (sheet já fechado).\n\n### Fix de teste\n- Trocou `waitForAnimationToEnd + assertVisible` por `extendedWaitUntil` com timeout 4s — polling pega a mensagem antes do auto-close.\n\n### Notas\n- Não é bug do app. Aprendizado: pra mensagens com auto-close, sempre usar `extendedWaitUntil`.\n- Vale revisar com PO se 2-3s é tempo suficiente pro usuário ler o erro antes do sheet sumir (UX adjacente).",
+      "decided_at": "2026-06-09T21:37:30+00:00",
+      "override_source": "panel",
       "severity_level": "baixa",
       "severity_label": "Baixa",
-      "status_category": "open",
-      "status_clean": "Aberto"
+      "status_category": "closed",
+      "status_clean": "Fechado — não é bug"
     }
   ],
-  "open_findings": 3
+  "open_findings": 2
 }
