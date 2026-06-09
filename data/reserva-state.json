@@ -2,7 +2,7 @@
   "brand": "reserva",
   "display_name": "Reserva",
   "schema_version": 1,
-  "generated_at": "2026-06-09T17:02:39.937554+00:00",
+  "generated_at": "2026-06-09T18:12:42.360280+00:00",
   "app": {
     "bundle_id": "com.globalsys.reserva",
     "version": "2000000.0.0",
@@ -3319,6 +3319,97 @@
       "last_run_stamp": "2026-06-03-1843"
     }
   ],
-  "findings": [],
-  "open_findings": 0
+  "findings": [
+    {
+      "id": "F-RES-01",
+      "title": "Modal \"Você esqueceu seu brinde!\" no checkout",
+      "severity": "Média",
+      "status": "Aberto",
+      "body": "Ao tocar **\"Fechar compra\"** na Sacola, o app intercepta o funil com um bottom sheet:\n\n> **Você esqueceu seu brinde!**\n> Tem certeza de que deseja fechar a compra sem o brinde?\n> [ Voltar e escolher meu brinde ] ← botão primário (preto, destaque)\n> [ Continuar sem o brinde ] ← botão secundário (branco)\n\n### Quando dispara\n- **Dispara:** sacola com **tênis** (categoria de calçados).\n- **Não dispara:** sacola só com camisa (sem item da categoria elegível).\n- Hipótese: gatilho atrelado a categoria/campanha promocional ativa.\n\n### Reproduzido\n- 2026-06-02: descoberta durante construção do `10-checkout-ate-pagamento`.\n- 2026-06-08: triagem manual com Thiago — confirmou UX intencional.\n\n### Evidência\n- Screenshot: `brands/reserva/scratch/repros/f-res-01-modal-brinde-tenis-2026-06-08.png`\n- Relatório (perguntas pro PO): `brands/reserva/scratch/repros/F-RES-01-modal-brinde.md`\n\n### Notas\n- Não é bug funcional — modal cumpre o que se propõe.\n- Flow automatizado dispensa via \"Continuar sem o brinde\" (`when: visible`).\n\n---",
+      "severity_level": "media",
+      "severity_label": "Média",
+      "status_category": "open",
+      "status_clean": "Aberto"
+    },
+    {
+      "id": "F-RES-02",
+      "title": "Modal Camisetas® promocional aparecendo \"aleatoriamente\"",
+      "severity": "Alta",
+      "status": "Fechado — não é bug",
+      "body": "Modal Flutter promocional aparecia em qualquer ponto do flow (Home, PLP, PDP, Menu, busca). Não renderizava na hierarchy Maestro → indetectável por texto. Tentativa de dismiss via tap em coord (90%, 31%) funcionava pontualmente mas modal reaparecia.\n\n### Resolução observada\nThiago desligou o modal pelo backend/conta em 2026-06-01. Defesas anti-modal foram removidas do harness (`dismiss-promo-modal.yaml` deletado, steps de tap removidos de subflows).\n\n### Notas\n- Modal reaparecia em sessões cold + warm.\n- Pra usuário real, controle de frequência do modal promocional pode estar errado (sem rate limit aparente). Vale alinhar com growth/CRM se a campanha for reativada.\n\n---",
+      "decided_at": "2026-06-09T18:11:48+00:00",
+      "override_source": "panel",
+      "severity_level": "alta",
+      "severity_label": "Alta",
+      "status_category": "closed",
+      "status_clean": "Fechado — não é bug"
+    },
+    {
+      "id": "F-RES-03",
+      "title": "Lupa de busca perde hit-test em cold launch (Flutter painting tardio)",
+      "severity": "Baixa",
+      "status": "Aberto",
+      "body": "Após `clearState: true`, a a11y da Home era populada **antes do paint** (problema conhecido do Flutter). O Maestro reportava o tap COMPLETED mas o tap caía no canvas em branco — o assert seguinte falhava.\n\n### Análise\n- Sintoma é da automação, não de uso real.\n- Usuário humano não consegue tocar a lupa antes da Home estar pintada (não vê o ícone).\n- Mitigação no harness: `retryTapIfNoChange: true` + `waitToSettleTimeoutMs: 1500` em `subflows/nav/open-search.yaml`.\n\n---",
+      "severity_level": "baixa",
+      "severity_label": "Baixa",
+      "status_category": "open",
+      "status_clean": "Aberto"
+    },
+    {
+      "id": "F-RES-04",
+      "title": "Scrim do modal de logout demora >1.5s a dissipar",
+      "severity": "Baixa",
+      "status": "Aberto",
+      "body": "Depois do tap em \"Sair\" (confirmação do logout), o scrim semi-transparente do modal persiste por mais de 1500ms. O usuário vê a Home embaçada por esse período.\n\n### Evidência\n- Maestro precisou de `waitForAnimationToEnd: 5000` ANTES do assert pro scrim sair.\n- Tap em si funciona corretamente (logout efetivado).\n\n### Notas\n- Polish / perf percebida. Sem impacto funcional.\n\n---",
+      "severity_level": "baixa",
+      "severity_label": "Baixa",
+      "status_category": "open",
+      "status_clean": "Aberto"
+    },
+    {
+      "id": "F-RES-05",
+      "title": "Bottom sheet de tamanho concatena estoque no mesmo nó (a11y)",
+      "severity": "Média",
+      "status": "Aberto",
+      "body": "O nó do picker de tamanho traz token + sufixo de estoque colado por `\\n` no mesmo nó textual: `\"02\\nResta 1\"`, `\"04\\nAvise-me\"`.\n\n### Impacto em acessibilidade\n- VoiceOver lê a string inteira de uma vez (\"zero dois resta um\") em vez de \"tamanho 02, botão, estoque baixo: resta 1\".\n- Deveriam ser nós separados pra screen reader segmentar.\n\n### Notas\n- Não foi confirmado se há dono no time pra mexer em a11y.\n\n---",
+      "severity_level": "media",
+      "severity_label": "Média",
+      "status_category": "open",
+      "status_clean": "Aberto"
+    },
+    {
+      "id": "F-RES-06",
+      "title": "Busca adulta retorna produto Reserva Mini esgotado",
+      "severity": "Média",
+      "status": "Aberto",
+      "body": "Busca por \"blusa\" retornou \"Blusa Menina Tricot Crochet\" (Reserva Mini, infantil) misturada com adulto, e com **estoque furado**: \"Avise-me\" em todos os tamanhos exceto 02 (\"Resta 1\").\n\n### Análise (com Thiago, 2026-06-08)\n- Mini tem pouca blusa mesmo. Esse produto é resto de estoque legítimo.\n- Não é ranking quebrado; é catálogo refletindo realidade.\n\n---",
+      "severity_level": "media",
+      "severity_label": "Média",
+      "status_category": "open",
+      "status_clean": "Aberto"
+    },
+    {
+      "id": "F-RES-07",
+      "title": "`rightOf` do cupom pegava linha errada (flakiness de automação)",
+      "severity": "Baixa",
+      "status": "Aberto",
+      "body": "`rightOf: \"Cupom de desconto\"` no flow `20-cupom-aplicar` pegava o \"Adicionar\" da linha de cima (Código de vendedora) → abria sheet errado. Causa: o carousel do brinde faz relayout contínuo; Flutter perde hit-test em micro-animações.\n\n### Validação manual (2026-06-08)\n- Thiago testou manualmente: tocou \"Adicionar\" do cupom → sheet correto abriu na primeira.\n- Screenshot: `brands/reserva/scratch/repros/f-res-07-manual-2026-06-08.png`.\n\n### Notas\n- Sob automação, mitigado com `index: 1` + `retryTapIfNoChange`. Não é bug do app.\n\n---",
+      "severity_level": "baixa",
+      "severity_label": "Baixa",
+      "status_category": "open",
+      "status_clean": "Aberto"
+    },
+    {
+      "id": "F-RES-08",
+      "title": "Inconsistência cross-brand Soma (UX divergente entre marcas)",
+      "severity": "Média",
+      "status": "Aberto",
+      "body": "Comparando NV, Reserva e Off:\n\n| Aspecto | NV | Reserva | Off |\n|---|---|---|---|\n| Tab account | Conta | Perfil | Conta |\n| Wishlist label | Wishlist | Favoritos | Wishlist |\n| Wishlist como tab | não (via Conta) | não (via Perfil) | sim (bottom bar) |\n| Checkout final | \"Finalização do pedido\" + \"Finalizar pedido\" | \"Pagamento\" + \"Continuar para a revisão\" | (= NV) |\n| Modal biometria pós-login | sim | não | sim |\n| Número de tabs | 4 | 5 | 5 |\n\n### Notas\n- Não é bug funcional.\n- Estratégico — vale levar pro design system algum dia, se houver intenção de aproximar as marcas.",
+      "severity_level": "media",
+      "severity_label": "Média",
+      "status_category": "open",
+      "status_clean": "Aberto"
+    }
+  ],
+  "open_findings": 7
 }

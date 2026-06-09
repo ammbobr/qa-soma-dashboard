@@ -2,7 +2,7 @@
   "brand": "off",
   "display_name": "Off Premium",
   "schema_version": 1,
-  "generated_at": "2026-06-09T17:02:39.652034+00:00",
+  "generated_at": "2026-06-09T18:12:42.120468+00:00",
   "app": {
     "bundle_id": "com.mobfiq.offpremium",
     "version": "10.0.0",
@@ -687,6 +687,40 @@
       "last_run_stamp": "2026-06-08-2334"
     }
   ],
-  "findings": [],
-  "open_findings": 0
+  "findings": [
+    {
+      "id": "F-OFF-01",
+      "title": "Regex de tamanho do `select-first-size` casava \"Guia de medidas\"",
+      "severity": "Baixa",
+      "status": "Aberto",
+      "body": "No fluxo `10-compra-via-busca` da Off, o subflow `select-first-size` tapava no link **\"Guia de medidas\"** em vez do tamanho, abrindo a tabela de medidas → `cta_select_size` falhava em seguida.\n\n### Causa raiz\n- A regex herdada (`first_size_label`) tinha `G` como alternativa (tamanho de letra).\n- `(...|G|...)[\\s\\S]*` casa \"Guia de medidas\" (começa com G), que aparece ANTES do picker na árvore.\n- Off usa tamanhos numéricos (36-44), não letras.\n\n### Fix aplicado\n- `first_size_label` da Off restrita pra `(02|04|06|35|36|37|38|39|40|42|44)[\\s\\S]*` (sem letras).\n- Tap virou best-effort (`when: visible`) + `retryTapIfNoChange`.\n\n### Notas\n- Não é bug do app — seletor herdado colidindo. Mesma classe dos fixes da Reserva.\n\n---",
+      "severity_level": "baixa",
+      "severity_label": "Baixa",
+      "status_category": "open",
+      "status_clean": "Aberto"
+    },
+    {
+      "id": "F-OFF-02",
+      "title": "Sacola Off não tem \"Página do produto\" no menu de ações",
+      "severity": "Baixa",
+      "status": "Aberto",
+      "body": "O sheet \"3 pontos\" do card da Sacola na Off tem 3 ações: **Salvar para depois ♡** + **Avise-me** (condicional ao estoque) + **Remover**. NÃO existe a ação \"Página do produto\" que NV/Reserva têm.\n\n### Hipótese\n- Você já está olhando o card com foto + nome do produto, então a ação \"ir pra página\" pode ter sido considerada redundante na Off.\n\n### Fix de teste\n- Brandificou `cart_item_secondary_action`: NV/Reserva = \"Página do produto\"; Off = \"Remover\" (sempre presente).\n\n### Notas\n- Não é bug. Diferença intencional de UX entre as marcas.\n\n---",
+      "severity_level": "baixa",
+      "severity_label": "Baixa",
+      "status_category": "open",
+      "status_clean": "Aberto"
+    },
+    {
+      "id": "F-OFF-03",
+      "title": "Cupom inválido: sheet auto-fecha em 2-3s (não é silencioso)",
+      "severity": "Baixa",
+      "status": "Aberto",
+      "body": "Inicialmente pareceu bug de UX (cupom rejeitado sem feedback). **Triagem manual provou que NÃO** — mensagem \"Cupom inválido\" aparece dentro do sheet, em vermelho, abaixo do campo, com borda vermelha no input (idêntico ao NV/Reserva). O sheet apenas auto-fecha em 2-3s, então a automação capturava a tela depois.\n\n### Evidência\n- Print manual: `scratch/repros/cupom-invalido-manual-2026-06-09.png` (mensagem visível).\n- Print automation: `scratch/repros/cupom-invalido-state-2026-06-09.png` (sheet já fechado).\n\n### Fix de teste\n- Trocou `waitForAnimationToEnd + assertVisible` por `extendedWaitUntil` com timeout 4s — polling pega a mensagem antes do auto-close.\n\n### Notas\n- Não é bug do app. Aprendizado: pra mensagens com auto-close, sempre usar `extendedWaitUntil`.\n- Vale revisar com PO se 2-3s é tempo suficiente pro usuário ler o erro antes do sheet sumir (UX adjacente).",
+      "severity_level": "baixa",
+      "severity_label": "Baixa",
+      "status_category": "open",
+      "status_clean": "Aberto"
+    }
+  ],
+  "open_findings": 3
 }

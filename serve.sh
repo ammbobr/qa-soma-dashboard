@@ -1,16 +1,13 @@
 #!/usr/bin/env bash
-# serve.sh — sobe um servidor HTTP local pra abrir o painel.
-# file:// quebra fetch(); precisa de um server.
+# serve.sh — sobe o servidor HTTP local pro painel (com endpoints de triagem).
+# Delega pra serve.py que expõe POST /api/override e /api/rebuild além do estático.
 #
 # Uso: shared/dashboard/serve.sh [porta]
 
 set -euo pipefail
 PORT="${1:-8765}"
-cd "$(dirname "${BASH_SOURCE[0]}")"
-
-echo "→ Painel: http://localhost:$PORT"
-echo "  Ctrl+C pra encerrar."
-echo
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$SCRIPT_DIR"
 
 # Gera dados se ainda não existirem
 if [[ ! -f data/state.json ]]; then
@@ -24,4 +21,4 @@ if command -v open >/dev/null 2>&1; then
   (sleep 1 && open "http://localhost:$PORT") &
 fi
 
-exec python3 -m http.server "$PORT"
+exec python3 "$SCRIPT_DIR/serve.py" "$PORT"

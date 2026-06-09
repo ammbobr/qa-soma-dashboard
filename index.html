@@ -3,9 +3,14 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
 <title>QA Soma — Painel</title>
-<link rel="stylesheet" href="styles.css?v=20260603-4" />
-<script defer src="app.js?v=4"></script>
+<!-- Cache-bust automático: substituído por publish-dashboard.sh em cada deploy.
+     Pra dev local, serve.py manda Cache-Control: no-store em tudo. -->
+<link rel="stylesheet" href="styles.css?v=20260609151242" />
+<script defer src="app.js?v=20260609151242"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
 </head>
 <body x-data="dashboard" x-init="init()">
@@ -151,28 +156,92 @@
       </span>
     </div>
 
-    <table class="findings-table">
+    <p class="api-status" x-show="!apiAvailable">
+      <span class="muted">Painel em modo leitura.</span> Pra triar pelo painel, rode
+      <code>shared/dashboard/serve.sh</code> e abra <code>http://localhost:8765</code>.
+    </p>
+    <p class="api-status api-status--ok" x-show="apiAvailable">
+      <span>✓ Backend conectado</span> — clique numa linha pra expandir e mudar status.
+    </p>
+
+    <table class="findings-table findings-table--expandable">
       <thead><tr>
+        <th class="col-toggle"></th>
         <th>ID</th><th>Marca</th><th>Sev.</th><th>Título</th><th>Status</th>
       </tr></thead>
       <tbody>
         <template x-for="f in filteredFindings()" :key="f.brand + '/' + f.id">
-          <tr>
+          <tr class="finding-row" :class="{ 'is-expanded': expandedFinding === findingKey(f) }"
+              @click="toggleExpand(f)">
+            <td class="col-toggle">
+              <span class="chev" x-text="expandedFinding === findingKey(f) ? '▾' : '▸'"></span>
+            </td>
             <td class="mono" x-text="f.id"></td>
             <td x-text="f.brandDisplay"></td>
             <td>
               <span class="sev-badge" :class="'sev--' + (f.severity_level || 'desconhecido')"
                     x-text="f.severity_label || '—'"></span>
             </td>
-            <td x-text="f.title"></td>
+            <td class="finding-title">
+              <span x-text="f.title"></span>
+              <span class="muted small detail-row-hint" x-show="expandedFinding === findingKey(f) === false"></span>
+            </td>
             <td>
               <span class="status-pill" :class="'st--' + (f.status_category || 'open')"
                     x-text="f.status_clean || 'Aberto'"></span>
+              <span class="override-dot" x-show="f.override_source === 'panel'" title="Decisão registrada via painel">●</span>
             </td>
           </tr>
         </template>
       </tbody>
     </table>
+
+    <!-- Detalhe expandido (overlay flutuante — só renderiza o item selecionado) -->
+    <template x-if="expandedFindingData">
+      <div class="finding-detail-overlay" @click.self="expandedFinding = null">
+        <div class="finding-detail-panel" x-transition>
+          <div class="finding-detail-panel__header">
+            <span class="mono" x-text="expandedFindingData.id"></span>
+            <span class="sev-badge" :class="'sev--' + (expandedFindingData.severity_level || 'desconhecido')" x-text="expandedFindingData.severity_label || '—'"></span>
+            <span class="status-pill" :class="'st--' + (expandedFindingData.status_category || 'open')" x-text="expandedFindingData.status_clean || 'Aberto'"></span>
+            <strong x-text="expandedFindingData.title"></strong>
+            <button class="btn-close" @click="expandedFinding = null" title="Fechar">✕</button>
+          </div>
+          <div class="md-body" x-html="renderMd(expandedFindingData.body)"></div>
+          <div x-show="expandedFindingData.decision" class="decision-note">
+            <strong>Decisão registrada:</strong>
+            <span x-text="expandedFindingData.decision"></span>
+            <span class="muted small" x-show="expandedFindingData.decided_at" x-text="'(' + (expandedFindingData.decided_at || '').slice(0,10) + ')'"></span>
+          </div>
+          <div class="finding-actions" x-show="apiAvailable">
+            <span class="muted small">Mudar status:</span>
+            <button class="btn btn--closed"
+                    :disabled="actionPending === findingKey(expandedFindingData)"
+                    @click="setStatus(expandedFindingData, 'closed')">Não é bug</button>
+            <button class="btn btn--resolved"
+                    :disabled="actionPending === findingKey(expandedFindingData)"
+                    @click="setStatus(expandedFindingData, 'resolved')">Resolvido</button>
+            <button class="btn btn--wontfix"
+                    :disabled="actionPending === findingKey(expandedFindingData)"
+                    @click="setStatus(expandedFindingData, 'wontfix')">Won't fix</button>
+            <button class="btn btn--inprogress"
+                    :disabled="actionPending === findingKey(expandedFindingData)"
+                    @click="setStatus(expandedFindingData, 'in_progress')">Em andamento</button>
+            <button class="btn btn--observation"
+                    :disabled="actionPending === findingKey(expandedFindingData)"
+                    @click="setStatus(expandedFindingData, 'observation')">Observação</button>
+            <button class="btn btn--reopen"
+                    :disabled="actionPending === findingKey(expandedFindingData)"
+                    @click="setStatus(expandedFindingData, 'open')">Reabrir</button>
+            <span class="muted small" x-show="actionPending === findingKey(expandedFindingData)">salvando…</span>
+          </div>
+          <p class="error-msg" x-show="actionError" x-text="actionError"></p>
+          <p class="muted small" x-show="!apiAvailable">
+            Painel em modo leitura. Pra mudar status, rode <code>shared/dashboard/serve.sh</code> e abra <code>http://localhost:8765</code>.
+          </p>
+        </div>
+      </div>
+    </template>
     <p x-show="filteredFindings().length === 0" class="empty">
       Nenhum bug com esses filtros.
     </p>
