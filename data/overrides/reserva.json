@@ -1,4 +1,10 @@
 {
+  "F-RES-01": {
+    "decided_at": "2026-06-09T19:32:01+00:00",
+    "decision": null,
+    "status": "Fechado — não é bug",
+    "status_key": "closed"
+  },
   "F-RES-02": {
     "decided_at": "2026-06-09T18:11:48+00:00",
     "decision": null,

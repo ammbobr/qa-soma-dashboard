@@ -2,7 +2,7 @@
   "brand": "reserva",
   "display_name": "Reserva",
   "schema_version": 1,
-  "generated_at": "2026-06-09T18:51:01.676321+00:00",
+  "generated_at": "2026-06-09T19:32:01.432678+00:00",
   "app": {
     "bundle_id": "com.globalsys.reserva",
     "version": "2000000.0.0",
@@ -3324,12 +3324,15 @@
       "id": "F-RES-01",
       "title": "Modal \"Você esqueceu seu brinde!\" no checkout",
       "severity": "Média",
-      "status": "Aberto",
+      "status": "Fechado — não é bug",
       "body": "Ao tocar **\"Fechar compra\"** na Sacola, o app intercepta o funil com um bottom sheet:\n\n> **Você esqueceu seu brinde!**\n> Tem certeza de que deseja fechar a compra sem o brinde?\n> [ Voltar e escolher meu brinde ] ← botão primário (preto, destaque)\n> [ Continuar sem o brinde ] ← botão secundário (branco)\n\n### Quando dispara\n- **Dispara:** sacola com **tênis** (categoria de calçados).\n- **Não dispara:** sacola só com camisa (sem item da categoria elegível).\n- Hipótese: gatilho atrelado a categoria/campanha promocional ativa.\n\n### Reproduzido\n- 2026-06-02: descoberta durante construção do `10-checkout-ate-pagamento`.\n- 2026-06-08: triagem manual com Thiago — confirmou UX intencional.\n\n### Evidência\n- Screenshot: `brands/reserva/scratch/repros/f-res-01-modal-brinde-tenis-2026-06-08.png`\n- Relatório (perguntas pro PO): `brands/reserva/scratch/repros/F-RES-01-modal-brinde.md`\n\n### Notas\n- Não é bug funcional — modal cumpre o que se propõe.\n- Flow automatizado dispensa via \"Continuar sem o brinde\" (`when: visible`).\n\n---",
       "severity_level": "media",
       "severity_label": "Média",
-      "status_category": "open",
-      "status_clean": "Aberto"
+      "status_category": "closed",
+      "status_clean": "Fechado — não é bug",
+      "decision": null,
+      "decided_at": "2026-06-09T19:32:01+00:00",
+      "override_source": "panel"
     },
     {
       "id": "F-RES-02",
@@ -3415,5 +3418,5 @@
       "status_clean": "Aberto"
     }
   ],
-  "open_findings": 6
+  "open_findings": 5
 }
