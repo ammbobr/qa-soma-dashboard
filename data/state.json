@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-09T17:01:56.740817+00:00",
+  "generated_at": "2026-06-09T17:02:39.972575+00:00",
   "brands": [
     {
       "id": "nv",
@@ -65,9 +65,9 @@
         "duration_s": 2383
       },
       "consolidated": {
-        "pass": 18,
+        "pass": 16,
         "fail": 0,
-        "total": 18,
+        "total": 16,
         "status": "PASS",
         "last_activity_stamp": "2026-06-03-1843"
       },

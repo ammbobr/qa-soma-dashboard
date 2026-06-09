@@ -2,7 +2,7 @@
   "brand": "reserva",
   "display_name": "Reserva",
   "schema_version": 1,
-  "generated_at": "2026-06-09T17:01:56.704605+00:00",
+  "generated_at": "2026-06-09T17:02:39.937554+00:00",
   "app": {
     "bundle_id": "com.globalsys.reserva",
     "version": "2000000.0.0",
@@ -18,9 +18,9 @@
     "duration_s": 2383
   },
   "consolidated": {
-    "pass": 18,
+    "pass": 16,
     "fail": 0,
-    "total": 18,
+    "total": 16,
     "status": "PASS",
     "last_activity_stamp": "2026-06-03-1843"
   },
@@ -3317,18 +3317,6 @@
       "last_status": "PASS",
       "last_duration_s": 123,
       "last_run_stamp": "2026-06-03-1843"
-    },
-    {
-      "name": "_debug-filtros",
-      "last_status": "PASS",
-      "last_duration_s": 92,
-      "last_run_stamp": "2026-06-02-1338"
-    },
-    {
-      "name": "_debug-cupom",
-      "last_status": "PASS",
-      "last_duration_s": 150,
-      "last_run_stamp": "2026-06-02-1252"
     }
   ],
   "findings": [],
