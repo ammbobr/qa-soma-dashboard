@@ -2,7 +2,7 @@
   "brand": "reserva",
   "display_name": "Reserva",
   "schema_version": 1,
-  "generated_at": "2026-06-09T16:10:19.129005+00:00",
+  "generated_at": "2026-06-09T17:01:56.704605+00:00",
   "app": {
     "bundle_id": "com.globalsys.reserva",
     "version": "2000000.0.0",
@@ -16,6 +16,13 @@
     "fail": 0,
     "total": 16,
     "duration_s": 2383
+  },
+  "consolidated": {
+    "pass": 18,
+    "fail": 0,
+    "total": 18,
+    "status": "PASS",
+    "last_activity_stamp": "2026-06-03-1843"
   },
   "runs": [
     {

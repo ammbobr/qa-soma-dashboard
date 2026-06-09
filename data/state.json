@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-09T16:10:19.159545+00:00",
+  "generated_at": "2026-06-09T17:01:56.740817+00:00",
   "brands": [
     {
       "id": "nv",
@@ -15,6 +15,13 @@
         "fail": 0,
         "total": 16,
         "duration_s": 894
+      },
+      "consolidated": {
+        "pass": 16,
+        "fail": 0,
+        "total": 16,
+        "status": "PASS",
+        "last_activity_stamp": "2026-05-30-1443"
       },
       "open_findings": 5,
       "state_file": "nv-state.json"
@@ -33,6 +40,13 @@
         "total": 1,
         "duration_s": 146
       },
+      "consolidated": {
+        "pass": 16,
+        "fail": 0,
+        "total": 16,
+        "status": "PASS",
+        "last_activity_stamp": "2026-06-09-1303"
+      },
       "open_findings": 0,
       "state_file": "off-state.json"
     },
@@ -49,6 +63,13 @@
         "fail": 0,
         "total": 16,
         "duration_s": 2383
+      },
+      "consolidated": {
+        "pass": 18,
+        "fail": 0,
+        "total": 18,
+        "status": "PASS",
+        "last_activity_stamp": "2026-06-03-1843"
       },
       "open_findings": 0,
       "state_file": "reserva-state.json"

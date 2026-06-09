@@ -47,15 +47,22 @@
             v<span x-text="b.app_version"></span>
             (build <span x-text="b.app_build"></span>)
           </div>
-          <div class="brand-card__run" :class="b.last_run ? 'run--' + b.last_run.status.toLowerCase() : 'run--empty'">
-            <template x-if="b.last_run">
+          <div class="brand-card__run" :class="(b.consolidated || b.last_run) ? 'run--' + ((b.consolidated || b.last_run).status.toLowerCase()) : 'run--empty'">
+            <template x-if="b.consolidated">
+              <div>
+                <strong x-text="b.consolidated.status"></strong>
+                <span x-text="`${b.consolidated.pass}/${b.consolidated.total}`"></span>
+                <span class="muted" x-text="`(${b.consolidated.last_activity_stamp})`"></span>
+              </div>
+            </template>
+            <template x-if="!b.consolidated && b.last_run">
               <div>
                 <strong x-text="b.last_run.status"></strong>
                 <span x-text="`${b.last_run.pass}/${b.last_run.total}`"></span>
                 <span class="muted" x-text="`(${b.last_run.stamp})`"></span>
               </div>
             </template>
-            <template x-if="!b.last_run">
+            <template x-if="!b.consolidated && !b.last_run">
               <div class="muted">sem rodadas ainda</div>
             </template>
           </div>

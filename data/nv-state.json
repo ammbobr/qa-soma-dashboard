@@ -2,7 +2,7 @@
   "brand": "nv",
   "display_name": "by NV",
   "schema_version": 1,
-  "generated_at": "2026-06-09T16:10:18.682603+00:00",
+  "generated_at": "2026-06-09T17:01:55.971849+00:00",
   "app": {
     "bundle_id": "br.com.bynv",
     "version": "2.0.0",
@@ -16,6 +16,13 @@
     "fail": 0,
     "total": 16,
     "duration_s": 894
+  },
+  "consolidated": {
+    "pass": 16,
+    "fail": 0,
+    "total": 16,
+    "status": "PASS",
+    "last_activity_stamp": "2026-05-30-1443"
   },
   "runs": [
     {
