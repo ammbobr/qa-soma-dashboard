@@ -4,5 +4,11 @@
     "decision": null,
     "status": "Fechado — não é bug",
     "status_key": "closed"
+  },
+  "F-RES-06": {
+    "decided_at": "2026-06-09T18:51:01+00:00",
+    "decision": null,
+    "status": "Fechado — não é bug",
+    "status_key": "closed"
   }
 }
