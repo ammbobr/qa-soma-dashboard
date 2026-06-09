@@ -11,6 +11,12 @@
     "status": "Fechado — não é bug",
     "status_key": "closed"
   },
+  "F-RES-05": {
+    "decided_at": "2026-06-09T21:48:37+00:00",
+    "decision": null,
+    "status": "Won't fix",
+    "status_key": "wontfix"
+  },
   "F-RES-06": {
     "decided_at": "2026-06-09T18:51:01+00:00",
     "decision": null,

@@ -2,7 +2,7 @@
   "brand": "reserva",
   "display_name": "Reserva",
   "schema_version": 1,
-  "generated_at": "2026-06-09T19:45:45.247996+00:00",
+  "generated_at": "2026-06-09T21:48:37.364520+00:00",
   "app": {
     "bundle_id": "com.globalsys.reserva",
     "version": "2000000.0.0",
@@ -3331,7 +3331,8 @@
       "severity_level": "media",
       "severity_label": "Média",
       "status_category": "closed",
-      "status_clean": "Fechado — não é bug"
+      "status_clean": "Fechado — não é bug",
+      "decision": null
     },
     {
       "id": "F-RES-02",
@@ -3344,7 +3345,8 @@
       "severity_level": "alta",
       "severity_label": "Alta",
       "status_category": "closed",
-      "status_clean": "Fechado — não é bug"
+      "status_clean": "Fechado — não é bug",
+      "decision": null
     },
     {
       "id": "F-RES-03",
@@ -3372,12 +3374,15 @@
       "id": "F-RES-05",
       "title": "Bottom sheet de tamanho concatena estoque no mesmo nó (a11y)",
       "severity": "Média",
-      "status": "Aberto",
+      "status": "Won't fix",
       "body": "O nó do picker de tamanho traz token + sufixo de estoque colado por `\\n` no mesmo nó textual: `\"02\\nResta 1\"`, `\"04\\nAvise-me\"`.\n\n### Impacto em acessibilidade\n- VoiceOver lê a string inteira de uma vez (\"zero dois resta um\") em vez de \"tamanho 02, botão, estoque baixo: resta 1\".\n- Deveriam ser nós separados pra screen reader segmentar.\n\n### Notas\n- Não foi confirmado se há dono no time pra mexer em a11y.\n\n---",
       "severity_level": "media",
       "severity_label": "Média",
-      "status_category": "open",
-      "status_clean": "Aberto"
+      "status_category": "wontfix",
+      "status_clean": "Won't fix",
+      "decision": null,
+      "decided_at": "2026-06-09T21:48:37+00:00",
+      "override_source": "panel"
     },
     {
       "id": "F-RES-06",
@@ -3390,7 +3395,8 @@
       "severity_level": "media",
       "severity_label": "Média",
       "status_category": "closed",
-      "status_clean": "Fechado — não é bug"
+      "status_clean": "Fechado — não é bug",
+      "decision": null
     },
     {
       "id": "F-RES-07",
@@ -3415,5 +3421,5 @@
       "status_clean": "Aberto"
     }
   ],
-  "open_findings": 5
+  "open_findings": 4
 }
