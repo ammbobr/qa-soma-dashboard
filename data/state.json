@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-09T15:13:49.806144+00:00",
+  "generated_at": "2026-06-09T16:06:26.814078+00:00",
   "brands": [
     {
       "id": "nv",
@@ -26,12 +26,12 @@
       "app_version": "10.0.0",
       "app_build": "1",
       "last_run": {
-        "stamp": "2026-06-09-0019",
+        "stamp": "2026-06-09-1303",
         "status": "PASS",
         "pass": 1,
         "fail": 0,
         "total": 1,
-        "duration_s": 116
+        "duration_s": 146
       },
       "open_findings": 0,
       "state_file": "off-state.json"
