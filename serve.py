@@ -27,6 +27,7 @@ from urllib.parse import urlparse
 DASHBOARD_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.abspath(os.path.join(DASHBOARD_DIR, "..", ".."))
 BRANDS_DIR = os.path.join(REPO_ROOT, "brands")
+OVERRIDES_DIR = os.path.join(DASHBOARD_DIR, "data", "overrides")
 BUILD_SCRIPT = os.path.join(REPO_ROOT, "shared", "scripts", "build-dashboard-data.sh")
 
 ID_RE = re.compile(r"^F(?:-[A-Z]+)?-\d+$")
@@ -96,14 +97,14 @@ class Handler(SimpleHTTPRequestHandler):
         if path == "/api/overrides":
             # devolve overrides de todas as marcas — útil pro frontend hidratar.
             out = {}
-            if os.path.isdir(BRANDS_DIR):
-                for brand in os.listdir(BRANDS_DIR):
-                    p = os.path.join(BRANDS_DIR, brand, "findings-overrides.json")
-                    if os.path.exists(p):
-                        try:
-                            out[brand] = json.load(open(p))
-                        except Exception:
-                            out[brand] = {}
+            if os.path.isdir(OVERRIDES_DIR):
+                for fname in os.listdir(OVERRIDES_DIR):
+                    if not fname.endswith(".json"): continue
+                    brand = fname[:-5]
+                    try:
+                        out[brand] = json.load(open(os.path.join(OVERRIDES_DIR, fname)))
+                    except Exception:
+                        out[brand] = {}
             return self._json(200, out)
         return super().do_GET()
 
@@ -138,7 +139,8 @@ class Handler(SimpleHTTPRequestHandler):
         if not os.path.isdir(brand_dir):
             return self._json(404, {"error": f"brand '{brand}' not found"})
 
-        overrides_path = os.path.join(brand_dir, "findings-overrides.json")
+        os.makedirs(OVERRIDES_DIR, exist_ok=True)
+        overrides_path = os.path.join(OVERRIDES_DIR, f"{brand}.json")
         try:
             existing = json.load(open(overrides_path)) if os.path.exists(overrides_path) else {}
         except Exception:

@@ -1,0 +1,182 @@
+name: apply-override
+
+# Trigger via API:
+#   curl -X POST https://api.github.com/repos/ammbobr/qa-soma-dashboard/dispatches \
+#     -H "Authorization: token <PAT>" \
+#     -H "Accept: application/vnd.github+json" \
+#     -d '{"event_type":"apply-override","client_payload":{
+#           "brand":"reserva","finding_id":"F-RES-01",
+#           "status":"closed","decision":"UX intencional"
+#         }}'
+#
+# O painel online faz essa chamada quando o usuário clica "Não é bug" etc.
+
+on:
+  repository_dispatch:
+    types: [apply-override]
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Validate payload
+        id: validate
+        env:
+          BRAND: ${{ github.event.client_payload.brand }}
+          FINDING_ID: ${{ github.event.client_payload.finding_id }}
+          STATUS: ${{ github.event.client_payload.status }}
+        run: |
+          set -e
+          if [[ -z "$BRAND" || -z "$FINDING_ID" || -z "$STATUS" ]]; then
+            echo "Payload incomplete: brand=$BRAND finding_id=$FINDING_ID status=$STATUS" >&2
+            exit 1
+          fi
+          if ! [[ "$BRAND" =~ ^[a-z0-9_-]+$ ]]; then
+            echo "brand invalid: $BRAND" >&2; exit 1
+          fi
+          if ! [[ "$FINDING_ID" =~ ^F(-[A-Z]+)?-[0-9]+$ ]]; then
+            echo "finding_id invalid: $FINDING_ID" >&2; exit 1
+          fi
+          case "$STATUS" in
+            open|closed|resolved|wontfix|in_progress|pending|observation) ;;
+            *) echo "status invalid: $STATUS" >&2; exit 1 ;;
+          esac
+          echo "ok"
+
+      - name: Apply override
+        env:
+          BRAND: ${{ github.event.client_payload.brand }}
+          FINDING_ID: ${{ github.event.client_payload.finding_id }}
+          STATUS_KEY: ${{ github.event.client_payload.status }}
+          DECISION: ${{ github.event.client_payload.decision }}
+        run: |
+          python3 - <<'PY'
+          import json, os, datetime, sys
+          brand = os.environ["BRAND"]
+          finding_id = os.environ["FINDING_ID"]
+          status_key = os.environ["STATUS_KEY"]
+          decision = os.environ.get("DECISION") or None
+
+          STATUS_LABELS = {
+              "open":         "Aberto",
+              "closed":       "Fechado — não é bug",
+              "resolved":     "Fechado — resolvido",
+              "wontfix":      "Won't fix",
+              "in_progress":  "Em correção",
+              "pending":      "Pendente",
+              "observation":  "Observação",
+          }
+
+          ov_dir = "data/overrides"
+          os.makedirs(ov_dir, exist_ok=True)
+          ov_path = f"{ov_dir}/{brand}.json"
+          ov = {}
+          if os.path.exists(ov_path):
+              with open(ov_path) as fh:
+                  try: ov = json.load(fh)
+                  except: ov = {}
+
+          if status_key == "open":
+              ov.pop(finding_id, None)
+          else:
+              ov[finding_id] = {
+                  "status": STATUS_LABELS[status_key],
+                  "status_key": status_key,
+                  "decision": decision,
+                  "decided_at": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"),
+              }
+          with open(ov_path, "w") as fh:
+              json.dump(ov, fh, ensure_ascii=False, indent=2, sort_keys=True)
+              fh.write("\n")
+
+          # Regenera state.json e <brand>-state.json (mescla overrides client-side).
+          # Carrega o brand-state existente, aplica override, recalcula contadores.
+          state_path = f"data/{brand}-state.json"
+          if not os.path.exists(state_path):
+              print(f"state file missing: {state_path}", file=sys.stderr)
+              sys.exit(0)
+          with open(state_path) as fh:
+              state = json.load(fh)
+
+          def classify(raw):
+              if not raw: return ("open", "Aberto")
+              s = raw.lower()
+              clean = (raw.replace("**","").replace("✅","").replace("❌","")
+                            .replace("🟡","").replace("🟠","").replace("🔴","")
+                            .replace("🟢","").replace("⏸️","").replace("🔄","")
+                            .replace("🔍","").strip().lstrip(" —-").strip())
+              if any(k in s for k in ["fechado","intencional","comportamento esperado",
+                      "não reproduz","nao reproduz","tratado pela suíte","verificado","corrigido","resolvido"]):
+                  return ("closed", clean or "Fechado")
+              if "won" in s and "fix" in s: return ("wontfix", clean or "Wont fix")
+              if "em adr" in s: return ("in_progress", clean or "Em ADR")
+              if "em correção" in s or "em correcao" in s: return ("in_progress", clean or "Em correção")
+              if "pendente" in s or "re-verificação" in s or "a confirmar" in s or "a validar" in s:
+                  return ("pending", clean or "Pendente")
+              if "observado" in s or "observação" in s or "validar com" in s or "não-bug" in s or "nao-bug" in s:
+                  return ("observation", clean or "Observação")
+              return ("open", clean or raw)
+
+          for f in state.get("findings", []):
+              entry = ov.get(f["id"])
+              if entry:
+                  f["status"] = entry["status"]
+                  f["decision"] = entry.get("decision")
+                  f["decided_at"] = entry.get("decided_at")
+                  f["override_source"] = "panel"
+              else:
+                  # Restaurar status do markdown — releitura simples: marca como aberto se não souber.
+                  # (Override removido → o build local com findings.md vai corrigir; aqui aproximamos.)
+                  if f.get("override_source") == "panel":
+                      f.pop("decision", None)
+                      f.pop("decided_at", None)
+                      f.pop("override_source", None)
+                      # status_clean original não conhecemos sem findings.md → assume Aberto.
+                      f["status"] = "Aberto"
+              cat, clean = classify(f.get("status"))
+              f["status_category"] = cat
+              f["status_clean"] = clean
+
+          state["open_findings"] = sum(
+              1 for f in state["findings"]
+              if f.get("status_category") not in ("closed", "wontfix", "observation")
+          )
+          state["generated_at"] = datetime.datetime.now(datetime.timezone.utc).isoformat()
+          with open(state_path, "w") as fh:
+              json.dump(state, fh, ensure_ascii=False, indent=2)
+
+          # Atualiza state.json global (índice).
+          idx_path = "data/state.json"
+          if os.path.exists(idx_path):
+              with open(idx_path) as fh: idx = json.load(fh)
+              for b in idx.get("brands", []):
+                  if b.get("id") == brand:
+                      b["open_findings"] = state["open_findings"]
+              idx["generated_at"] = state["generated_at"]
+              with open(idx_path, "w") as fh:
+                  json.dump(idx, fh, ensure_ascii=False, indent=2)
+          PY
+
+      - name: Commit & push
+        env:
+          BRAND: ${{ github.event.client_payload.brand }}
+          FINDING_ID: ${{ github.event.client_payload.finding_id }}
+          STATUS_KEY: ${{ github.event.client_payload.status }}
+        run: |
+          git config user.name  "qa-painel-bot"
+          git config user.email "qa-painel-bot@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "no changes to commit"
+            exit 0
+          fi
+          git commit -m "Override: $BRAND/$FINDING_ID → $STATUS_KEY (via painel)"
+          git push origin main

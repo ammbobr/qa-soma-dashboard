@@ -2,7 +2,7 @@
   "brand": "reserva",
   "display_name": "Reserva",
   "schema_version": 1,
-  "generated_at": "2026-06-09T18:12:42.360280+00:00",
+  "generated_at": "2026-06-09T18:31:23.718608+00:00",
   "app": {
     "bundle_id": "com.globalsys.reserva",
     "version": "2000000.0.0",

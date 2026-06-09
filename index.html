@@ -9,8 +9,8 @@
 <title>QA Soma — Painel</title>
 <!-- Cache-bust automático: substituído por publish-dashboard.sh em cada deploy.
      Pra dev local, serve.py manda Cache-Control: no-store em tudo. -->
-<link rel="stylesheet" href="styles.css?v=20260609151242" />
-<script defer src="app.js?v=20260609151242"></script>
+<link rel="stylesheet" href="styles.css?v=20260609153123" />
+<script defer src="app.js?v=20260609153123"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
 </head>
 <body x-data="dashboard" x-init="init()">
@@ -156,12 +156,17 @@
       </span>
     </div>
 
-    <p class="api-status" x-show="!apiAvailable">
-      <span class="muted">Painel em modo leitura.</span> Pra triar pelo painel, rode
-      <code>shared/dashboard/serve.sh</code> e abra <code>http://localhost:8765</code>.
-    </p>
     <p class="api-status api-status--ok" x-show="apiAvailable">
-      <span>✓ Backend conectado</span> — clique numa linha pra expandir e mudar status.
+      <span>✓ Backend local conectado</span> — clique numa linha pra expandir e mudar status (mudanças instantâneas).
+    </p>
+    <p class="api-status api-status--ok" x-show="!apiAvailable && pat">
+      <span>✓ Modo online (GitHub Action)</span> — triagem via API · ~30-60s pra propagar
+      <button class="link-btn" @click="openPatPrompt()">trocar PAT</button>
+    </p>
+    <p class="api-status" x-show="!apiAvailable && !pat">
+      <span class="muted">Painel em modo leitura.</span>
+      Pra triar online, <button class="link-btn" @click="openPatPrompt()">configurar GitHub PAT</button>.
+      Pra triar local, rode <code>shared/dashboard/serve.sh</code>.
     </p>
 
     <table class="findings-table findings-table--expandable">
@@ -196,6 +201,35 @@
       </tbody>
     </table>
 
+    <!-- Modal de configuração do PAT -->
+    <template x-if="patPromptOpen">
+      <div class="finding-detail-overlay" @click.self="patPromptOpen = false">
+        <div class="finding-detail-panel pat-panel" x-transition>
+          <div class="finding-detail-panel__header">
+            <strong>Configurar GitHub PAT</strong>
+            <button class="btn-close" @click="patPromptOpen = false" title="Fechar">✕</button>
+          </div>
+          <p>
+            Pra triar pelo painel online (GitHub Pages), preciso de um Personal Access Token
+            com permissão de disparar workflows no repo <code>ammbobr/qa-soma-dashboard</code>.
+          </p>
+          <ol class="pat-steps">
+            <li>Vá em <a href="https://github.com/settings/tokens?type=beta" target="_blank" rel="noopener">github.com/settings/tokens</a> → "Generate new token" (fine-grained).</li>
+            <li>Repository access: só <code>ammbobr/qa-soma-dashboard</code>.</li>
+            <li>Permissions → Repository → <strong>Contents: Read and write</strong> + <strong>Metadata: Read</strong>.</li>
+            <li>Copie o token e cole abaixo. Fica salvo só no seu browser (localStorage).</li>
+          </ol>
+          <input type="password" class="pat-input" placeholder="ghp_… ou github_pat_…"
+                 x-model="patInput" @keydown.enter="savePat()" />
+          <div class="finding-actions">
+            <button class="btn btn--closed" @click="savePat()">Salvar</button>
+            <button class="btn btn--reopen" @click="patInput = ''; savePat()" x-show="pat">Remover PAT</button>
+            <button class="btn btn--reopen" @click="patPromptOpen = false">Cancelar</button>
+          </div>
+        </div>
+      </div>
+    </template>
+
     <!-- Detalhe expandido (overlay flutuante — só renderiza o item selecionado) -->
     <template x-if="expandedFindingData">
       <div class="finding-detail-overlay" @click.self="expandedFinding = null">
@@ -213,7 +247,7 @@
             <span x-text="expandedFindingData.decision"></span>
             <span class="muted small" x-show="expandedFindingData.decided_at" x-text="'(' + (expandedFindingData.decided_at || '').slice(0,10) + ')'"></span>
           </div>
-          <div class="finding-actions" x-show="apiAvailable">
+          <div class="finding-actions" x-show="canTriage">
             <span class="muted small">Mudar status:</span>
             <button class="btn btn--closed"
                     :disabled="actionPending === findingKey(expandedFindingData)"
@@ -233,11 +267,13 @@
             <button class="btn btn--reopen"
                     :disabled="actionPending === findingKey(expandedFindingData)"
                     @click="setStatus(expandedFindingData, 'open')">Reabrir</button>
-            <span class="muted small" x-show="actionPending === findingKey(expandedFindingData)">salvando…</span>
+            <span class="muted small" x-show="actionPending === findingKey(expandedFindingData) && apiAvailable">salvando…</span>
+            <span class="muted small" x-show="actionPending === findingKey(expandedFindingData) && !apiAvailable">disparando workflow… (~30-60s)</span>
           </div>
           <p class="error-msg" x-show="actionError" x-text="actionError"></p>
-          <p class="muted small" x-show="!apiAvailable">
-            Painel em modo leitura. Pra mudar status, rode <code>shared/dashboard/serve.sh</code> e abra <code>http://localhost:8765</code>.
+          <p class="muted small" x-show="!canTriage">
+            Modo leitura. Pra triar, rode <code>shared/dashboard/serve.sh</code> local
+            ou <button class="link-btn" @click="openPatPrompt()">configure um PAT</button> pra usar online.
           </p>
         </div>
       </div>

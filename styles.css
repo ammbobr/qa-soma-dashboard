@@ -350,6 +350,42 @@ main { padding: 28px; max-width: 1280px; margin: 0 auto; }
 }
 .small { font-size: 11px; }
 
+/* Modal de PAT */
+.pat-panel { max-width: 560px; }
+.pat-panel p { font-size: 13.5px; line-height: 1.5; margin: 4px 0 12px; color: var(--text); }
+.pat-steps { font-size: 13px; line-height: 1.6; margin: 0 0 14px 20px; padding: 0; color: var(--text-muted); }
+.pat-steps li { margin: 4px 0; }
+.pat-steps code { background: var(--surface-2); padding: 1px 5px; border-radius: 4px; font-size: 12px; }
+.pat-steps strong { color: var(--text); }
+.pat-steps a { color: var(--accent, #6e9ec2); }
+.pat-input {
+  width: 100%;
+  background: var(--surface-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+.pat-input:focus {
+  outline: none;
+  border-color: var(--accent, #6e9ec2);
+}
+
+/* Link button (texto que age como botão) */
+.link-btn {
+  background: transparent;
+  border: 0;
+  color: var(--accent, #6e9ec2);
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  font: inherit;
+}
+.link-btn:hover { color: var(--text); }
+
 .filters { display: flex; gap: 20px; margin-bottom: 20px; align-items: flex-end; flex-wrap: wrap; }
 .filters label { display: flex; flex-direction: column; gap: 4px; font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; }
 .filters select {
