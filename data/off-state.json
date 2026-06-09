@@ -2,22 +2,39 @@
   "brand": "off",
   "display_name": "Off Premium",
   "schema_version": 1,
-  "generated_at": "2026-06-08T23:17:21.125993+00:00",
+  "generated_at": "2026-06-09T01:49:55.775116+00:00",
   "app": {
     "bundle_id": "com.mobfiq.offpremium",
     "version": "10.0.0",
     "build": "1",
-    "build_path": "brands/off/test-builds/OFF05-06.app"
+    "build_path": "/Users/thiagoborges/+Soma/Claude/QA Produtos Digitais Soma/brands/off/test-builds/OFF05-06.app"
   },
   "last_run": {
-    "stamp": "2026-06-08-2004",
+    "stamp": "2026-06-08-2247",
     "status": "FAIL",
     "pass": 0,
-    "fail": 0,
-    "total": 0,
-    "duration_s": 0
+    "fail": 1,
+    "total": 1,
+    "duration_s": 163
   },
   "runs": [
+    {
+      "stamp": "2026-06-08-2247",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 163,
+      "report_md": "brands/off/reports/run-2026-06-08-2247.md",
+      "artifacts_dir": "brands/off/reports/run-2026-06-08-2247/",
+      "flows": [
+        {
+          "name": "20-wishlist-favoritar",
+          "status": "FAIL",
+          "duration_s": 163
+        }
+      ]
+    },
     {
       "stamp": "2026-06-08-2004",
       "status": "FAIL",
@@ -375,8 +392,8 @@
     {
       "name": "20-wishlist-favoritar",
       "last_status": "FAIL",
-      "last_duration_s": 243,
-      "last_run_stamp": "2026-06-08-1148"
+      "last_duration_s": 163,
+      "last_run_stamp": "2026-06-08-2247"
     },
     {
       "name": "00-pipeline-smoke",
