@@ -2,7 +2,7 @@
   "brand": "off",
   "display_name": "Off Premium",
   "schema_version": 1,
-  "generated_at": "2026-06-09T03:19:55.073485+00:00",
+  "generated_at": "2026-06-09T03:21:57.002121+00:00",
   "app": {
     "bundle_id": "com.mobfiq.offpremium",
     "version": "10.0.0",
@@ -10,14 +10,31 @@
     "build_path": "/Users/thiagoborges/+Soma/Claude/QA Produtos Digitais Soma/brands/off/test-builds/OFF05-06.app"
   },
   "last_run": {
-    "stamp": "2026-06-09-0018",
+    "stamp": "2026-06-09-0019",
     "status": "PASS",
     "pass": 1,
     "fail": 0,
     "total": 1,
-    "duration_s": 103
+    "duration_s": 116
   },
   "runs": [
+    {
+      "stamp": "2026-06-09-0019",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 116,
+      "report_md": "brands/off/reports/run-2026-06-09-0019.md",
+      "artifacts_dir": "brands/off/reports/run-2026-06-09-0019/",
+      "flows": [
+        {
+          "name": "20-cupom-aplicar",
+          "status": "PASS",
+          "duration_s": 116
+        }
+      ]
+    },
     {
       "stamp": "2026-06-09-0018",
       "status": "PASS",
@@ -550,6 +567,12 @@
   ],
   "flows_summary": [
     {
+      "name": "20-cupom-aplicar",
+      "last_status": "PASS",
+      "last_duration_s": 116,
+      "last_run_stamp": "2026-06-09-0019"
+    },
+    {
       "name": "20-sacola-editar",
       "last_status": "PASS",
       "last_duration_s": 103,
@@ -560,12 +583,6 @@
       "last_status": "PASS",
       "last_duration_s": 142,
       "last_run_stamp": "2026-06-09-0015"
-    },
-    {
-      "name": "20-cupom-aplicar",
-      "last_status": "FAIL",
-      "last_duration_s": 140,
-      "last_run_stamp": "2026-06-09-0004"
     },
     {
       "name": "00-pipeline-smoke",
