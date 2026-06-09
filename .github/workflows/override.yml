@@ -13,7 +13,7 @@ name: apply-override
 
 on:
   repository_dispatch:
-    types: [apply-override]
+    types: [apply-override, delete-finding]
 
 permissions:
   contents: write
@@ -30,13 +30,14 @@ jobs:
       - name: Validate payload
         id: validate
         env:
+          EVENT: ${{ github.event.action }}
           BRAND: ${{ github.event.client_payload.brand }}
           FINDING_ID: ${{ github.event.client_payload.finding_id }}
           STATUS: ${{ github.event.client_payload.status }}
         run: |
           set -e
-          if [[ -z "$BRAND" || -z "$FINDING_ID" || -z "$STATUS" ]]; then
-            echo "Payload incomplete: brand=$BRAND finding_id=$FINDING_ID status=$STATUS" >&2
+          if [[ -z "$BRAND" || -z "$FINDING_ID" ]]; then
+            echo "Payload incomplete: brand=$BRAND finding_id=$FINDING_ID" >&2
             exit 1
           fi
           if ! [[ "$BRAND" =~ ^[a-z0-9_-]+$ ]]; then
@@ -45,14 +46,20 @@ jobs:
           if ! [[ "$FINDING_ID" =~ ^F(-[A-Z]+)?-[0-9]+$ ]]; then
             echo "finding_id invalid: $FINDING_ID" >&2; exit 1
           fi
-          case "$STATUS" in
-            open|closed|resolved|wontfix|in_progress|pending|observation) ;;
-            *) echo "status invalid: $STATUS" >&2; exit 1 ;;
-          esac
-          echo "ok"
+          if [[ "$EVENT" == "apply-override" ]]; then
+            if [[ -z "$STATUS" ]]; then
+              echo "status required for apply-override" >&2; exit 1
+            fi
+            case "$STATUS" in
+              open|closed|resolved|wontfix|in_progress|pending|observation) ;;
+              *) echo "status invalid: $STATUS" >&2; exit 1 ;;
+            esac
+          fi
+          echo "event=$EVENT ok"
 
-      - name: Apply override
+      - name: Apply override or delete
         env:
+          EVENT: ${{ github.event.action }}
           BRAND: ${{ github.event.client_payload.brand }}
           FINDING_ID: ${{ github.event.client_payload.finding_id }}
           STATUS_KEY: ${{ github.event.client_payload.status }}
@@ -60,9 +67,10 @@ jobs:
         run: |
           python3 - <<'PY'
           import json, os, datetime, sys
+          event = os.environ["EVENT"]
           brand = os.environ["BRAND"]
           finding_id = os.environ["FINDING_ID"]
-          status_key = os.environ["STATUS_KEY"]
+          status_key = os.environ.get("STATUS_KEY") or ""
           decision = os.environ.get("DECISION") or None
 
           STATUS_LABELS = {
@@ -84,7 +92,13 @@ jobs:
                   try: ov = json.load(fh)
                   except: ov = {}
 
-          if status_key == "open":
+          if event == "delete-finding":
+              # Soft-delete: marca deleted=true. Builder esconde do painel.
+              ov[finding_id] = {
+                  "deleted": True,
+                  "decided_at": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"),
+              }
+          elif status_key == "open":
               ov.pop(finding_id, None)
           else:
               ov[finding_id] = {
@@ -125,7 +139,12 @@ jobs:
                   return ("observation", clean or "Observação")
               return ("open", clean or raw)
 
-          for f in state.get("findings", []):
+          # Filtra findings com deleted=true ANTES de processar overrides.
+          state["findings"] = [
+              f for f in state.get("findings", [])
+              if not (ov.get(f["id"]) or {}).get("deleted")
+          ]
+          for f in state["findings"]:
               entry = ov.get(f["id"])
               if entry:
                   f["status"] = entry["status"]
@@ -167,6 +186,7 @@ jobs:
 
       - name: Commit & push
         env:
+          EVENT: ${{ github.event.action }}
           BRAND: ${{ github.event.client_payload.brand }}
           FINDING_ID: ${{ github.event.client_payload.finding_id }}
           STATUS_KEY: ${{ github.event.client_payload.status }}
@@ -178,5 +198,10 @@ jobs:
             echo "no changes to commit"
             exit 0
           fi
-          git commit -m "Override: $BRAND/$FINDING_ID → $STATUS_KEY (via painel)"
+          if [[ "$EVENT" == "delete-finding" ]]; then
+            MSG="Delete: $BRAND/$FINDING_ID (via painel)"
+          else
+            MSG="Override: $BRAND/$FINDING_ID → $STATUS_KEY (via painel)"
+          fi
+          git commit -m "$MSG"
           git push origin main

@@ -112,6 +112,8 @@ class Handler(SimpleHTTPRequestHandler):
         path = urlparse(self.path).path
         if path == "/api/override":
             return self._handle_override()
+        if path == "/api/delete":
+            return self._handle_delete()
         if path == "/api/rebuild":
             return self._handle_rebuild()
         self._json(404, {"error": "unknown endpoint"})
@@ -171,6 +173,83 @@ class Handler(SimpleHTTPRequestHandler):
             "brand": brand,
             "finding_id": finding_id,
             "status": ALLOWED_STATUS[status_key],
+            "rebuilt": rebuilt,
+        })
+
+    def _handle_delete(self):
+        """Hard-delete: remove a seção '## F-XXX — ...' do findings.md +
+        remove a entry do overrides.json + rebuilda os JSONs."""
+        body = self._read_json_body()
+        if body is None:
+            return self._json(400, {"error": "invalid json body"})
+
+        brand = (body.get("brand") or "").strip()
+        finding_id = (body.get("finding_id") or "").strip()
+
+        if not brand or not re.match(r"^[a-z0-9_-]+$", brand):
+            return self._json(400, {"error": "brand invalid"})
+        if not ID_RE.match(finding_id):
+            return self._json(400, {"error": "finding_id invalid"})
+
+        brand_dir = os.path.join(BRANDS_DIR, brand)
+        if not os.path.isdir(brand_dir):
+            return self._json(404, {"error": f"brand '{brand}' not found"})
+
+        # 1) Remove a seção do findings.md.
+        findings_path = os.path.join(brand_dir, "findings.md")
+        removed_from_md = False
+        if os.path.exists(findings_path):
+            try:
+                with open(findings_path) as fh:
+                    lines = fh.readlines()
+                out = []
+                skipping = False
+                # Padrão exato: "## F-XXX — Título" ou "## F-XXX - Título"
+                head_re = re.compile(rf"^##\s+{re.escape(finding_id)}\s*[—-]\s")
+                next_h2 = re.compile(r"^##\s+")
+                for line in lines:
+                    if skipping:
+                        if next_h2.match(line):
+                            skipping = False
+                            out.append(line)
+                        # senão: pula a linha (engole o body)
+                    elif head_re.match(line):
+                        skipping = True
+                        removed_from_md = True
+                    else:
+                        out.append(line)
+                # Limpa "---" órfão deixado antes da seção removida (visual).
+                cleaned = []
+                for i, line in enumerate(out):
+                    if line.strip() == "---" and i + 1 < len(out) and out[i + 1].strip() == "":
+                        if i + 2 < len(out) and out[i + 2].strip() == "---":
+                            continue  # dois '---' seguidos com linha em branco entre — colapsa
+                    cleaned.append(line)
+                with open(findings_path, "w") as fh:
+                    fh.writelines(cleaned)
+            except Exception as e:
+                return self._json(500, {"error": f"failed editing findings.md: {e}"})
+
+        # 2) Remove a entry do overrides.json (não interessa mais — finding sumiu).
+        os.makedirs(OVERRIDES_DIR, exist_ok=True)
+        overrides_path = os.path.join(OVERRIDES_DIR, f"{brand}.json")
+        if os.path.exists(overrides_path):
+            try:
+                ov = json.load(open(overrides_path))
+            except Exception:
+                ov = {}
+            if finding_id in ov:
+                ov.pop(finding_id)
+                with open(overrides_path, "w") as fh:
+                    json.dump(ov, fh, ensure_ascii=False, indent=2, sort_keys=True)
+                    fh.write("\n")
+
+        rebuilt = self._rebuild()
+        return self._json(200, {
+            "ok": True,
+            "brand": brand,
+            "finding_id": finding_id,
+            "removed_from_md": removed_from_md,
             "rebuilt": rebuilt,
         })
 

@@ -9,8 +9,8 @@
 <title>QA Soma — Painel</title>
 <!-- Cache-bust automático: substituído por publish-dashboard.sh em cada deploy.
      Pra dev local, serve.py manda Cache-Control: no-store em tudo. -->
-<link rel="stylesheet" href="styles.css?v=20260609181846" />
-<script defer src="app.js?v=20260609181846"></script>
+<link rel="stylesheet" href="styles.css?v=20260609202328" />
+<script defer src="app.js?v=20260609202328"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
 </head>
 <body x-data="dashboard" x-init="init()">
@@ -247,7 +247,7 @@
             <span x-text="expandedFindingData.decision"></span>
             <span class="muted small" x-show="expandedFindingData.decided_at" x-text="'(' + (expandedFindingData.decided_at || '').slice(0,10) + ')'"></span>
           </div>
-          <div class="finding-actions" x-show="canTriage">
+          <div class="finding-actions" x-show="canTriage && deletePending !== findingKey(expandedFindingData)">
             <span class="muted small">Mudar status:</span>
             <button class="btn btn--closed"
                     :disabled="actionPending === findingKey(expandedFindingData)"
@@ -267,8 +267,23 @@
             <button class="btn btn--reopen"
                     :disabled="actionPending === findingKey(expandedFindingData)"
                     @click="setStatus(expandedFindingData, 'open')">Reabrir</button>
+            <button class="btn btn--danger"
+                    :disabled="actionPending === findingKey(expandedFindingData)"
+                    @click="askDelete(expandedFindingData)"
+                    title="Remove o bug definitivamente">🗑 Apagar</button>
             <span class="muted small" x-show="actionPending === findingKey(expandedFindingData) && apiAvailable">salvando…</span>
             <span class="muted small" x-show="actionPending === findingKey(expandedFindingData) && !apiAvailable">disparando workflow… (~30-60s)</span>
+          </div>
+
+          <!-- Confirm de delete (substitui a barra de ações enquanto pendente) -->
+          <div class="finding-actions confirm-delete" x-show="deletePending === findingKey(expandedFindingData)">
+            <span>
+              <strong>Apagar este bug?</strong>
+              <span class="muted small" x-show="apiAvailable"> Remove a seção do findings.md e do painel. Sem volta.</span>
+              <span class="muted small" x-show="!apiAvailable"> Marca como deletado no painel (online soft-delete).</span>
+            </span>
+            <button class="btn btn--danger" @click="confirmDelete(expandedFindingData)">Sim, apagar</button>
+            <button class="btn btn--reopen" @click="cancelDelete()">Cancelar</button>
           </div>
           <p class="error-msg" x-show="actionError" x-text="actionError"></p>
           <p class="muted small" x-show="!canTriage">

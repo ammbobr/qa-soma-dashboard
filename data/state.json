@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-09T21:48:37.364520+00:00",
+  "generated_at": "2026-06-09T23:23:28.410823+00:00",
   "brands": [
     {
       "id": "nv",
@@ -47,7 +47,7 @@
         "status": "PASS",
         "last_activity_stamp": "2026-06-09-1303"
       },
-      "open_findings": 2,
+      "open_findings": 3,
       "state_file": "off-state.json"
     },
     {
@@ -71,7 +71,7 @@
         "status": "PASS",
         "last_activity_stamp": "2026-06-03-1843"
       },
-      "open_findings": 4,
+      "open_findings": 5,
       "state_file": "reserva-state.json"
     }
   ],

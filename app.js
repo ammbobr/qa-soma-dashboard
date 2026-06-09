@@ -28,6 +28,7 @@ function dashboardData() {
     patPromptOpen: false,        // modal de configuração do PAT
     patInput: "",                // textarea do PAT (não persiste até salvar)
     pollHandle: null,            // setInterval do poll pós-dispatch
+    deletePending: null,         // "brand/id" enquanto o usuário confirma o delete
 
     async init() {
       this.bindHashRoute();
@@ -254,6 +255,109 @@ function dashboardData() {
         this.actionError = e.message;
         this.actionPending = null;
       }
+    },
+
+    // ---------- delete ----------
+
+    askDelete(f) {
+      this.deletePending = this.findingKey(f);
+    },
+
+    cancelDelete() {
+      this.deletePending = null;
+    },
+
+    async confirmDelete(f) {
+      this.deletePending = null;
+      if (this.apiAvailable) return this._deleteLocal(f);
+      if (this.pat) return this._deleteDispatch(f);
+      this.actionError = "Sem backend local nem PAT — configure o PAT pra apagar online.";
+    },
+
+    async _deleteLocal(f) {
+      const key = this.findingKey(f);
+      this.actionPending = key;
+      this.actionError = null;
+      try {
+        const r = await fetch("/api/delete", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ brand: f.brand, finding_id: f.id }),
+        });
+        const data = await r.json();
+        if (!r.ok || !data.ok) throw new Error(data.error || `HTTP ${r.status}`);
+        this.expandedFinding = null;
+        await this.refresh();
+        this.allFindingsCache = null;
+        await this.loadAllFindings();
+      } catch (e) {
+        this.actionError = e.message;
+      } finally {
+        this.actionPending = null;
+      }
+    },
+
+    async _deleteDispatch(f) {
+      const key = this.findingKey(f);
+      this.actionPending = key;
+      this.actionError = null;
+      const repo = "ammbobr/qa-soma-dashboard";
+      try {
+        const r = await fetch(`https://api.github.com/repos/${repo}/dispatches`, {
+          method: "POST",
+          headers: {
+            "Accept": "application/vnd.github+json",
+            "Authorization": `token ${this.pat}`,
+            "Content-Type": "application/json",
+            "X-GitHub-Api-Version": "2022-11-28",
+          },
+          body: JSON.stringify({
+            event_type: "delete-finding",
+            client_payload: { brand: f.brand, finding_id: f.id },
+          }),
+        });
+        if (!r.ok) {
+          let msg = `HTTP ${r.status}`;
+          try { msg = (await r.json()).message || msg; } catch {}
+          throw new Error(`GitHub: ${msg}`);
+        }
+        this._beginPollForDelete(f);
+      } catch (e) {
+        this.actionError = e.message;
+        this.actionPending = null;
+      }
+    },
+
+    _beginPollForDelete(f) {
+      if (this.pollHandle) { clearInterval(this.pollHandle); }
+      let ticks = 0;
+      const maxTicks = 24;
+      this.pollHandle = setInterval(async () => {
+        ticks++;
+        try {
+          const r = await fetch(`data/${f.brand}-state.json?t=${Date.now()}`, { cache: "no-store" });
+          if (r.ok) {
+            const s = await r.json();
+            const stillThere = (s.findings || []).some((x) => x.id === f.id);
+            if (!stillThere) {
+              clearInterval(this.pollHandle);
+              this.pollHandle = null;
+              this.actionPending = null;
+              this.expandedFinding = null;
+              await this.refresh();
+              this.allFindingsCache = null;
+              await this.loadAllFindings();
+              return;
+            }
+          }
+        } catch {}
+        if (ticks >= maxTicks) {
+          clearInterval(this.pollHandle);
+          this.pollHandle = null;
+          this.actionPending = null;
+          this.actionError = "Delete não propagou em 2 min — verifique o workflow no GitHub.";
+        }
+      }, 5000);
     },
 
     _beginPollForUpdate(f, expectedStatusKey) {

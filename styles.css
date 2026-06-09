@@ -325,6 +325,16 @@ main { padding: 28px; max-width: 1280px; margin: 0 auto; }
 .btn--observation  { border-color: #8d6a4a; color: #b08a5f; }
 .btn--observation:hover:not(:disabled) { background: rgba(141, 106, 74, 0.12); }
 .btn--reopen       { border-color: var(--border); color: var(--text-muted); }
+.btn--danger       { border-color: #a04545; color: #d77878; }
+.btn--danger:hover:not(:disabled) { background: rgba(160, 69, 69, 0.15); }
+
+.confirm-delete {
+  background: rgba(160, 69, 69, 0.08);
+  border: 1px solid rgba(160, 69, 69, 0.35);
+  border-radius: 6px;
+  padding: 10px 14px;
+}
+.confirm-delete strong { color: #d77878; }
 
 .api-status {
   margin: 0 0 16px;
