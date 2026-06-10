@@ -2,7 +2,7 @@
   "brand": "nv",
   "display_name": "by NV",
   "schema_version": 1,
-  "generated_at": "2026-06-10T02:31:48.758458+00:00",
+  "generated_at": "2026-06-10T02:31:58.471403+00:00",
   "app": {
     "bundle_id": "br.com.bynv",
     "version": "2.0.0",
@@ -1848,17 +1848,6 @@
       "severity": null,
       "status": "❌ **Won't fix**",
       "body": "**Build:** v2.0.0 · **Quando:** 2026-05-22, durante automação do `10-checkout-ate-pagamento`.\n\n**Comportamento observado:**\nNa tela \"Acesse sua conta\" da rota **\"Entrar como convidado\"** (campo de email único pra contato do pedido), o app aceita strings claramente inválidas como email:\n- `qa-checkout@somagrupo.com.brsomagrupo.com.br.com.br` — múltiplos TLDs concatenados ✅ aceito\n- Não há feedback visual durante a digitação indicando email inválido\n- O botão \"Confirmar\" habilita assim que o texto contém `@` + algum caractere depois\n\n**Risco:**\n- Pedidos sem rastreabilidade de cliente (email inválido = não recebe confirmação)\n- Possível abuso (envio de pedidos com emails inexistentes)\n\n**Reproduzir:**\n1. Adicionar produto à sacola\n2. \"Fechar compra\" → \"Entrar como convidado\"\n3. Digitar `foo@bar.bar.bar.bar.bar` no campo\n4. Botão \"Confirmar\" habilita; ao tocar, prossegue pra tela de OTP (com base no domínio absurdo)\n\n**Sugestão:** validar regex de email no client (RFC 5322 simplificado) e/ou no submit do botão.\n\n---",
-      "severity_level": "desconhecido",
-      "severity_label": "—",
-      "status_category": "wontfix",
-      "status_clean": "Won't fix"
-    },
-    {
-      "id": "F-014",
-      "title": "Botões usam o texto do estado desabilitado como label",
-      "severity": null,
-      "status": "❌ **Won't fix**",
-      "body": "**Build:** v2.0.0 · **Quando:** 2026-05-22.\n\n**Comportamento observado:**\nEm ao menos duas telas de login, o botão de ação principal tem como **label** o texto que descreve **o que falta fazer**, não a ação:\n\n| Tela | Label desabilitado | Label habilitado |\n|---|---|---|\n| Acesse sua conta → Entrar como convidado | \"Insira seu email\" | \"Confirmar\" |\n| Acesse sua conta → Entrar com email e senha | \"Informe seus dados de acesso\" | \"Confirmar\" |\n\n**Risco:**\n- Confunde testes automatizados (selector por texto muda quando os campos preenchem)\n- Leitor de tela anuncia o botão como \"Insira seu email\" mesmo quando ele é o submit — acessibilidade ruim\n- Usuário pode achar que \"Insira seu email\" é o campo (foi exatamente o que confundi durante a automação)\n\n**Sugestão:** label fixa (`Continuar` / `Confirmar`) com estado disabled controlado por opacity/cor, não por texto.\n\n---",
       "severity_level": "desconhecido",
       "severity_label": "—",
       "status_category": "wontfix",
