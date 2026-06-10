@@ -2,7 +2,7 @@
   "brand": "off",
   "display_name": "Off Premium",
   "schema_version": 1,
-  "generated_at": "2026-06-09T23:24:16.284357+00:00",
+  "generated_at": "2026-06-10T02:34:29.492232+00:00",
   "app": {
     "bundle_id": "com.mobfiq.offpremium",
     "version": "10.0.0",
@@ -689,17 +689,6 @@
   ],
   "findings": [
     {
-      "id": "F-OFF-01",
-      "title": "Regex de tamanho do `select-first-size` casava \"Guia de medidas\"",
-      "severity": "Baixa",
-      "status": "Aberto",
-      "body": "No fluxo `10-compra-via-busca` da Off, o subflow `select-first-size` tapava no link **\"Guia de medidas\"** em vez do tamanho, abrindo a tabela de medidas → `cta_select_size` falhava em seguida.\n\n### Causa raiz\n- A regex herdada (`first_size_label`) tinha `G` como alternativa (tamanho de letra).\n- `(...|G|...)[\\s\\S]*` casa \"Guia de medidas\" (começa com G), que aparece ANTES do picker na árvore.\n- Off usa tamanhos numéricos (36-44), não letras.\n\n### Fix aplicado\n- `first_size_label` da Off restrita pra `(02|04|06|35|36|37|38|39|40|42|44)[\\s\\S]*` (sem letras).\n- Tap virou best-effort (`when: visible`) + `retryTapIfNoChange`.\n\n### Notas\n- Não é bug do app — seletor herdado colidindo. Mesma classe dos fixes da Reserva.\n\n---",
-      "severity_level": "baixa",
-      "severity_label": "Baixa",
-      "status_category": "open",
-      "status_clean": "Aberto"
-    },
-    {
       "id": "F-OFF-02",
       "title": "Sacola Off não tem \"Página do produto\" no menu de ações",
       "severity": "Baixa",
@@ -721,8 +710,9 @@
       "severity_level": "baixa",
       "severity_label": "Baixa",
       "status_category": "closed",
-      "status_clean": "Fechado — não é bug"
+      "status_clean": "Fechado — não é bug",
+      "decision": null
     }
   ],
-  "open_findings": 2
+  "open_findings": 1
 }
