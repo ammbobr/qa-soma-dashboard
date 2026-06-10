@@ -2,7 +2,7 @@
   "brand": "reserva",
   "display_name": "Reserva",
   "schema_version": 1,
-  "generated_at": "2026-06-10T02:32:15.849828+00:00",
+  "generated_at": "2026-06-10T02:33:28.789939+00:00",
   "app": {
     "bundle_id": "com.globalsys.reserva",
     "version": "2000000.0.0",
@@ -3394,18 +3394,7 @@
       "severity_label": "Baixa",
       "status_category": "open",
       "status_clean": "Aberto"
-    },
-    {
-      "id": "F-RES-08",
-      "title": "Inconsistência cross-brand Soma (UX divergente entre marcas)",
-      "severity": "Média",
-      "status": "Aberto",
-      "body": "Comparando NV, Reserva e Off:\n\n| Aspecto | NV | Reserva | Off |\n|---|---|---|---|\n| Tab account | Conta | Perfil | Conta |\n| Wishlist label | Wishlist | Favoritos | Wishlist |\n| Wishlist como tab | não (via Conta) | não (via Perfil) | sim (bottom bar) |\n| Checkout final | \"Finalização do pedido\" + \"Finalizar pedido\" | \"Pagamento\" + \"Continuar para a revisão\" | (= NV) |\n| Modal biometria pós-login | sim | não | sim |\n| Número de tabs | 4 | 5 | 5 |\n\n### Notas\n- Não é bug funcional.\n- Estratégico — vale levar pro design system algum dia, se houver intenção de aproximar as marcas.",
-      "severity_level": "media",
-      "severity_label": "Média",
-      "status_category": "open",
-      "status_clean": "Aberto"
     }
   ],
-  "open_findings": 4
+  "open_findings": 3
 }
