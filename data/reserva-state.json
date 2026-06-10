@@ -2,7 +2,7 @@
   "brand": "reserva",
   "display_name": "Reserva",
   "schema_version": 1,
-  "generated_at": "2026-06-10T02:34:53.850141+00:00",
+  "generated_at": "2026-06-10T02:35:04.958235+00:00",
   "app": {
     "bundle_id": "com.globalsys.reserva",
     "version": "2000000.0.0",
@@ -3335,17 +3335,6 @@
       "decision": null
     },
     {
-      "id": "F-RES-03",
-      "title": "Lupa de busca perde hit-test em cold launch (Flutter painting tardio)",
-      "severity": "Baixa",
-      "status": "Aberto",
-      "body": "Após `clearState: true`, a a11y da Home era populada **antes do paint** (problema conhecido do Flutter). O Maestro reportava o tap COMPLETED mas o tap caía no canvas em branco — o assert seguinte falhava.\n\n### Análise\n- Sintoma é da automação, não de uso real.\n- Usuário humano não consegue tocar a lupa antes da Home estar pintada (não vê o ícone).\n- Mitigação no harness: `retryTapIfNoChange: true` + `waitToSettleTimeoutMs: 1500` em `subflows/nav/open-search.yaml`.\n\n---",
-      "severity_level": "baixa",
-      "severity_label": "Baixa",
-      "status_category": "open",
-      "status_clean": "Aberto"
-    },
-    {
       "id": "F-RES-04",
       "title": "Scrim do modal de logout demora >1.5s a dissipar",
       "severity": "Baixa",
@@ -3388,5 +3377,5 @@
       "decision": null
     }
   ],
-  "open_findings": 2
+  "open_findings": 1
 }
