@@ -2,7 +2,7 @@
   "brand": "nv",
   "display_name": "by NV",
   "schema_version": 1,
-  "generated_at": "2026-06-09T23:24:16.057203+00:00",
+  "generated_at": "2026-06-10T02:31:48.758458+00:00",
   "app": {
     "bundle_id": "br.com.bynv",
     "version": "2.0.0",
@@ -1896,18 +1896,7 @@
       "severity_label": "—",
       "status_category": "closed",
       "status_clean": "observação de comportamento, não-bug óbvio — mas vale validar com produto se é intencional. Em apps de e-commerce, é comum:"
-    },
-    {
-      "id": "F-018",
-      "title": "Modal de biometria pós-login",
-      "severity": null,
-      "status": "não é bug; é fluxo de produto. Mencionado aqui porque **toda automação que loga precisa dispensar esse modal**. Já incorporado no subflow `auth/login.yaml`.",
-      "body": "**Build:** v2.0.0 · **Quando:** 2026-05-25, descoberto na construção do subflow `auth/login.yaml`.\n\n**Comportamento observado:**\nApós primeiro login da sessão (Configurar dados via tela \"Entrar com email e senha\"), o app exibe modal:\n\n> \"Deseja facilitar seus próximos acessos? Habilite o acesso à biometria para acessar sua conta.\" — botões \"Agora não\" / \"Habilitar biometria\"",
-      "severity_level": "desconhecido",
-      "severity_label": "—",
-      "status_category": "open",
-      "status_clean": "não é bug; é fluxo de produto. Mencionado aqui porque toda automação que loga precisa dispensar esse modal. Já incorporado no subflow `auth/login.yaml`."
     }
   ],
-  "open_findings": 5
+  "open_findings": 4
 }
