@@ -2,7 +2,7 @@
   "brand": "reserva",
   "display_name": "Reserva",
   "schema_version": 1,
-  "generated_at": "2026-06-10T02:35:04.958235+00:00",
+  "generated_at": "2026-06-10T02:35:37.761915+00:00",
   "app": {
     "bundle_id": "com.globalsys.reserva",
     "version": "2000000.0.0",
@@ -3360,20 +3360,6 @@
       "severity_label": "Média",
       "status_category": "wontfix",
       "status_clean": "Won't fix",
-      "decision": null
-    },
-    {
-      "id": "F-RES-06",
-      "title": "Busca adulta retorna produto Reserva Mini esgotado",
-      "severity": "Média",
-      "status": "Fechado — não é bug",
-      "body": "Busca por \"blusa\" retornou \"Blusa Menina Tricot Crochet\" (Reserva Mini, infantil) misturada com adulto, e com **estoque furado**: \"Avise-me\" em todos os tamanhos exceto 02 (\"Resta 1\").\n\n### Análise (com Thiago, 2026-06-08)\n- Mini tem pouca blusa mesmo. Esse produto é resto de estoque legítimo.\n- Não é ranking quebrado; é catálogo refletindo realidade.\n\n---",
-      "decided_at": "2026-06-09T18:51:01+00:00",
-      "override_source": "panel",
-      "severity_level": "media",
-      "severity_label": "Média",
-      "status_category": "closed",
-      "status_clean": "Fechado — não é bug",
       "decision": null
     }
   ],
