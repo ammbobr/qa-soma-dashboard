@@ -9,6 +9,12 @@
     "decided_at": "2026-06-10T02:32:15+00:00",
     "deleted": true
   },
+  "F-RES-04": {
+    "decided_at": "2026-06-10T02:34:53+00:00",
+    "decision": null,
+    "status": "Em correção",
+    "status_key": "in_progress"
+  },
   "F-RES-05": {
     "decided_at": "2026-06-09T21:48:37+00:00",
     "decision": null,
