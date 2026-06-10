@@ -2,7 +2,7 @@
   "brand": "reserva",
   "display_name": "Reserva",
   "schema_version": 1,
-  "generated_at": "2026-06-10T02:33:28.789939+00:00",
+  "generated_at": "2026-06-10T02:34:41.865026+00:00",
   "app": {
     "bundle_id": "com.globalsys.reserva",
     "version": "2000000.0.0",
@@ -3383,18 +3383,7 @@
       "status_category": "closed",
       "status_clean": "Fechado — não é bug",
       "decision": null
-    },
-    {
-      "id": "F-RES-07",
-      "title": "`rightOf` do cupom pegava linha errada (flakiness de automação)",
-      "severity": "Baixa",
-      "status": "Aberto",
-      "body": "`rightOf: \"Cupom de desconto\"` no flow `20-cupom-aplicar` pegava o \"Adicionar\" da linha de cima (Código de vendedora) → abria sheet errado. Causa: o carousel do brinde faz relayout contínuo; Flutter perde hit-test em micro-animações.\n\n### Validação manual (2026-06-08)\n- Thiago testou manualmente: tocou \"Adicionar\" do cupom → sheet correto abriu na primeira.\n- Screenshot: `brands/reserva/scratch/repros/f-res-07-manual-2026-06-08.png`.\n\n### Notas\n- Sob automação, mitigado com `index: 1` + `retryTapIfNoChange`. Não é bug do app.\n\n---",
-      "severity_level": "baixa",
-      "severity_label": "Baixa",
-      "status_category": "open",
-      "status_clean": "Aberto"
     }
   ],
-  "open_findings": 3
+  "open_findings": 2
 }
