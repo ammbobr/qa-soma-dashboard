@@ -2,7 +2,7 @@
   "brand": "reserva",
   "display_name": "Reserva",
   "schema_version": 1,
-  "generated_at": "2026-06-09T23:24:16.528273+00:00",
+  "generated_at": "2026-06-10T02:32:15.849828+00:00",
   "app": {
     "bundle_id": "com.globalsys.reserva",
     "version": "2000000.0.0",
@@ -3331,20 +3331,8 @@
       "severity_level": "media",
       "severity_label": "Média",
       "status_category": "closed",
-      "status_clean": "Fechado — não é bug"
-    },
-    {
-      "id": "F-RES-02",
-      "title": "Modal Camisetas® promocional aparecendo \"aleatoriamente\"",
-      "severity": "Alta",
-      "status": "Fechado — não é bug",
-      "body": "Modal Flutter promocional aparecia em qualquer ponto do flow (Home, PLP, PDP, Menu, busca). Não renderizava na hierarchy Maestro → indetectável por texto. Tentativa de dismiss via tap em coord (90%, 31%) funcionava pontualmente mas modal reaparecia.\n\n### Resolução observada\nThiago desligou o modal pelo backend/conta em 2026-06-01. Defesas anti-modal foram removidas do harness (`dismiss-promo-modal.yaml` deletado, steps de tap removidos de subflows).\n\n### Notas\n- Modal reaparecia em sessões cold + warm.\n- Pra usuário real, controle de frequência do modal promocional pode estar errado (sem rate limit aparente). Vale alinhar com growth/CRM se a campanha for reativada.\n\n---",
-      "decided_at": "2026-06-09T18:11:48+00:00",
-      "override_source": "panel",
-      "severity_level": "alta",
-      "severity_label": "Alta",
-      "status_category": "closed",
-      "status_clean": "Fechado — não é bug"
+      "status_clean": "Fechado — não é bug",
+      "decision": null
     },
     {
       "id": "F-RES-03",
@@ -3379,7 +3367,8 @@
       "severity_level": "media",
       "severity_label": "Média",
       "status_category": "wontfix",
-      "status_clean": "Won't fix"
+      "status_clean": "Won't fix",
+      "decision": null
     },
     {
       "id": "F-RES-06",
@@ -3392,7 +3381,8 @@
       "severity_level": "media",
       "severity_label": "Média",
       "status_category": "closed",
-      "status_clean": "Fechado — não é bug"
+      "status_clean": "Fechado — não é bug",
+      "decision": null
     },
     {
       "id": "F-RES-07",
