@@ -2,7 +2,7 @@
   "brand": "reserva",
   "display_name": "Reserva",
   "schema_version": 1,
-  "generated_at": "2026-06-11T16:01:01.637056+00:00",
+  "generated_at": "2026-06-11T17:28:53.287591+00:00",
   "app": {
     "bundle_id": "com.globalsys.reserva",
     "version": "2000000.0.0",
@@ -10,21 +10,140 @@
     "build_path": "/Users/thiagoborges/+Soma/Claude/QA Produtos Digitais Soma/brands/reserva/test-builds/Reserva29-05.app"
   },
   "last_run": {
-    "stamp": "2026-06-11-1259",
-    "status": "FAIL",
+    "stamp": "2026-06-11-1427",
+    "status": "PASS",
     "pass": 1,
-    "fail": 1,
-    "total": 2,
-    "duration_s": 94
+    "fail": 0,
+    "total": 1,
+    "duration_s": 98
   },
   "consolidated": {
-    "pass": 15,
+    "pass": 16,
     "fail": 1,
-    "total": 16,
+    "total": 17,
     "status": "FAIL",
-    "last_activity_stamp": "2026-06-11-1259"
+    "last_activity_stamp": "2026-06-11-1427"
   },
   "runs": [
+    {
+      "stamp": "2026-06-11-1427",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 98,
+      "report_md": "brands/reserva/reports/run-2026-06-11-1427.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-11-1427/",
+      "flows": [
+        {
+          "name": "20-plp-filtros-ordenacao",
+          "status": "PASS",
+          "duration_s": 98
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-11-1425",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 120,
+      "report_md": "brands/reserva/reports/run-2026-06-11-1425.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-11-1425/",
+      "flows": [
+        {
+          "name": "20-categoria-navegacao",
+          "status": "PASS",
+          "duration_s": 120
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-11-1412",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 161,
+      "report_md": "brands/reserva/reports/run-2026-06-11-1412.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-11-1412/",
+      "flows": [
+        {
+          "name": "10-compra-categoria-voltar-e-trocar",
+          "status": "PASS",
+          "duration_s": 161
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-11-1406",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 170,
+      "report_md": "brands/reserva/reports/run-2026-06-11-1406.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-11-1406/",
+      "flows": [
+        {
+          "name": "10-compra-categoria-voltar-e-trocar",
+          "status": "FAIL",
+          "duration_s": 170
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-11-1400",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 176,
+      "report_md": "brands/reserva/reports/run-2026-06-11-1400.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-11-1400/",
+      "flows": [
+        {
+          "name": "10-compra-categoria-voltar-e-trocar",
+          "status": "FAIL",
+          "duration_s": 176
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-11-1340",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 147,
+      "report_md": "brands/reserva/reports/run-2026-06-11-1340.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-11-1340/",
+      "flows": [
+        {
+          "name": "10-compra-categoria-voltar-e-trocar",
+          "status": "FAIL",
+          "duration_s": 147
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-11-1319",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 160,
+      "report_md": "brands/reserva/reports/run-2026-06-11-1319.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-11-1319/",
+      "flows": [
+        {
+          "name": "10-compra-via-categoria",
+          "status": "PASS",
+          "duration_s": 160
+        }
+      ]
+    },
     {
       "stamp": "2026-06-11-1259",
       "status": "FAIL",
@@ -3245,6 +3364,30 @@
   ],
   "flows_summary": [
     {
+      "name": "20-plp-filtros-ordenacao",
+      "last_status": "PASS",
+      "last_duration_s": 98,
+      "last_run_stamp": "2026-06-11-1427"
+    },
+    {
+      "name": "20-categoria-navegacao",
+      "last_status": "PASS",
+      "last_duration_s": 120,
+      "last_run_stamp": "2026-06-11-1425"
+    },
+    {
+      "name": "10-compra-categoria-voltar-e-trocar",
+      "last_status": "PASS",
+      "last_duration_s": 161,
+      "last_run_stamp": "2026-06-11-1412"
+    },
+    {
+      "name": "10-compra-via-categoria",
+      "last_status": "PASS",
+      "last_duration_s": 160,
+      "last_run_stamp": "2026-06-11-1319"
+    },
+    {
       "name": "00-pipeline-smoke",
       "last_status": "PASS",
       "last_duration_s": 32,
@@ -3275,21 +3418,9 @@
       "last_run_stamp": "2026-06-03-1843"
     },
     {
-      "name": "10-compra-via-categoria",
-      "last_status": "PASS",
-      "last_duration_s": 337,
-      "last_run_stamp": "2026-06-03-1843"
-    },
-    {
       "name": "20-busca-textual",
       "last_status": "PASS",
       "last_duration_s": 170,
-      "last_run_stamp": "2026-06-03-1843"
-    },
-    {
-      "name": "20-categoria-navegacao",
-      "last_status": "PASS",
-      "last_duration_s": 126,
       "last_run_stamp": "2026-06-03-1843"
     },
     {
@@ -3302,12 +3433,6 @@
       "name": "20-home-dobras",
       "last_status": "PASS",
       "last_duration_s": 119,
-      "last_run_stamp": "2026-06-03-1843"
-    },
-    {
-      "name": "20-plp-filtros-ordenacao",
-      "last_status": "PASS",
-      "last_duration_s": 117,
       "last_run_stamp": "2026-06-03-1843"
     },
     {
