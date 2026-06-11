@@ -2,29 +2,51 @@
   "brand": "reserva",
   "display_name": "Reserva",
   "schema_version": 1,
-  "generated_at": "2026-06-11T15:15:55.055553+00:00",
+  "generated_at": "2026-06-11T16:01:01.637056+00:00",
   "app": {
     "bundle_id": "com.globalsys.reserva",
     "version": "2000000.0.0",
     "build": "1",
-    "build_path": "brands/reserva/test-builds/Reserva29-05.app"
+    "build_path": "/Users/thiagoborges/+Soma/Claude/QA Produtos Digitais Soma/brands/reserva/test-builds/Reserva29-05.app"
   },
   "last_run": {
-    "stamp": "2026-06-03-1843",
-    "status": "PASS",
-    "pass": 16,
-    "fail": 0,
-    "total": 16,
-    "duration_s": 2383
+    "stamp": "2026-06-11-1259",
+    "status": "FAIL",
+    "pass": 1,
+    "fail": 1,
+    "total": 2,
+    "duration_s": 94
   },
   "consolidated": {
-    "pass": 16,
-    "fail": 0,
+    "pass": 15,
+    "fail": 1,
     "total": 16,
-    "status": "PASS",
-    "last_activity_stamp": "2026-06-03-1843"
+    "status": "FAIL",
+    "last_activity_stamp": "2026-06-11-1259"
   },
   "runs": [
+    {
+      "stamp": "2026-06-11-1259",
+      "status": "FAIL",
+      "pass": 1,
+      "fail": 1,
+      "total": 2,
+      "duration_s": 94,
+      "report_md": "brands/reserva/reports/run-2026-06-11-1259.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-11-1259/",
+      "flows": [
+        {
+          "name": "00-pipeline-smoke",
+          "status": "PASS",
+          "duration_s": 32
+        },
+        {
+          "name": "00-smoke-launch",
+          "status": "FAIL",
+          "duration_s": 62
+        }
+      ]
+    },
     {
       "stamp": "2026-06-03-1843",
       "status": "PASS",
@@ -3225,14 +3247,14 @@
     {
       "name": "00-pipeline-smoke",
       "last_status": "PASS",
-      "last_duration_s": 11,
-      "last_run_stamp": "2026-06-03-1843"
+      "last_duration_s": 32,
+      "last_run_stamp": "2026-06-11-1259"
     },
     {
       "name": "00-smoke-launch",
-      "last_status": "PASS",
-      "last_duration_s": 34,
-      "last_run_stamp": "2026-06-03-1843"
+      "last_status": "FAIL",
+      "last_duration_s": 62,
+      "last_run_stamp": "2026-06-11-1259"
     },
     {
       "name": "10-checkout-ate-pagamento",
