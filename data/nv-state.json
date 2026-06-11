@@ -2,7 +2,7 @@
   "brand": "nv",
   "display_name": "by NV",
   "schema_version": 1,
-  "generated_at": "2026-06-11T12:50:19.597177+00:00",
+  "generated_at": "2026-06-11T12:50:28.566380+00:00",
   "app": {
     "bundle_id": "br.com.bynv",
     "version": "2.0.0",
@@ -1816,12 +1816,15 @@
       "id": "F-010",
       "title": "Texto legal de política de privacidade ausente no Login (v2.0.0)",
       "severity": "🔴 Alta (compliance LGPD).",
-      "status": "🟡 **Em correção — ticket aberto**",
+      "status": "Fechado — resolvido",
       "body": "**Tela:** `LoginDobra03`.\n\n**Observado:** texto legal de política de privacidade (geralmente \"Ao continuar, você concorda com nossos Termos e Política de Privacidade\") não aparece na tela de Login do v2.0.0.\n\n**Ação sugerida (URGENTE antes de subir pra prod):**\n- Confirmar com jurídico/DPO se a remoção do texto é aceitável.\n- Se não for, restaurar antes do release.\n- LGPD costuma exigir consentimento explícito visível no momento da coleta de dados pessoais (Login é coleta de credenciais).\n\n---",
       "severity_level": "alta",
       "severity_label": "Alta",
-      "status_category": "in_progress",
-      "status_clean": "Em correção — ticket aberto"
+      "status_category": "closed",
+      "status_clean": "Fechado — resolvido",
+      "decision": null,
+      "decided_at": "2026-06-11T12:50:28+00:00",
+      "override_source": "panel"
     },
     {
       "id": "F-012",
@@ -1893,5 +1896,5 @@
       "status_clean": "observação de comportamento, não-bug óbvio — mas vale validar com produto se é intencional. Em apps de e-commerce, é comum:"
     }
   ],
-  "open_findings": 2
+  "open_findings": 1
 }

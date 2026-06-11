@@ -5,6 +5,12 @@
     "status": "Fechado — resolvido",
     "status_key": "resolved"
   },
+  "F-010": {
+    "decided_at": "2026-06-11T12:50:28+00:00",
+    "decision": null,
+    "status": "Fechado — resolvido",
+    "status_key": "resolved"
+  },
   "F-012": {
     "decided_at": "2026-06-11T12:49:25+00:00",
     "decision": null,
