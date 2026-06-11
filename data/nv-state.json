@@ -2,7 +2,7 @@
   "brand": "nv",
   "display_name": "by NV",
   "schema_version": 1,
-  "generated_at": "2026-06-10T02:31:58.471403+00:00",
+  "generated_at": "2026-06-11T12:49:25.081306+00:00",
   "app": {
     "bundle_id": "br.com.bynv",
     "version": "2.0.0",
@@ -1824,12 +1824,15 @@
       "id": "F-012",
       "title": "Wishlist persiste para usuário anônimo (positivo)",
       "severity": "🟢 Comportamento positivo (não-bug), só vale documentar.",
-      "status": null,
+      "status": "Observação",
       "body": "**Build:** `RunnerSim.app` v2.0.0, descoberto 2026-05-21 durante mapeamento de `20-wishlist-favoritar`.\n\n**Comportamento observado:**\nAo tocar no coração de favoritar no PDP **sem login**, o produto é adicionado à\nwishlist e fica visível na tela \"Conta → Wishlist\" (com contagem \"1 produto\" +\nações \"Adicionar à sacola\" e \"Remover\").\n\nA tela \"Conta\" diz: *\"Faça login ou crie uma conta para acompanhar seus pedidos\ne ter acesso à sua sacola e wishlist\"* — mas a wishlist anônima funciona local\nno dispositivo (provavelmente persistida por device-id).\n\n**Implicação pra QA:**\n- O tap no coração é TOGGLE — segunda chamada remove o item. Flows que rodam\n  em sequência (mesmo simulador) podem alternar entre estados.\n- Pra teste de regressão sem login, basta validar que a tela Wishlist é\n  acessível e que mostra estado coerente (empty ou com items).\n- Pra teste com login completo (sincronização com conta de servidor), depende\n  de credenciais de teste — vira variante.\n\n---",
       "severity_level": "positivo",
       "severity_label": "Positivo",
-      "status_category": "open",
-      "status_clean": "Aberto"
+      "status_category": "observation",
+      "status_clean": "Observação",
+      "decision": null,
+      "decided_at": "2026-06-11T12:49:25+00:00",
+      "override_source": "panel"
     },
     {
       "id": "F-011",
@@ -1887,5 +1890,5 @@
       "status_clean": "observação de comportamento, não-bug óbvio — mas vale validar com produto se é intencional. Em apps de e-commerce, é comum:"
     }
   ],
-  "open_findings": 4
+  "open_findings": 3
 }
