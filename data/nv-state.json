@@ -2,7 +2,7 @@
   "brand": "nv",
   "display_name": "by NV",
   "schema_version": 1,
-  "generated_at": "2026-06-11T12:49:25.081306+00:00",
+  "generated_at": "2026-06-11T12:50:19.597177+00:00",
   "app": {
     "bundle_id": "br.com.bynv",
     "version": "2.0.0",
@@ -1802,12 +1802,15 @@
       "id": "F-009",
       "title": "Aviso de devolução em loja removido da Conta (v2.0.0)",
       "severity": "🟠 Média (informação relevante ao consumidor).",
-      "status": "🟡 **Em correção — falta ativar via CMS**",
+      "status": "Fechado — resolvido",
       "body": "**Tela:** `ContaDobra02`.\n\n**Observado:** aviso/info sobre \"devolução em loja física\" não aparece mais nessa tela no v2.0.0.\n\n**Ação sugerida:** confirmar com produto se foi movido pra outro lugar ou removido. Impacta CX e SAC.\n\n---",
       "severity_level": "media",
       "severity_label": "Média",
-      "status_category": "in_progress",
-      "status_clean": "Em correção — falta ativar via CMS"
+      "status_category": "closed",
+      "status_clean": "Fechado — resolvido",
+      "decision": null,
+      "decided_at": "2026-06-11T12:50:19+00:00",
+      "override_source": "panel"
     },
     {
       "id": "F-010",
@@ -1890,5 +1893,5 @@
       "status_clean": "observação de comportamento, não-bug óbvio — mas vale validar com produto se é intencional. Em apps de e-commerce, é comum:"
     }
   ],
-  "open_findings": 3
+  "open_findings": 2
 }
