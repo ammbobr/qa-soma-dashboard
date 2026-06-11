@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-11T18:23:42.573198+00:00",
+  "generated_at": "2026-06-11T19:13:19.136863+00:00",
   "brands": [
     {
       "id": "nv",
@@ -33,19 +33,19 @@
       "app_version": "10.0.0",
       "app_build": "1",
       "last_run": {
-        "stamp": "2026-06-11-1510",
+        "stamp": "2026-06-11-1608",
         "status": "PASS",
         "pass": 1,
         "fail": 0,
         "total": 1,
-        "duration_s": 214
+        "duration_s": 93
       },
       "consolidated": {
-        "pass": 16,
-        "fail": 1,
+        "pass": 17,
+        "fail": 0,
         "total": 17,
-        "status": "FAIL",
-        "last_activity_stamp": "2026-06-11-1510"
+        "status": "PASS",
+        "last_activity_stamp": "2026-06-11-1608"
       },
       "open_findings": 0,
       "state_file": "off-state.json"
@@ -57,19 +57,19 @@
       "app_version": "2000000.0.0",
       "app_build": "1",
       "last_run": {
-        "stamp": "2026-06-11-1516",
+        "stamp": "2026-06-11-1524",
         "status": "PASS",
         "pass": 1,
         "fail": 0,
         "total": 1,
-        "duration_s": 183
+        "duration_s": 56
       },
       "consolidated": {
-        "pass": 16,
-        "fail": 1,
+        "pass": 17,
+        "fail": 0,
         "total": 17,
-        "status": "FAIL",
-        "last_activity_stamp": "2026-06-11-1516"
+        "status": "PASS",
+        "last_activity_stamp": "2026-06-11-1524"
       },
       "open_findings": 1,
       "state_file": "reserva-state.json"

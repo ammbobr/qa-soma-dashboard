@@ -2,7 +2,7 @@
   "brand": "off",
   "display_name": "Off Premium",
   "schema_version": 1,
-  "generated_at": "2026-06-11T18:23:42.285565+00:00",
+  "generated_at": "2026-06-11T19:13:18.470581+00:00",
   "app": {
     "bundle_id": "com.mobfiq.offpremium",
     "version": "10.0.0",
@@ -10,21 +10,55 @@
     "build_path": "brands/off/test-builds/OFF05-06.app"
   },
   "last_run": {
-    "stamp": "2026-06-11-1510",
+    "stamp": "2026-06-11-1608",
     "status": "PASS",
     "pass": 1,
     "fail": 0,
     "total": 1,
-    "duration_s": 214
+    "duration_s": 93
   },
   "consolidated": {
-    "pass": 16,
-    "fail": 1,
+    "pass": 17,
+    "fail": 0,
     "total": 17,
-    "status": "FAIL",
-    "last_activity_stamp": "2026-06-11-1510"
+    "status": "PASS",
+    "last_activity_stamp": "2026-06-11-1608"
   },
   "runs": [
+    {
+      "stamp": "2026-06-11-1608",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 93,
+      "report_md": "brands/off/reports/run-2026-06-11-1608.md",
+      "artifacts_dir": "brands/off/reports/run-2026-06-11-1608/",
+      "flows": [
+        {
+          "name": "00-smoke-launch",
+          "status": "PASS",
+          "duration_s": 93
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-11-1525",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 71,
+      "report_md": "brands/off/reports/run-2026-06-11-1525.md",
+      "artifacts_dir": "brands/off/reports/run-2026-06-11-1525/",
+      "flows": [
+        {
+          "name": "00-smoke-launch",
+          "status": "FAIL",
+          "duration_s": 71
+        }
+      ]
+    },
     {
       "stamp": "2026-06-11-1510",
       "status": "PASS",
@@ -681,6 +715,12 @@
   ],
   "flows_summary": [
     {
+      "name": "00-smoke-launch",
+      "last_status": "PASS",
+      "last_duration_s": 93,
+      "last_run_stamp": "2026-06-11-1608"
+    },
+    {
       "name": "10-compra-categoria-voltar-e-trocar",
       "last_status": "PASS",
       "last_duration_s": 214,
@@ -696,12 +736,6 @@
       "name": "00-pipeline-smoke",
       "last_status": "PASS",
       "last_duration_s": 33,
-      "last_run_stamp": "2026-06-11-1429"
-    },
-    {
-      "name": "00-smoke-launch",
-      "last_status": "FAIL",
-      "last_duration_s": 62,
       "last_run_stamp": "2026-06-11-1429"
     },
     {
