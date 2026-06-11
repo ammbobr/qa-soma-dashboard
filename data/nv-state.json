@@ -2,7 +2,7 @@
   "brand": "nv",
   "display_name": "by NV",
   "schema_version": 1,
-  "generated_at": "2026-06-11T15:15:54.512203+00:00",
+  "generated_at": "2026-06-11T18:23:42.058163+00:00",
   "app": {
     "bundle_id": "br.com.bynv",
     "version": "2.0.0",
@@ -10,21 +10,38 @@
     "build_path": "brands/nv/test-builds/NVBuild.app"
   },
   "last_run": {
-    "stamp": "2026-06-11-1210",
-    "status": "PASS",
-    "pass": 1,
-    "fail": 0,
+    "stamp": "2026-06-11-1519",
+    "status": "FAIL",
+    "pass": 0,
+    "fail": 1,
     "total": 1,
-    "duration_s": 124
+    "duration_s": 64
   },
   "consolidated": {
-    "pass": 17,
-    "fail": 0,
+    "pass": 16,
+    "fail": 1,
     "total": 17,
-    "status": "PASS",
-    "last_activity_stamp": "2026-06-11-1210"
+    "status": "FAIL",
+    "last_activity_stamp": "2026-06-11-1519"
   },
   "runs": [
+    {
+      "stamp": "2026-06-11-1519",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 64,
+      "report_md": "brands/nv/reports/run-2026-06-11-1519.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-06-11-1519/",
+      "flows": [
+        {
+          "name": "10-compra-categoria-voltar-e-trocar",
+          "status": "FAIL",
+          "duration_s": 64
+        }
+      ]
+    },
     {
       "stamp": "2026-06-11-1210",
       "status": "PASS",
@@ -1681,16 +1698,16 @@
   ],
   "flows_summary": [
     {
+      "name": "10-compra-categoria-voltar-e-trocar",
+      "last_status": "FAIL",
+      "last_duration_s": 64,
+      "last_run_stamp": "2026-06-11-1519"
+    },
+    {
       "name": "10-compra-via-categoria",
       "last_status": "PASS",
       "last_duration_s": 124,
       "last_run_stamp": "2026-06-11-1210"
-    },
-    {
-      "name": "10-compra-categoria-voltar-e-trocar",
-      "last_status": "PASS",
-      "last_duration_s": 134,
-      "last_run_stamp": "2026-06-11-1207"
     },
     {
       "name": "00-pipeline-smoke",

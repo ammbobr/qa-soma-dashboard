@@ -2,29 +2,97 @@
   "brand": "off",
   "display_name": "Off Premium",
   "schema_version": 1,
-  "generated_at": "2026-06-11T17:30:55.327721+00:00",
+  "generated_at": "2026-06-11T18:23:42.285565+00:00",
   "app": {
     "bundle_id": "com.mobfiq.offpremium",
     "version": "10.0.0",
     "build": "1",
-    "build_path": "/Users/thiagoborges/+Soma/Claude/QA Produtos Digitais Soma/brands/off/test-builds/OFF05-06.app"
+    "build_path": "brands/off/test-builds/OFF05-06.app"
   },
   "last_run": {
-    "stamp": "2026-06-11-1429",
-    "status": "FAIL",
+    "stamp": "2026-06-11-1510",
+    "status": "PASS",
     "pass": 1,
-    "fail": 1,
-    "total": 2,
-    "duration_s": 95
+    "fail": 0,
+    "total": 1,
+    "duration_s": 214
   },
   "consolidated": {
-    "pass": 15,
+    "pass": 16,
     "fail": 1,
-    "total": 16,
+    "total": 17,
     "status": "FAIL",
-    "last_activity_stamp": "2026-06-11-1429"
+    "last_activity_stamp": "2026-06-11-1510"
   },
   "runs": [
+    {
+      "stamp": "2026-06-11-1510",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 214,
+      "report_md": "brands/off/reports/run-2026-06-11-1510.md",
+      "artifacts_dir": "brands/off/reports/run-2026-06-11-1510/",
+      "flows": [
+        {
+          "name": "10-compra-categoria-voltar-e-trocar",
+          "status": "PASS",
+          "duration_s": 214
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-11-1505",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 187,
+      "report_md": "brands/off/reports/run-2026-06-11-1505.md",
+      "artifacts_dir": "brands/off/reports/run-2026-06-11-1505/",
+      "flows": [
+        {
+          "name": "10-compra-categoria-voltar-e-trocar",
+          "status": "FAIL",
+          "duration_s": 187
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-11-1450",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 168,
+      "report_md": "brands/off/reports/run-2026-06-11-1450.md",
+      "artifacts_dir": "brands/off/reports/run-2026-06-11-1450/",
+      "flows": [
+        {
+          "name": "10-compra-categoria-voltar-e-trocar",
+          "status": "FAIL",
+          "duration_s": 168
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-11-1445",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 163,
+      "report_md": "brands/off/reports/run-2026-06-11-1445.md",
+      "artifacts_dir": "brands/off/reports/run-2026-06-11-1445/",
+      "flows": [
+        {
+          "name": "10-compra-via-categoria",
+          "status": "PASS",
+          "duration_s": 163
+        }
+      ]
+    },
     {
       "stamp": "2026-06-11-1429",
       "status": "FAIL",
@@ -613,6 +681,18 @@
   ],
   "flows_summary": [
     {
+      "name": "10-compra-categoria-voltar-e-trocar",
+      "last_status": "PASS",
+      "last_duration_s": 214,
+      "last_run_stamp": "2026-06-11-1510"
+    },
+    {
+      "name": "10-compra-via-categoria",
+      "last_status": "PASS",
+      "last_duration_s": 163,
+      "last_run_stamp": "2026-06-11-1445"
+    },
+    {
       "name": "00-pipeline-smoke",
       "last_status": "PASS",
       "last_duration_s": 33,
@@ -658,12 +738,6 @@
       "name": "10-compra-via-busca",
       "last_status": "PASS",
       "last_duration_s": 105,
-      "last_run_stamp": "2026-06-08-2334"
-    },
-    {
-      "name": "10-compra-via-categoria",
-      "last_status": "PASS",
-      "last_duration_s": 120,
       "last_run_stamp": "2026-06-08-2334"
     },
     {
