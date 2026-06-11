@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-11T12:50:28.566380+00:00",
+  "generated_at": "2026-06-11T15:15:55.089966+00:00",
   "brands": [
     {
       "id": "nv",
@@ -9,19 +9,19 @@
       "app_version": "2.0.0",
       "app_build": "1",
       "last_run": {
-        "stamp": "2026-05-30-1443",
+        "stamp": "2026-06-11-1210",
         "status": "PASS",
-        "pass": 16,
+        "pass": 1,
         "fail": 0,
-        "total": 16,
-        "duration_s": 894
+        "total": 1,
+        "duration_s": 124
       },
       "consolidated": {
-        "pass": 16,
+        "pass": 17,
         "fail": 0,
-        "total": 16,
+        "total": 17,
         "status": "PASS",
-        "last_activity_stamp": "2026-05-30-1443"
+        "last_activity_stamp": "2026-06-11-1210"
       },
       "open_findings": 1,
       "state_file": "nv-state.json"

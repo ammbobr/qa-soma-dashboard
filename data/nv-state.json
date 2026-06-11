@@ -2,7 +2,7 @@
   "brand": "nv",
   "display_name": "by NV",
   "schema_version": 1,
-  "generated_at": "2026-06-11T12:50:28.566380+00:00",
+  "generated_at": "2026-06-11T15:15:54.512203+00:00",
   "app": {
     "bundle_id": "br.com.bynv",
     "version": "2.0.0",
@@ -10,21 +10,89 @@
     "build_path": "brands/nv/test-builds/NVBuild.app"
   },
   "last_run": {
-    "stamp": "2026-05-30-1443",
+    "stamp": "2026-06-11-1210",
     "status": "PASS",
-    "pass": 16,
+    "pass": 1,
     "fail": 0,
-    "total": 16,
-    "duration_s": 894
+    "total": 1,
+    "duration_s": 124
   },
   "consolidated": {
-    "pass": 16,
+    "pass": 17,
     "fail": 0,
-    "total": 16,
+    "total": 17,
     "status": "PASS",
-    "last_activity_stamp": "2026-05-30-1443"
+    "last_activity_stamp": "2026-06-11-1210"
   },
   "runs": [
+    {
+      "stamp": "2026-06-11-1210",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 124,
+      "report_md": "brands/nv/reports/run-2026-06-11-1210.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-06-11-1210/",
+      "flows": [
+        {
+          "name": "10-compra-via-categoria",
+          "status": "PASS",
+          "duration_s": 124
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-11-1207",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 134,
+      "report_md": "brands/nv/reports/run-2026-06-11-1207.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-06-11-1207/",
+      "flows": [
+        {
+          "name": "10-compra-categoria-voltar-e-trocar",
+          "status": "PASS",
+          "duration_s": 134
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-11-1203",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 81,
+      "report_md": "brands/nv/reports/run-2026-06-11-1203.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-06-11-1203/",
+      "flows": [
+        {
+          "name": "10-compra-categoria-voltar-e-trocar",
+          "status": "FAIL",
+          "duration_s": 81
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-11-1201",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 126,
+      "report_md": "brands/nv/reports/run-2026-06-11-1201.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-06-11-1201/",
+      "flows": [
+        {
+          "name": "10-compra-via-categoria",
+          "status": "PASS",
+          "duration_s": 126
+        }
+      ]
+    },
     {
       "stamp": "2026-05-30-1443",
       "status": "PASS",
@@ -1613,6 +1681,18 @@
   ],
   "flows_summary": [
     {
+      "name": "10-compra-via-categoria",
+      "last_status": "PASS",
+      "last_duration_s": 124,
+      "last_run_stamp": "2026-06-11-1210"
+    },
+    {
+      "name": "10-compra-categoria-voltar-e-trocar",
+      "last_status": "PASS",
+      "last_duration_s": 134,
+      "last_run_stamp": "2026-06-11-1207"
+    },
+    {
       "name": "00-pipeline-smoke",
       "last_status": "PASS",
       "last_duration_s": 11,
@@ -1640,12 +1720,6 @@
       "name": "10-compra-via-busca",
       "last_status": "PASS",
       "last_duration_s": 76,
-      "last_run_stamp": "2026-05-30-1443"
-    },
-    {
-      "name": "10-compra-via-categoria",
-      "last_status": "PASS",
-      "last_duration_s": 78,
       "last_run_stamp": "2026-05-30-1443"
     },
     {
@@ -1804,13 +1878,12 @@
       "severity": "🟠 Média (informação relevante ao consumidor).",
       "status": "Fechado — resolvido",
       "body": "**Tela:** `ContaDobra02`.\n\n**Observado:** aviso/info sobre \"devolução em loja física\" não aparece mais nessa tela no v2.0.0.\n\n**Ação sugerida:** confirmar com produto se foi movido pra outro lugar ou removido. Impacta CX e SAC.\n\n---",
+      "decided_at": "2026-06-11T12:50:19+00:00",
+      "override_source": "panel",
       "severity_level": "media",
       "severity_label": "Média",
       "status_category": "closed",
-      "status_clean": "Fechado — resolvido",
-      "decision": null,
-      "decided_at": "2026-06-11T12:50:19+00:00",
-      "override_source": "panel"
+      "status_clean": "Fechado — resolvido"
     },
     {
       "id": "F-010",
@@ -1818,13 +1891,12 @@
       "severity": "🔴 Alta (compliance LGPD).",
       "status": "Fechado — resolvido",
       "body": "**Tela:** `LoginDobra03`.\n\n**Observado:** texto legal de política de privacidade (geralmente \"Ao continuar, você concorda com nossos Termos e Política de Privacidade\") não aparece na tela de Login do v2.0.0.\n\n**Ação sugerida (URGENTE antes de subir pra prod):**\n- Confirmar com jurídico/DPO se a remoção do texto é aceitável.\n- Se não for, restaurar antes do release.\n- LGPD costuma exigir consentimento explícito visível no momento da coleta de dados pessoais (Login é coleta de credenciais).\n\n---",
+      "decided_at": "2026-06-11T12:50:28+00:00",
+      "override_source": "panel",
       "severity_level": "alta",
       "severity_label": "Alta",
       "status_category": "closed",
-      "status_clean": "Fechado — resolvido",
-      "decision": null,
-      "decided_at": "2026-06-11T12:50:28+00:00",
-      "override_source": "panel"
+      "status_clean": "Fechado — resolvido"
     },
     {
       "id": "F-012",
@@ -1832,13 +1904,12 @@
       "severity": "🟢 Comportamento positivo (não-bug), só vale documentar.",
       "status": "Observação",
       "body": "**Build:** `RunnerSim.app` v2.0.0, descoberto 2026-05-21 durante mapeamento de `20-wishlist-favoritar`.\n\n**Comportamento observado:**\nAo tocar no coração de favoritar no PDP **sem login**, o produto é adicionado à\nwishlist e fica visível na tela \"Conta → Wishlist\" (com contagem \"1 produto\" +\nações \"Adicionar à sacola\" e \"Remover\").\n\nA tela \"Conta\" diz: *\"Faça login ou crie uma conta para acompanhar seus pedidos\ne ter acesso à sua sacola e wishlist\"* — mas a wishlist anônima funciona local\nno dispositivo (provavelmente persistida por device-id).\n\n**Implicação pra QA:**\n- O tap no coração é TOGGLE — segunda chamada remove o item. Flows que rodam\n  em sequência (mesmo simulador) podem alternar entre estados.\n- Pra teste de regressão sem login, basta validar que a tela Wishlist é\n  acessível e que mostra estado coerente (empty ou com items).\n- Pra teste com login completo (sincronização com conta de servidor), depende\n  de credenciais de teste — vira variante.\n\n---",
+      "decided_at": "2026-06-11T12:49:25+00:00",
+      "override_source": "panel",
       "severity_level": "positivo",
       "severity_label": "Positivo",
       "status_category": "observation",
-      "status_clean": "Observação",
-      "decision": null,
-      "decided_at": "2026-06-11T12:49:25+00:00",
-      "override_source": "panel"
+      "status_clean": "Observação"
     },
     {
       "id": "F-011",

@@ -2,7 +2,7 @@
   "brand": "reserva",
   "display_name": "Reserva",
   "schema_version": 1,
-  "generated_at": "2026-06-10T02:35:37.761915+00:00",
+  "generated_at": "2026-06-11T15:15:55.055553+00:00",
   "app": {
     "bundle_id": "com.globalsys.reserva",
     "version": "2000000.0.0",
@@ -3331,8 +3331,7 @@
       "severity_level": "media",
       "severity_label": "Média",
       "status_category": "closed",
-      "status_clean": "Fechado — não é bug",
-      "decision": null
+      "status_clean": "Fechado — não é bug"
     },
     {
       "id": "F-RES-04",
@@ -3340,13 +3339,12 @@
       "severity": "Baixa",
       "status": "Em correção",
       "body": "Depois do tap em \"Sair\" (confirmação do logout), o scrim semi-transparente do modal persiste por mais de 1500ms. O usuário vê a Home embaçada por esse período.\n\n### Evidência\n- Maestro precisou de `waitForAnimationToEnd: 5000` ANTES do assert pro scrim sair.\n- Tap em si funciona corretamente (logout efetivado).\n\n### Notas\n- Polish / perf percebida. Sem impacto funcional.\n\n---",
+      "decided_at": "2026-06-10T02:34:53+00:00",
+      "override_source": "panel",
       "severity_level": "baixa",
       "severity_label": "Baixa",
       "status_category": "in_progress",
-      "status_clean": "Em correção",
-      "decision": null,
-      "decided_at": "2026-06-10T02:34:53+00:00",
-      "override_source": "panel"
+      "status_clean": "Em correção"
     },
     {
       "id": "F-RES-05",
@@ -3359,8 +3357,7 @@
       "severity_level": "media",
       "severity_label": "Média",
       "status_category": "wontfix",
-      "status_clean": "Won't fix",
-      "decision": null
+      "status_clean": "Won't fix"
     }
   ],
   "open_findings": 1
