@@ -2,7 +2,7 @@
   "brand": "off",
   "display_name": "Off Premium",
   "schema_version": 1,
-  "generated_at": "2026-06-10T02:34:29.492232+00:00",
+  "generated_at": "2026-06-11T12:49:43.606178+00:00",
   "app": {
     "bundle_id": "com.mobfiq.offpremium",
     "version": "10.0.0",
@@ -689,17 +689,6 @@
   ],
   "findings": [
     {
-      "id": "F-OFF-02",
-      "title": "Sacola Off não tem \"Página do produto\" no menu de ações",
-      "severity": "Baixa",
-      "status": "Aberto",
-      "body": "O sheet \"3 pontos\" do card da Sacola na Off tem 3 ações: **Salvar para depois ♡** + **Avise-me** (condicional ao estoque) + **Remover**. NÃO existe a ação \"Página do produto\" que NV/Reserva têm.\n\n### Hipótese\n- Você já está olhando o card com foto + nome do produto, então a ação \"ir pra página\" pode ter sido considerada redundante na Off.\n\n### Fix de teste\n- Brandificou `cart_item_secondary_action`: NV/Reserva = \"Página do produto\"; Off = \"Remover\" (sempre presente).\n\n### Notas\n- Não é bug. Diferença intencional de UX entre as marcas.\n\n---",
-      "severity_level": "baixa",
-      "severity_label": "Baixa",
-      "status_category": "open",
-      "status_clean": "Aberto"
-    },
-    {
       "id": "F-OFF-03",
       "title": "Cupom inválido: sheet auto-fecha em 2-3s (não é silencioso)",
       "severity": "Baixa",
@@ -714,5 +703,5 @@
       "decision": null
     }
   ],
-  "open_findings": 1
+  "open_findings": 0
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-11T12:49:25.081306+00:00",
+  "generated_at": "2026-06-11T12:49:43.606178+00:00",
   "brands": [
     {
       "id": "nv",
@@ -47,7 +47,7 @@
         "status": "PASS",
         "last_activity_stamp": "2026-06-09-1303"
       },
-      "open_findings": 1,
+      "open_findings": 0,
       "state_file": "off-state.json"
     },
     {
