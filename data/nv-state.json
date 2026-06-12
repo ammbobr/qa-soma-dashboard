@@ -2,7 +2,7 @@
   "brand": "nv",
   "display_name": "by NV",
   "schema_version": 1,
-  "generated_at": "2026-06-11T19:13:17.787465+00:00",
+  "generated_at": "2026-06-12T15:00:39.059778+00:00",
   "app": {
     "bundle_id": "br.com.bynv",
     "version": "2.0.0",
@@ -10,21 +10,123 @@
     "build_path": "brands/nv/test-builds/NVBuild.app"
   },
   "last_run": {
-    "stamp": "2026-06-11-1519",
-    "status": "FAIL",
-    "pass": 0,
-    "fail": 1,
+    "stamp": "2026-06-11-2024",
+    "status": "PASS",
+    "pass": 1,
+    "fail": 0,
     "total": 1,
-    "duration_s": 64
+    "duration_s": 152
   },
   "consolidated": {
-    "pass": 16,
-    "fail": 1,
+    "pass": 17,
+    "fail": 0,
     "total": 17,
-    "status": "FAIL",
-    "last_activity_stamp": "2026-06-11-1519"
+    "status": "PASS",
+    "last_activity_stamp": "2026-06-11-2024"
   },
   "runs": [
+    {
+      "stamp": "2026-06-11-2024",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 152,
+      "report_md": "brands/nv/reports/run-2026-06-11-2024.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-06-11-2024/",
+      "flows": [
+        {
+          "name": "10-compra-via-categoria",
+          "status": "PASS",
+          "duration_s": 152
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-11-1709",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 193,
+      "report_md": "brands/nv/reports/run-2026-06-11-1709.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-06-11-1709/",
+      "flows": [
+        {
+          "name": "10-compra-categoria-voltar-e-trocar",
+          "status": "PASS",
+          "duration_s": 193
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-11-1701",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 183,
+      "report_md": "brands/nv/reports/run-2026-06-11-1701.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-06-11-1701/",
+      "flows": [
+        {
+          "name": "10-compra-categoria-voltar-e-trocar",
+          "status": "FAIL",
+          "duration_s": 183
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-11-1654",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 163,
+      "report_md": "brands/nv/reports/run-2026-06-11-1654.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-06-11-1654/",
+      "flows": [
+        {
+          "name": "10-compra-categoria-voltar-e-trocar",
+          "status": "FAIL",
+          "duration_s": 163
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-11-1646",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 165,
+      "report_md": "brands/nv/reports/run-2026-06-11-1646.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-06-11-1646/",
+      "flows": [
+        {
+          "name": "10-compra-categoria-voltar-e-trocar",
+          "status": "FAIL",
+          "duration_s": 165
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-11-1639",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 169,
+      "report_md": "brands/nv/reports/run-2026-06-11-1639.md",
+      "artifacts_dir": "brands/nv/reports/run-2026-06-11-1639/",
+      "flows": [
+        {
+          "name": "10-compra-categoria-voltar-e-trocar",
+          "status": "FAIL",
+          "duration_s": 169
+        }
+      ]
+    },
     {
       "stamp": "2026-06-11-1519",
       "status": "FAIL",
@@ -1698,16 +1800,16 @@
   ],
   "flows_summary": [
     {
-      "name": "10-compra-categoria-voltar-e-trocar",
-      "last_status": "FAIL",
-      "last_duration_s": 64,
-      "last_run_stamp": "2026-06-11-1519"
-    },
-    {
       "name": "10-compra-via-categoria",
       "last_status": "PASS",
-      "last_duration_s": 124,
-      "last_run_stamp": "2026-06-11-1210"
+      "last_duration_s": 152,
+      "last_run_stamp": "2026-06-11-2024"
+    },
+    {
+      "name": "10-compra-categoria-voltar-e-trocar",
+      "last_status": "PASS",
+      "last_duration_s": 193,
+      "last_run_stamp": "2026-06-11-1709"
     },
     {
       "name": "00-pipeline-smoke",

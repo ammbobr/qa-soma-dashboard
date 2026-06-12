@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-11T19:13:19.136863+00:00",
+  "generated_at": "2026-06-12T15:00:39.663271+00:00",
   "brands": [
     {
       "id": "nv",
@@ -9,19 +9,19 @@
       "app_version": "2.0.0",
       "app_build": "1",
       "last_run": {
-        "stamp": "2026-06-11-1519",
-        "status": "FAIL",
-        "pass": 0,
-        "fail": 1,
+        "stamp": "2026-06-11-2024",
+        "status": "PASS",
+        "pass": 1,
+        "fail": 0,
         "total": 1,
-        "duration_s": 64
+        "duration_s": 152
       },
       "consolidated": {
-        "pass": 16,
-        "fail": 1,
+        "pass": 17,
+        "fail": 0,
         "total": 17,
-        "status": "FAIL",
-        "last_activity_stamp": "2026-06-11-1519"
+        "status": "PASS",
+        "last_activity_stamp": "2026-06-11-2024"
       },
       "open_findings": 1,
       "state_file": "nv-state.json"
@@ -33,19 +33,19 @@
       "app_version": "10.0.0",
       "app_build": "1",
       "last_run": {
-        "stamp": "2026-06-11-1608",
+        "stamp": "2026-06-12-1107",
         "status": "PASS",
         "pass": 1,
         "fail": 0,
         "total": 1,
-        "duration_s": 93
+        "duration_s": 181
       },
       "consolidated": {
         "pass": 17,
         "fail": 0,
         "total": 17,
         "status": "PASS",
-        "last_activity_stamp": "2026-06-11-1608"
+        "last_activity_stamp": "2026-06-12-1107"
       },
       "open_findings": 0,
       "state_file": "off-state.json"
@@ -57,21 +57,21 @@
       "app_version": "2000000.0.0",
       "app_build": "1",
       "last_run": {
-        "stamp": "2026-06-11-1524",
-        "status": "PASS",
-        "pass": 1,
-        "fail": 0,
+        "stamp": "2026-06-12-1155",
+        "status": "FAIL",
+        "pass": 0,
+        "fail": 1,
         "total": 1,
-        "duration_s": 56
+        "duration_s": 125
       },
       "consolidated": {
-        "pass": 17,
-        "fail": 0,
+        "pass": 16,
+        "fail": 1,
         "total": 17,
-        "status": "PASS",
-        "last_activity_stamp": "2026-06-11-1524"
+        "status": "FAIL",
+        "last_activity_stamp": "2026-06-12-1155"
       },
-      "open_findings": 1,
+      "open_findings": 2,
       "state_file": "reserva-state.json"
     }
   ],

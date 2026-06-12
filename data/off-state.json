@@ -2,7 +2,7 @@
   "brand": "off",
   "display_name": "Off Premium",
   "schema_version": 1,
-  "generated_at": "2026-06-11T19:13:18.470581+00:00",
+  "generated_at": "2026-06-12T15:00:39.320978+00:00",
   "app": {
     "bundle_id": "com.mobfiq.offpremium",
     "version": "10.0.0",
@@ -10,21 +10,38 @@
     "build_path": "brands/off/test-builds/OFF05-06.app"
   },
   "last_run": {
-    "stamp": "2026-06-11-1608",
+    "stamp": "2026-06-12-1107",
     "status": "PASS",
     "pass": 1,
     "fail": 0,
     "total": 1,
-    "duration_s": 93
+    "duration_s": 181
   },
   "consolidated": {
     "pass": 17,
     "fail": 0,
     "total": 17,
     "status": "PASS",
-    "last_activity_stamp": "2026-06-11-1608"
+    "last_activity_stamp": "2026-06-12-1107"
   },
   "runs": [
+    {
+      "stamp": "2026-06-12-1107",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 181,
+      "report_md": "brands/off/reports/run-2026-06-12-1107.md",
+      "artifacts_dir": "brands/off/reports/run-2026-06-12-1107/",
+      "flows": [
+        {
+          "name": "10-compra-categoria-voltar-e-trocar",
+          "status": "PASS",
+          "duration_s": 181
+        }
+      ]
+    },
     {
       "stamp": "2026-06-11-1608",
       "status": "PASS",
@@ -715,16 +732,16 @@
   ],
   "flows_summary": [
     {
+      "name": "10-compra-categoria-voltar-e-trocar",
+      "last_status": "PASS",
+      "last_duration_s": 181,
+      "last_run_stamp": "2026-06-12-1107"
+    },
+    {
       "name": "00-smoke-launch",
       "last_status": "PASS",
       "last_duration_s": 93,
       "last_run_stamp": "2026-06-11-1608"
-    },
-    {
-      "name": "10-compra-categoria-voltar-e-trocar",
-      "last_status": "PASS",
-      "last_duration_s": 214,
-      "last_run_stamp": "2026-06-11-1510"
     },
     {
       "name": "10-compra-via-categoria",

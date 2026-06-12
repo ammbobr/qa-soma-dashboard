@@ -2,7 +2,7 @@
   "brand": "reserva",
   "display_name": "Reserva",
   "schema_version": 1,
-  "generated_at": "2026-06-11T19:13:18.920764+00:00",
+  "generated_at": "2026-06-12T15:00:39.626966+00:00",
   "app": {
     "bundle_id": "com.globalsys.reserva",
     "version": "2000000.0.0",
@@ -10,21 +10,157 @@
     "build_path": "brands/reserva/test-builds/Reserva29-05.app"
   },
   "last_run": {
-    "stamp": "2026-06-11-1524",
-    "status": "PASS",
-    "pass": 1,
-    "fail": 0,
+    "stamp": "2026-06-12-1155",
+    "status": "FAIL",
+    "pass": 0,
+    "fail": 1,
     "total": 1,
-    "duration_s": 56
+    "duration_s": 125
   },
   "consolidated": {
-    "pass": 17,
-    "fail": 0,
+    "pass": 16,
+    "fail": 1,
     "total": 17,
-    "status": "PASS",
-    "last_activity_stamp": "2026-06-11-1524"
+    "status": "FAIL",
+    "last_activity_stamp": "2026-06-12-1155"
   },
   "runs": [
+    {
+      "stamp": "2026-06-12-1155",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 125,
+      "report_md": "brands/reserva/reports/run-2026-06-12-1155.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-12-1155/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 125
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-12-1145",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 112,
+      "report_md": "brands/reserva/reports/run-2026-06-12-1145.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-12-1145/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 112
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-12-1141",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 117,
+      "report_md": "brands/reserva/reports/run-2026-06-12-1141.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-12-1141/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 117
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-12-1111",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 99,
+      "report_md": "brands/reserva/reports/run-2026-06-12-1111.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-12-1111/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 99
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-12-1037",
+      "status": "PASS",
+      "pass": 1,
+      "fail": 0,
+      "total": 1,
+      "duration_s": 188,
+      "report_md": "brands/reserva/reports/run-2026-06-12-1037.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-12-1037/",
+      "flows": [
+        {
+          "name": "10-compra-categoria-voltar-e-trocar",
+          "status": "PASS",
+          "duration_s": 188
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-12-1021",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 111,
+      "report_md": "brands/reserva/reports/run-2026-06-12-1021.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-12-1021/",
+      "flows": [
+        {
+          "name": "10-compra-via-busca",
+          "status": "FAIL",
+          "duration_s": 111
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-11-2032",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 108,
+      "report_md": "brands/reserva/reports/run-2026-06-11-2032.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-11-2032/",
+      "flows": [
+        {
+          "name": "10-compra-categoria-voltar-e-trocar",
+          "status": "FAIL",
+          "duration_s": 108
+        }
+      ]
+    },
+    {
+      "stamp": "2026-06-11-2027",
+      "status": "FAIL",
+      "pass": 0,
+      "fail": 1,
+      "total": 1,
+      "duration_s": 118,
+      "report_md": "brands/reserva/reports/run-2026-06-11-2027.md",
+      "artifacts_dir": "brands/reserva/reports/run-2026-06-11-2027/",
+      "flows": [
+        {
+          "name": "10-compra-categoria-voltar-e-trocar",
+          "status": "FAIL",
+          "duration_s": 118
+        }
+      ]
+    },
     {
       "stamp": "2026-06-11-1524",
       "status": "PASS",
@@ -3398,16 +3534,22 @@
   ],
   "flows_summary": [
     {
-      "name": "00-smoke-launch",
-      "last_status": "PASS",
-      "last_duration_s": 56,
-      "last_run_stamp": "2026-06-11-1524"
+      "name": "10-compra-via-busca",
+      "last_status": "FAIL",
+      "last_duration_s": 125,
+      "last_run_stamp": "2026-06-12-1155"
     },
     {
       "name": "10-compra-categoria-voltar-e-trocar",
       "last_status": "PASS",
-      "last_duration_s": 183,
-      "last_run_stamp": "2026-06-11-1516"
+      "last_duration_s": 188,
+      "last_run_stamp": "2026-06-12-1037"
+    },
+    {
+      "name": "00-smoke-launch",
+      "last_status": "PASS",
+      "last_duration_s": 56,
+      "last_run_stamp": "2026-06-11-1524"
     },
     {
       "name": "20-plp-filtros-ordenacao",
@@ -3443,12 +3585,6 @@
       "name": "10-compra-cold-anonimo",
       "last_status": "PASS",
       "last_duration_s": 178,
-      "last_run_stamp": "2026-06-03-1843"
-    },
-    {
-      "name": "10-compra-via-busca",
-      "last_status": "PASS",
-      "last_duration_s": 315,
       "last_run_stamp": "2026-06-03-1843"
     },
     {
@@ -3539,7 +3675,18 @@
       "severity_label": "Média",
       "status_category": "wontfix",
       "status_clean": "Won't fix"
+    },
+    {
+      "id": "F-RES-09",
+      "title": "Campanha flash sequestra o launch: app abre direto na PLP da campanha",
+      "severity": "Média",
+      "status": "Aberto",
+      "body": "Durante campanha flash com countdown na home (observado 2026-06-11 \"Casacos a\npartir de R$399\" e 2026-06-12 \"Camisas até R$399\"), o app abre **direto na PLP\nda campanha** (ex: \"Camisas / 57 produtos\"), empilhada dentro da tab Início, em\nTODO launch — não só no primeiro. A home real fica atrás do back.\n\n### Evidências\n- Reproduzido em 5 launches consecutivos (runs 10:21–11:55 de 2026-06-12).\n- Tab \"Início\" aparece `selected=true` com a PLP em cima (rota empilhada na tab).\n- Tap duplo na tab Início faz pop-to-root manualmente, mas no launch seguinte a\n  PLP volta — o push é re-disparado pelo app a cada abertura.\n\n### Impacto\n- **Usuário**: a cada abertura do app cai na campanha em vez da home — decisão\n  de produto? Validar se é intencional (parece agressivo re-disparar SEMPRE).\n- **Automação**: fluxos que partem da home (ex: 10-compra-via-busca, lupa por\n  coordenada da home) falham enquanto a campanha está no ar. Fluxos via tab\n  Menu sobrevivem.\n\n### Notas\n- Não ocorre fora do período de campanha (suíte 17/17 verde em 2026-06-11 à tarde).\n- Se for intencional, o harness precisa de defesa específica (pop pós-launch\n  com espera maior); se não for, é bug de re-disparo do deep-link de campanha.",
+      "severity_level": "media",
+      "severity_label": "Média",
+      "status_category": "open",
+      "status_clean": "Aberto"
     }
   ],
-  "open_findings": 1
+  "open_findings": 2
 }
